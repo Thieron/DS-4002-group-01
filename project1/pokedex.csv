@@ -1,0 +1,1026 @@
+id,name,genus,type_1,type_2,color,generation,pokedex_entry
+1,bulbasaur,Seed Pokémon,grass,poison,green,generation-i,A strange seed was planted on its back at birth. The plant sprouts and grows with this POKéMON.
+2,ivysaur,Seed Pokémon,grass,poison,green,generation-i,"When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs."
+3,venusaur,Seed Pokémon,grass,poison,green,generation-i,The plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.
+4,charmander,Lizard Pokémon,fire,,red,generation-i,"Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail."
+5,charmeleon,Flame Pokémon,fire,,red,generation-i,"When it swings its burning tail, it elevates the temperature to unbearably high levels."
+6,charizard,Flame Pokémon,fire,flying,red,generation-i,Spits fire that is hot enough to melt boulders. Known to cause forest fires unintentionally.
+7,squirtle,Tiny Turtle Pokémon,water,,blue,generation-i,"After birth, its back swells and hardens into a shell. Powerfully sprays foam from its mouth."
+8,wartortle,Turtle Pokémon,water,,blue,generation-i,"Often hides in water to stalk unwary prey. For swimming fast, it moves its ears to maintain balance."
+9,blastoise,Shellfish Pokémon,water,,blue,generation-i,A brutal POKéMON with pressurized water jets on its shell. They are used for high speed tackles.
+10,caterpie,Worm Pokémon,bug,,green,generation-i,Its short feet are tipped with suction pads that enable it to tirelessly climb slopes and walls.
+11,metapod,Cocoon Pokémon,bug,,green,generation-i,"This POKéMON is vulnerable to attack while its shell is soft, exposing its weak and tender body."
+12,butterfree,Butterfly Pokémon,bug,flying,white,generation-i,"In battle, it flaps its wings at high speed to release highly toxic dust into the air."
+13,weedle,Hairy Bug Pokémon,bug,poison,brown,generation-i,"Often found in forests, eating leaves. It has a sharp venomous stinger on its head."
+14,kakuna,Cocoon Pokémon,bug,poison,yellow,generation-i,"Almost incapable of moving, this POKéMON can only harden its shell to protect itself from predators."
+15,beedrill,Poison Bee Pokémon,bug,poison,yellow,generation-i,Flies at high speed and attacks using its large venomous stingers on its forelegs and tail.
+16,pidgey,Tiny Bird Pokémon,normal,flying,brown,generation-i,A common sight in forests and woods. It flaps its wings at ground level to kick up blinding sand.
+17,pidgeotto,Bird Pokémon,normal,flying,brown,generation-i,"Very protective of its sprawling territorial area, this POKéMON will fiercely peck at any intruder."
+18,pidgeot,Bird Pokémon,normal,flying,brown,generation-i,"When hunting, it skims the surface of water at high speed to pick off unwary prey such as MAGIKARP."
+19,rattata,Mouse Pokémon,normal,,purple,generation-i,"Bites anything when it attacks. Small and very quick, it is a common sight in many places."
+20,raticate,Mouse Pokémon,normal,,brown,generation-i,It uses its whis­ kers to maintain its balance. It apparently slows down if they are cut off.
+21,spearow,Tiny Bird Pokémon,normal,flying,brown,generation-i,Eats bugs in grassy areas. It has to flap its short wings at high speed to stay airborne.
+22,fearow,Beak Pokémon,normal,flying,brown,generation-i,"With its huge and magnificent wings, it can keep aloft without ever having to land for rest."
+23,ekans,Snake Pokémon,poison,,purple,generation-i,"Moves silently and stealthily. Eats the eggs of birds, such as PIDGEY and SPEAROW, whole."
+24,arbok,Cobra Pokémon,poison,,purple,generation-i,It is rumored that the ferocious warning markings on its belly differ from area to area.
+25,pikachu,Mouse Pokémon,electric,,yellow,generation-i,"When several of these POKéMON gather, their electricity could build and cause lightning storms."
+26,raichu,Mouse Pokémon,electric,,yellow,generation-i,Its long tail serves as a ground to protect itself from its own high voltage power.
+27,sandshrew,Mouse Pokémon,ground,,yellow,generation-i,Burrows deep underground in arid locations far from water. It only emerges to hunt for food.
+28,sandslash,Mouse Pokémon,ground,,yellow,generation-i,Curls up into a spiny ball when threatened. It can roll while curled up to attack or escape.
+29,nidoran-f,Poison Pin Pokémon,poison,,blue,generation-i,"Although small, its venomous barbs render this POKéMON dangerous. The female has smaller horns."
+30,nidorina,Poison Pin Pokémon,poison,,blue,generation-i,The female's horn develops slowly. Prefers physical attacks such as clawing and biting.
+31,nidoqueen,Drill Pokémon,poison,ground,blue,generation-i,Its hard scales provide strong protection. It uses its hefty bulk to execute powerful moves.
+32,nidoran-m,Poison Pin Pokémon,poison,,purple,generation-i,"Stiffens its ears to sense danger. The larger its horns, the more powerful its secreted venom."
+33,nidorino,Poison Pin Pokémon,poison,,purple,generation-i,An aggressive POKéMON that is quick to attack. The horn on its head secretes a powerful venom.
+34,nidoking,Drill Pokémon,poison,ground,purple,generation-i,"It uses its powerful tail in battle to smash, constrict, then break the prey's bones."
+35,clefairy,Fairy Pokémon,fairy,,pink,generation-i,Its magical and cute appeal has many admirers. It is rare and found only in certain areas.
+36,clefable,Fairy Pokémon,fairy,,pink,generation-i,A timid fairy POKéMON that is rarely seen. It will run and hide the moment it senses people.
+37,vulpix,Fox Pokémon,fire,,brown,generation-i,"At the time of birth, it has just one tail. The tail splits from its tip as it grows older."
+38,ninetales,Fox Pokémon,fire,,yellow,generation-i,Very smart and very vengeful. Grabbing one of its many tails could result in a 1000-year curse.
+39,jigglypuff,Balloon Pokémon,normal,fairy,pink,generation-i,"When its huge eyes light up, it sings a mysteriously soothing melody that lulls its enemies to sleep."
+40,wigglytuff,Balloon Pokémon,normal,fairy,pink,generation-i,"The body is soft and rubbery. When angered, it will suck in air and inflate itself to an enormous size."
+41,zubat,Bat Pokémon,poison,flying,purple,generation-i,Forms colonies in perpetually dark places. Uses ultrasonic waves to identify and approach targets.
+42,golbat,Bat Pokémon,poison,flying,purple,generation-i,"Once it strikes, it will not stop draining energy from the victim even if it gets too heavy to fly."
+43,oddish,Weed Pokémon,grass,poison,blue,generation-i,"During the day, it keeps its face buried in the ground. At night, it wanders around sowing its seeds."
+44,gloom,Weed Pokémon,grass,poison,blue,generation-i,The fluid that oozes from its mouth isn't drool. It is a nectar that is used to attract prey.
+45,vileplume,Flower Pokémon,grass,poison,red,generation-i,"The larger its petals, the more toxic pollen it contains. Its big head is heavy and hard to hold up."
+46,paras,Mushroom Pokémon,bug,grass,red,generation-i,Burrows to suck tree roots. The mushrooms on its back grow by draw­ ing nutrients from the bug host.
+47,parasect,Mushroom Pokémon,bug,grass,red,generation-i,A host-parasite pair in which the parasite mushroom has taken over the host bug. Prefers damp places.
+48,venonat,Insect Pokémon,bug,poison,purple,generation-i,Lives in the shadows of tall trees where it eats insects. It is attracted by light at night.
+49,venomoth,Poison Moth Pokémon,bug,poison,purple,generation-i,The dust-like scales covering its wings are color coded to indicate the kinds of poison it has.
+50,diglett,Mole Pokémon,ground,,brown,generation-i,Lives about one yard underground where it feeds on plant roots. It sometimes appears above ground.
+51,dugtrio,Mole Pokémon,ground,,brown,generation-i,A team of DIGLETT triplets. It triggers huge earthquakes by burrowing 60 miles underground.
+52,meowth,Scratch Cat Pokémon,normal,,yellow,generation-i,Adores circular objects. Wanders the streets on a nightly basis to look for dropped loose change.
+53,persian,Classy Cat Pokémon,normal,,yellow,generation-i,"Although its fur has many admirers, it is tough to raise as a pet because of its fickle meanness."
+54,psyduck,Duck Pokémon,water,,yellow,generation-i,"While lulling its enemies with its vacant look, this wily POKéMON will use psychokinetic powers."
+55,golduck,Duck Pokémon,water,,blue,generation-i,"Often seen swim­ ming elegantly by lake shores. It is often mistaken for the Japanese monster, Kappa."
+56,mankey,Pig Monkey Pokémon,fighting,,brown,generation-i,Extremely quick to anger. It could be docile one moment then thrashing away the next instant.
+57,primeape,Pig Monkey Pokémon,fighting,,brown,generation-i,Always furious and tenacious to boot. It will not abandon chasing its quarry until it is caught.
+58,growlithe,Puppy Pokémon,fire,,brown,generation-i,Very protective of its territory. It will bark and bite to repel intruders from its space.
+59,arcanine,Legendary Pokémon,fire,,brown,generation-i,A POKéMON that has been admired since the past for its beauty. It runs agilely as if on wings.
+60,poliwag,Tadpole Pokémon,water,,blue,generation-i,Its newly grown legs prevent it from running. It appears to prefer swimming than trying to stand.
+61,poliwhirl,Tadpole Pokémon,water,,blue,generation-i,"Capable of living in or out of water. When out of water, it sweats to keep its body slimy."
+62,poliwrath,Tadpole Pokémon,water,fighting,blue,generation-i,An adept swimmer at both the front crawl and breast stroke. Easily overtakes the best human swimmers.
+63,abra,Psi Pokémon,psychic,,brown,generation-i,"Using its ability to read minds, it will identify impending danger and TELEPORT to safety."
+64,kadabra,Psi Pokémon,psychic,,brown,generation-i,It emits special alpha waves from its body that induce headaches just by being close by.
+65,alakazam,Psi Pokémon,psychic,,brown,generation-i,"Its brain can out­ perform a super­ computer. Its intelligence quotient is said to be 5,000."
+66,machop,Superpower Pokémon,fighting,,gray,generation-i,Loves to build its muscles. It trains in all styles of martial arts to become even stronger.
+67,machoke,Superpower Pokémon,fighting,,gray,generation-i,"Its muscular body is so powerful, it must wear a power save belt to be able to regulate its motions."
+68,machamp,Superpower Pokémon,fighting,,gray,generation-i,"Using its heavy muscles, it throws powerful punches that can send the victim clear over the horizon."
+69,bellsprout,Flower Pokémon,grass,poison,green,generation-i,A carnivorous POKéMON that traps and eats bugs. It uses its root feet to soak up needed moisture.
+70,weepinbell,Flycatcher Pokémon,grass,poison,green,generation-i,It spits out POISONPOWDER to immobilize the enemy and then finishes it with a spray of ACID.
+71,victreebel,Flycatcher Pokémon,grass,poison,green,generation-i,"Said to live in huge colonies deep in jungles, although no one has ever returned from there."
+72,tentacool,Jellyfish Pokémon,water,poison,blue,generation-i,Drifts in shallow seas. Anglers who hook them by accident are often punished by its stinging acid.
+73,tentacruel,Jellyfish Pokémon,water,poison,blue,generation-i,"The tentacles are normally kept short. On hunts, they are extended to ensnare and immobilize prey."
+74,geodude,Rock Pokémon,rock,ground,brown,generation-i,"Found in fields and mountains. Mistaking them for boulders, people often step or trip on them."
+75,graveler,Rock Pokémon,rock,ground,brown,generation-i,Rolls down slopes to move. It rolls over any obstacle without slowing or changing its direction.
+76,golem,Megaton Pokémon,rock,ground,brown,generation-i,Its boulder-like body is extremely hard. It can easily withstand dynamite blasts without damage.
+77,ponyta,Fire Horse Pokémon,fire,,yellow,generation-i,Its hooves are 10 times harder than diamonds. It can trample anything completely flat in little time.
+78,rapidash,Fire Horse Pokémon,fire,,yellow,generation-i,"Very competitive, this POKéMON will chase anything that moves fast in the hopes of racing it."
+79,slowpoke,Dopey Pokémon,water,psychic,pink,generation-i,Incredibly slow and dopey. It takes 5 seconds for it to feel pain when under attack.
+80,slowbro,Hermit Crab Pokémon,water,psychic,pink,generation-i,The SHELLDER that is latched onto SLOWPOKE's tail is said to feed on the host's left over scraps.
+81,magnemite,Magnet Pokémon,electric,steel,gray,generation-i,Uses anti-gravity to stay suspended. Appears without warning and uses THUNDER WAVE and similar moves.
+82,magneton,Magnet Pokémon,electric,steel,gray,generation-i,Formed by several MAGNEMITEs linked together. They frequently appear when sunspots flare up.
+83,farfetchd,Wild Duck Pokémon,normal,flying,brown,generation-i,The sprig of green onions it holds is its weapon. It is used much like a metal sword.
+84,doduo,Twin Bird Pokémon,normal,flying,brown,generation-i,A bird that makes up for its poor flying with its fast foot speed. Leaves giant footprints.
+85,dodrio,Triple Bird Pokémon,normal,flying,brown,generation-i,"Uses its three brains to execute complex plans. While two heads sleep, one head stays awake."
+86,seel,Sea Lion Pokémon,water,,white,generation-i,The protruding horn on its head is very hard. It is used for bashing through thick ice.
+87,dewgong,Sea Lion Pokémon,water,ice,white,generation-i,Stores thermal energy in its body. Swims at a steady 8 knots even in intensely cold waters.
+88,grimer,Sludge Pokémon,poison,,purple,generation-i,Appears in filthy areas. Thrives by sucking up polluted sludge that is pumped out of factories.
+89,muk,Sludge Pokémon,poison,,purple,generation-i,"Thickly covered with a filthy, vile sludge. It is so toxic, even its footprints contain poison."
+90,shellder,Bivalve Pokémon,water,,purple,generation-i,Its hard shell repels any kind of attack. It is vulnerable only when its shell is open.
+91,cloyster,Bivalve Pokémon,water,ice,purple,generation-i,"When attacked, it launches its horns in quick volleys. Its innards have never been seen."
+92,gastly,Gas Pokémon,ghost,poison,purple,generation-i,"Almost invisible, this gaseous POKéMON cloaks the target and puts it to sleep without notice."
+93,haunter,Gas Pokémon,ghost,poison,purple,generation-i,"Because of its ability to slip through block walls, it is said to be from an­ other dimension."
+94,gengar,Shadow Pokémon,ghost,poison,purple,generation-i,"Under a full moon, this POKéMON likes to mimic the shadows of people and laugh at their fright."
+95,onix,Rock Snake Pokémon,rock,ground,gray,generation-i,"As it grows, the stone portions of its body harden to become similar to a diamond, but colored black."
+96,drowzee,Hypnosis Pokémon,psychic,,yellow,generation-i,Puts enemies to sleep then eats their dreams. Occasionally gets sick from eating bad dreams.
+97,hypno,Hypnosis Pokémon,psychic,,yellow,generation-i,"When it locks eyes with an enemy, it will use a mix of PSI moves such as HYPNOSIS and CONFUSION."
+98,krabby,River Crab Pokémon,water,,red,generation-i,"Its pincers are not only powerful weapons, they are used for balance when walking sideways."
+99,kingler,Pincer Pokémon,water,,red,generation-i,"The large pincer has 10000 hp of crushing power. However, its huge size makes it unwieldy to use."
+100,voltorb,Ball Pokémon,electric,,red,generation-i,"Usually found in power plants. Easily mistaken for a POKé BALL, they have zapped many people."
+101,electrode,Ball Pokémon,electric,,red,generation-i,It stores electric energy under very high pressure. It often explodes with little or no provocation.
+102,exeggcute,Egg Pokémon,grass,psychic,pink,generation-i,"Often mistaken for eggs. When disturbed, they quickly gather and attack in swarms."
+103,exeggutor,Coconut Pokémon,grass,psychic,yellow,generation-i,"Legend has it that on rare occasions, one of its heads will drop off and continue on as an EXEGGCUTE."
+104,cubone,Lonely Pokémon,ground,,brown,generation-i,"Because it never removes its skull helmet, no one has ever seen this POKéMON's real face."
+105,marowak,Bone Keeper Pokémon,ground,,brown,generation-i,The bone it holds is its key weapon. It throws the bone skillfully like a boomerang to KO targets.
+106,hitmonlee,Kicking Pokémon,fighting,,brown,generation-i,"When in a hurry, its legs lengthen progressively. It runs smoothly with extra long, loping strides."
+107,hitmonchan,Punching Pokémon,fighting,,brown,generation-i,"While apparently doing nothing, it fires punches in lightning fast volleys that are impossible to see."
+108,lickitung,Licking Pokémon,normal,,pink,generation-i,Its tongue can be extended like a chameleon's. It leaves a tingling sensation when it licks enemies.
+109,koffing,Poison Gas Pokémon,poison,,purple,generation-i,"Because it stores several kinds of toxic gases in its body, it is prone to exploding without warning."
+110,weezing,Poison Gas Pokémon,poison,,purple,generation-i,"Where two kinds of poison gases meet, 2 KOFFINGs can fuse into a WEEZING over many years."
+111,rhyhorn,Spikes Pokémon,ground,rock,gray,generation-i,Its massive bones are 1000 times harder than human bones. It can easily knock a trailer flying.
+112,rhydon,Drill Pokémon,ground,rock,gray,generation-i,"Protected by an armor-like hide, it is capable of living in molten lava of 3,600 degrees."
+113,chansey,Egg Pokémon,normal,,pink,generation-i,A rare and elusive POKéMON that is said to bring happiness to those who manage to get it.
+114,tangela,Vine Pokémon,grass,,blue,generation-i,The whole body is swathed with wide vines that are similar to sea­ weed. Its vines shake as it walks.
+115,kangaskhan,Parent Pokémon,normal,,brown,generation-i,The infant rarely ventures out of its mother's protective pouch until it is 3 years old.
+116,horsea,Dragon Pokémon,water,,blue,generation-i,Known to shoot down flying bugs with precision blasts of ink from the surface of the water.
+117,seadra,Dragon Pokémon,water,,blue,generation-i,Capable of swim­ ming backwards by rapidly flapping its wing-like pectoral fins and stout tail.
+118,goldeen,Goldfish Pokémon,water,,red,generation-i,"Its tail fin billows like an elegant ballroom dress, giving it the nickname of the Water Queen."
+119,seaking,Goldfish Pokémon,water,,red,generation-i,"In the autumn spawning season, they can be seen swimming power­ fully up rivers and creeks."
+120,staryu,Star Shape Pokémon,water,,brown,generation-i,An enigmatic POKéMON that can effortlessly regenerate any appendage it loses in battle.
+121,starmie,Mysterious Pokémon,water,psychic,purple,generation-i,Its central core glows with the seven colors of the rainbow. Some people value the core as a gem.
+122,mr-mime,Barrier Pokémon,psychic,fairy,pink,generation-i,"If interrupted while it is miming, it will slap around the offender with its broad hands."
+123,scyther,Mantis Pokémon,bug,flying,green,generation-i,"With ninja-like agility and speed, it can create the illusion that there is more than one."
+124,jynx,Human Shape Pokémon,ice,psychic,red,generation-i,It seductively wiggles its hips as it walks. It can cause people to dance in unison with it.
+125,electabuzz,Electric Pokémon,electric,,yellow,generation-i,"Normally found near power plants, they can wander away and cause major blackouts in cities."
+126,magmar,Spitfire Pokémon,fire,,red,generation-i,Its body always burns with an orange glow that enables it to hide perfectly among flames.
+127,pinsir,Stag Beetle Pokémon,bug,,brown,generation-i,"If it fails to crush the victim in its pincers, it will swing it around and toss it hard."
+128,tauros,Wild Bull Pokémon,normal,,brown,generation-i,"When it targets an enemy, it charges furiously while whipping its body with its long tails."
+129,magikarp,Fish Pokémon,water,,red,generation-i,"In the distant past, it was somewhat stronger than the horribly weak descendants that exist today."
+130,gyarados,Atrocious Pokémon,water,flying,blue,generation-i,"Rarely seen in the wild. Huge and vicious, it is capable of destroying entire cities in a rage."
+131,lapras,Transport Pokémon,water,ice,blue,generation-i,A POKéMON that has been over­ hunted almost to extinction. It can ferry people across the water.
+132,ditto,Transform Pokémon,normal,,purple,generation-i,Capable of copying an enemy's genetic code to instantly transform itself into a duplicate of the enemy.
+133,eevee,Evolution Pokémon,normal,,brown,generation-i,Its genetic code is irregular. It may mutate if it is exposed to radiation from element STONEs.
+134,vaporeon,Bubble Jet Pokémon,water,,blue,generation-i,Lives close to water. Its long tail is ridged with a fin which is often mistaken for a mermaid's.
+135,jolteon,Lightning Pokémon,electric,,yellow,generation-i,It accumulates negative ions in the atmosphere to blast out 10000- volt lightning bolts.
+136,flareon,Flame Pokémon,fire,,red,generation-i,"When storing thermal energy in its body, its temperature could soar to over 1600 degrees."
+137,porygon,Virtual Pokémon,normal,,pink,generation-i,A POKéMON that consists entirely of programming code. Capable of moving freely in cyberspace.
+138,omanyte,Spiral Pokémon,rock,water,blue,generation-i,"Although long extinct, in rare cases, it can be genetically resurrected from fossils."
+139,omastar,Spiral Pokémon,rock,water,blue,generation-i,A prehistoric POKéMON that died out when its heavy shell made it impossible to catch prey.
+140,kabuto,Shellfish Pokémon,rock,water,brown,generation-i,A POKéMON that was resurrected from a fossil found in what was once the ocean floor eons ago.
+141,kabutops,Shellfish Pokémon,rock,water,brown,generation-i,Its sleek shape is perfect for swim­ ming. It slashes prey with its claws and drains the body fluids.
+142,aerodactyl,Fossil Pokémon,rock,flying,purple,generation-i,"A ferocious, pre­ historic POKéMON that goes for the enemy's throat with its serrated saw-like fangs."
+143,snorlax,Sleeping Pokémon,normal,,black,generation-i,"Very lazy. Just eats and sleeps. As its rotund bulk builds, it becomes steadily more slothful."
+144,articuno,Freeze Pokémon,ice,flying,blue,generation-i,A legendary bird POKéMON that is said to appear to doomed people who are lost in icy mountains.
+145,zapdos,Electric Pokémon,electric,flying,yellow,generation-i,A legendary bird POKéMON that is said to appear from clouds while dropping enormous lightning bolts.
+146,moltres,Flame Pokémon,fire,flying,yellow,generation-i,Known as the legendary bird of fire. Every flap of its wings creates a dazzling flash of flames.
+147,dratini,Dragon Pokémon,dragon,,blue,generation-i,Long considered a mythical POKéMON until recently when a small colony was found living underwater.
+148,dragonair,Dragon Pokémon,dragon,,blue,generation-i,A mystical POKéMON that exudes a gentle aura. Has the ability to change climate conditions.
+149,dragonite,Dragon Pokémon,dragon,flying,brown,generation-i,An extremely rarely seen marine POKéMON. Its intelligence is said to match that of humans.
+150,mewtwo,Genetic Pokémon,psychic,,purple,generation-i,It was created by a scientist after years of horrific gene splicing and DNA engineering experiments.
+151,mew,New Species Pokémon,psychic,,pink,generation-i,So rare that it is still said to be a mirage by many experts. Only a few people have seen it worldwide.
+152,chikorita,Leaf Pokémon,grass,,green,generation-ii,A sweet aroma gently wafts from the leaf on its head. It is docile and loves to soak up the sun's rays.
+153,bayleef,Leaf Pokémon,grass,,green,generation-ii,"The scent of spices comes from around its neck. Somehow, sniffing it makes you want to fight."
+154,meganium,Herb Pokémon,grass,,green,generation-ii,The aroma that rises from its petals contains a substance that calms aggressive feelings.
+155,cyndaquil,Fire Mouse Pokémon,fire,,yellow,generation-ii,"It is timid, and always curls it­ self up in a ball. If attacked, it flares up its back for protection."
+156,quilava,Volcano Pokémon,fire,,yellow,generation-ii,Be careful if it turns its back during battle. It means that it will attack with the fire on its back.
+157,typhlosion,Volcano Pokémon,fire,,yellow,generation-ii,"If its rage peaks, it becomes so hot that anything that touches it will instantly go up in flames."
+158,totodile,Big Jaw Pokémon,water,,blue,generation-ii,Its well-developed jaws are powerful and capable of crushing anything. Even its trainer must be careful.
+159,croconaw,Big Jaw Pokémon,water,,blue,generation-ii,"If it loses a fang, a new one grows back in its place. There are always 48 fangs lining its mouth."
+160,feraligatr,Big Jaw Pokémon,water,,blue,generation-ii,"When it bites with its massive and powerful jaws, it shakes its head and savagely tears its victim up."
+161,sentret,Scout Pokémon,normal,,brown,generation-ii,"A very cautious POKéMON, it raises itself up using its tail to get a better view of its surroundings."
+162,furret,Long Body Pokémon,normal,,brown,generation-ii,It makes a nest to suit its long and skinny body. The nest is impossible for other POKéMON to enter.
+163,hoothoot,Owl Pokémon,normal,flying,brown,generation-ii,"It always stands on one foot. It changes feet so fast, the movement can rarely be seen."
+164,noctowl,Owl Pokémon,normal,flying,brown,generation-ii,Its eyes are specially adapted. They concentrate even faint light and enable it to see in the dark.
+165,ledyba,Five Star Pokémon,bug,flying,red,generation-ii,It is very timid. It will be afraid to move if it is alone. But it will be active if it is in a group.
+166,ledian,Five Star Pokémon,bug,flying,red,generation-ii,"When the stars flicker in the night sky, it flutters about, scattering a glowing powder."
+167,spinarak,String Spit Pokémon,bug,poison,green,generation-ii,"It lies still in the same pose for days in its web, waiting for its unsuspecting prey to wander close."
+168,ariados,Long Leg Pokémon,bug,poison,red,generation-ii,It spins string not only from its rear but also from its mouth. It is hard to tell which end is which.
+169,crobat,Bat Pokémon,poison,flying,purple,generation-ii,It flies so si­ lently through the dark on its four wings that it may not be noticed even when nearby.
+170,chinchou,Angler Pokémon,water,electric,blue,generation-ii,It shoots positive and negative elec­ tricity between the tips of its two antennae and zaps its enemies.
+171,lanturn,Light Pokémon,water,electric,blue,generation-ii,The light it emits is so bright that it can illuminate the sea's surface from a depth of over three miles.
+172,pichu,Tiny Mouse Pokémon,electric,,yellow,generation-ii,It is not yet skilled at storing electricity. It may send out a jolt if amused or startled.
+173,cleffa,Star Shape Pokémon,fairy,,pink,generation-ii,"Because of its unusual, star-like silhouette, people believe that it came here on a meteor."
+174,igglybuff,Balloon Pokémon,normal,fairy,pink,generation-ii,"It has a very soft body. If it starts to roll, it will bounce all over and be impossible to stop."
+175,togepi,Spike Ball Pokémon,fairy,,white,generation-ii,The shell seems to be filled with joy. It is said that it will share good luck when treated kindly.
+176,togetic,Happiness Pokémon,fairy,flying,white,generation-ii,"They say that it will appear before kindhearted, car­ ing people and shower them with happiness."
+177,natu,Tiny Bird Pokémon,psychic,flying,green,generation-ii,"Because its wings aren't yet fully grown, it has to hop to get around. It is always star­ ing at something."
+178,xatu,Mystic Pokémon,psychic,flying,green,generation-ii,They say that it stays still and quiet because it is seeing both the past and future at the same time.
+179,mareep,Wool Pokémon,electric,,white,generation-ii,"If static elec­ tricity builds in its body, its fleece doubles in volume. Touching it will shock you."
+180,flaaffy,Wool Pokémon,electric,,pink,generation-ii,"As a result of storing too much electricity, it developed patches where even downy wool won't grow."
+181,ampharos,Light Pokémon,electric,,yellow,generation-ii,The tail's tip shines brightly and can be seen from far away. It acts as a beacon for lost people.
+182,bellossom,Flower Pokémon,grass,,green,generation-ii,BELLOSSOM gather at times and appear to dance. They say that the dance is a ritual to summon the sun.
+183,marill,Aqua Mouse Pokémon,water,fairy,blue,generation-ii,"The tip of its tail, which con­ tains oil that is lighter than wa­ ter, lets it swim without drowning."
+184,azumarill,Aqua Rabbit Pokémon,water,fairy,blue,generation-ii,"By keeping still and listening in­ tently, it can tell what is in even wild, fast- moving rivers."
+185,sudowoodo,Imitation Pokémon,rock,,brown,generation-ii,"Although it always pretends to be a tree, its composi­ tion appears to be closer to a rock than a plant."
+186,politoed,Frog Pokémon,water,,green,generation-ii,"If POLIWAG and POLIWHIRL hear its echoing cry, they respond by gather­ ing from far and wide."
+187,hoppip,Cottonweed Pokémon,grass,flying,pink,generation-ii,"To keep from being blown away by the wind, they gather in clusters. They do enjoy gentle breezes, though."
+188,skiploom,Cottonweed Pokémon,grass,flying,green,generation-ii,The bloom on top of its head opens and closes as the temperature fluc­ tuates up and down.
+189,jumpluff,Cottonweed Pokémon,grass,flying,blue,generation-ii,"Once it catches the wind, it deft­ ly controls its cotton-puff spores to float, even around the world."
+190,aipom,Long Tail Pokémon,normal,,purple,generation-ii,Its tail is so powerful that it can use it to grab a tree branch and hold itself up in the air.
+191,sunkern,Seed Pokémon,grass,,yellow,generation-ii,"It may drop out of the sky suddenly. If attacked by a SPEAROW, it will violently shake its leaves."
+192,sunflora,Sun Pokémon,grass,,yellow,generation-ii,"It converts sun­ light into energy. In the darkness after sunset, it closes its petals and becomes still."
+193,yanma,Clear Wing Pokémon,bug,flying,red,generation-ii,"If it flaps its wings really fast, it can generate shock waves that will shatter win­ dows in the area."
+194,wooper,Water Fish Pokémon,water,ground,blue,generation-ii,This POKéMON lives in cold water. It will leave the water to search for food when it gets cold outside.
+195,quagsire,Water Fish Pokémon,water,ground,blue,generation-ii,"This carefree POKéMON has an easy-going nature. While swimming, it always bumps into boat hulls."
+196,espeon,Sun Pokémon,psychic,,purple,generation-ii,It uses the fine hair that covers its body to sense air currents and predict its ene­ my's actions.
+197,umbreon,Moonlight Pokémon,dark,,black,generation-ii,"When agitated, this POKéMON pro­ tects itself by spraying poisonous sweat from its pores."
+198,murkrow,Darkness Pokémon,dark,flying,black,generation-ii,"Feared and loathed by many, it is believed to bring misfortune to all those who see it at night."
+199,slowking,Royal Pokémon,water,psychic,pink,generation-ii,"It has incredible intellect and in­ tuition. Whatever the situation, it remains calm and collected."
+200,misdreavus,Screech Pokémon,ghost,,gray,generation-ii,It likes playing mischievous tricks such as screaming and wailing to startle people at night.
+201,unown,Symbol Pokémon,psychic,,black,generation-ii,Their shapes look like hieroglyphs on ancient tab­ lets. It is said that the two are somehow related.
+202,wobbuffet,Patient Pokémon,psychic,,blue,generation-ii,"It hates light and shock. If attack­ ed, it inflates its body to pump up its counter­ strike."
+203,girafarig,Long Neck Pokémon,normal,psychic,yellow,generation-ii,"Its tail has a small brain of its own. Beware! If you get close, it may react to your scent and bite."
+204,pineco,Bagworm Pokémon,bug,,gray,generation-ii,It likes to make its shell thicker by adding layers of tree bark. The additional weight doesn't bother it.
+205,forretress,Bagworm Pokémon,bug,steel,purple,generation-ii,Its entire body is shielded by a steel-hard shell. What lurks inside the armor is a total mystery.
+206,dunsparce,Land Snake Pokémon,normal,,yellow,generation-ii,"When spotted, this POKéMON escapes backward by furi­ ously boring into the ground with its tail."
+207,gligar,Fly Scorpion Pokémon,ground,flying,purple,generation-ii,It flies straight at its target's face then clamps down on the star­ tled victim to inject poison.
+208,steelix,Iron Snake Pokémon,steel,ground,gray,generation-ii,"Its body has been compressed deep under the ground. As a result, it is even harder than a diamond."
+209,snubbull,Fairy Pokémon,fairy,,pink,generation-ii,"Although it looks frightening, it is actually kind and affectionate. It is very popular among women."
+210,granbull,Fairy Pokémon,fairy,,purple,generation-ii,"It is actually timid and easily spooked. If at­ tacked, it flails about to fend off its attacker."
+211,qwilfish,Balloon Pokémon,water,poison,gray,generation-ii,"To fire its poison spikes, it must inflate its body by drinking over 2.6 gallons of water all at once."
+212,scizor,Pincer Pokémon,bug,steel,red,generation-ii,It swings its eye- patterned pincers up to scare its foes. This makes it look like it has three heads.
+213,shuckle,Mold Pokémon,bug,rock,yellow,generation-ii,The BERRIES it stores in its vase-like shell decompose and become a gooey liquid.
+214,heracross,Single Horn Pokémon,bug,fighting,blue,generation-ii,This powerful POKéMON thrusts its prized horn under its enemies’ bellies then lifts and throws them.
+215,sneasel,Sharp Claw Pokémon,dark,ice,black,generation-ii,"Its paws conceal sharp claws. If attacked, it sud­ denly extends the claws and startles its enemy."
+216,teddiursa,Little Bear Pokémon,normal,,brown,generation-ii,"If it finds honey, its crescent mark glows. It always licks its paws because they are soaked with honey."
+217,ursaring,Hibernator Pokémon,normal,,brown,generation-ii,"Although it is a good climber, it prefers to snap trees with its forelegs and eat fallen BERRIES."
+218,slugma,Lava Pokémon,fire,,red,generation-ii,"It never sleeps. It has to keep moving because if it stopped, its magma body would cool and harden."
+219,magcargo,Lava Pokémon,fire,rock,red,generation-ii,The shell on its back is just skin that has cooled and hardened. It breaks easily with a slight touch.
+220,swinub,Pig Pokémon,ice,ground,brown,generation-ii,It rubs its snout on the ground to find and dig up food. It sometimes discovers hot springs.
+221,piloswine,Swine Pokémon,ice,ground,brown,generation-ii,"Because the long hair all over its body obscures its sight, it just keeps charging repeatedly."
+222,corsola,Coral Pokémon,water,rock,pink,generation-ii,It continuously sheds and grows. The tip of its head is prized as a treasure for its beauty.
+223,remoraid,Jet Pokémon,water,,gray,generation-ii,It has superb ac­ curacy. The water it shoots out can strike even moving prey from more than 300 feet.
+224,octillery,Jet Pokémon,water,,red,generation-ii,It traps enemies with its suction- cupped tentacles then smashes them with its rock-hard head.
+225,delibird,Delivery Pokémon,ice,flying,red,generation-ii,It carries food all day long. There are tales about lost people who were saved by the food it had.
+226,mantine,Kite Pokémon,water,flying,purple,generation-ii,"As it majestically swims, it doesn't care if REMORAID attach to it for scavenging its leftovers."
+227,skarmory,Armor Bird Pokémon,steel,flying,gray,generation-ii,"Its sturdy wings look heavy, but they are actually hollow and light, allowing it to fly freely in the sky."
+228,houndour,Dark Pokémon,dark,fire,black,generation-ii,It uses different kinds of cries for communicating with others of its kind and for pursuing its prey.
+229,houndoom,Dark Pokémon,dark,fire,black,generation-ii,"If you are burned by the flames it shoots from its mouth, the pain will never go away."
+230,kingdra,Dragon Pokémon,water,dragon,blue,generation-ii,It is said that it usually hides in underwater caves. It can create whirlpools by yawning.
+231,phanpy,Long Nose Pokémon,ground,,blue,generation-ii,"It swings its long snout around play­ fully, but because it is so strong, that can be dan­ gerous."
+232,donphan,Armor Pokémon,ground,,gray,generation-ii,"It has sharp, hard tusks and a rugged hide. Its TACKLE is strong enough to knock down a house."
+233,porygon2,Virtual Pokémon,normal,,red,generation-ii,"This upgraded version of PORYGON is designed for space exploration. It can't fly, though."
+234,stantler,Big Horn Pokémon,normal,,brown,generation-ii,The curved antlers subtly change the flow of air to create a strange space where real­ ity is distorted.
+235,smeargle,Painter Pokémon,normal,,white,generation-ii,A special fluid oozes from the tip of its tail. It paints the fluid everywhere to mark its territory.
+236,tyrogue,Scuffle Pokémon,fighting,,purple,generation-ii,"It is always bursting with en­ ergy. To make it­ self stronger, it keeps on fighting even if it loses."
+237,hitmontop,Handstand Pokémon,fighting,,brown,generation-ii,"If you become enchanted by its smooth, elegant, dance-like kicks, you may get drilled hard."
+238,smoochum,Kiss Pokémon,ice,psychic,pink,generation-ii,Its lips are the most sensitive parts on its body. It always uses its lips first to examine things.
+239,elekid,Electric Pokémon,electric,,yellow,generation-ii,"It rotates its arms to generate electricity, but it tires easily, so it charges up only a little bit."
+240,magby,Live Coal Pokémon,fire,,red,generation-ii,"Each and every time it inhales and exhales, hot embers dribble out of its mouth and nostrils."
+241,miltank,Milk Cow Pokémon,normal,,pink,generation-ii,"Its milk is packed with nutrition, making it the ultimate beverage for the sick or weary."
+242,blissey,Happiness Pokémon,normal,,pink,generation-ii,Anyone who takes even one bite of BLISSEY's egg be­ comes unfailingly caring and pleas­ ant to everyone.
+243,raikou,Thunder Pokémon,electric,,yellow,generation-ii,The rain clouds it carries let it fire thunderbolts at will. They say that it descended with lightning.
+244,entei,Volcano Pokémon,fire,,brown,generation-ii,"Volcanoes erupt when it barks. Un­ able to restrain its extreme power, it races headlong around the land."
+245,suicune,Aurora Pokémon,water,,blue,generation-ii,"Said to be the reincarnation of north winds, it can instantly purify filthy, murky water."
+246,larvitar,Rock Skin Pokémon,rock,ground,green,generation-ii,"It feeds on soil. After it has eaten a large mountain, it will fall asleep so it can grow."
+247,pupitar,Hard Shell Pokémon,rock,ground,gray,generation-ii,"Its shell is as hard as sheet rock, and it is also very strong. Its THRASHING can topple a mountain."
+248,tyranitar,Armor Pokémon,rock,dark,green,generation-ii,"Its body can't be harmed by any sort of attack, so it is very eager to make challenges against enemies."
+249,lugia,Diving Pokémon,psychic,flying,white,generation-ii,It is said that it quietly spends its time deep at the bottom of the sea because its powers are too strong.
+250,ho-oh,Rainbow Pokémon,fire,flying,red,generation-ii,Legends claim this POKéMON flies the world's skies con­ tinuously on its magnificent seven- colored wings.
+251,celebi,Time Travel Pokémon,psychic,grass,green,generation-ii,This POKéMON wan­ ders across time. Grass and trees flourish in the forests in which it has appeared.
+252,treecko,Wood Gecko Pokémon,grass,,green,generation-iii,TREECKO has small hooks on the bottom of its feet that enable it to scale vertical walls. This POKéMON attacks by slamming foes with its thick tail.
+253,grovyle,Wood Gecko Pokémon,grass,,green,generation-iii,The leaves growing out of GROVYLE’s body are convenient for camouflaging it from enemies in the forest. This POKéMON is a master at climbing trees in jungles.
+254,sceptile,Forest Pokémon,grass,,green,generation-iii,The leaves growing on SCEPTILE’s body are very sharp edged. This POKéMON is very agile - it leaps all over the branches of trees and jumps on its foe from above or behind.
+255,torchic,Chick Pokémon,fire,,red,generation-iii,"TORCHIC sticks with its TRAINER, following behind with unsteady steps. This POKéMON breathes fire of over 1,800 degrees F, including fireballs that leave the foe scorched black."
+256,combusken,Young Fowl Pokémon,fire,fighting,red,generation-iii,"COMBUSKEN toughens up its legs and thighs by running through fields and mountains. This POKéMON’s legs possess both speed and power, enabling it to dole out ten kicks in one second."
+257,blaziken,Blaze Pokémon,fire,fighting,red,generation-iii,"In battle, BLAZIKEN blows out intense flames from its wrists and attacks foes courageously. The stronger the foe, the more intensely this POKéMON’s wrists burn."
+258,mudkip,Mud Fish Pokémon,water,,blue,generation-iii,"The fin on MUDKIP’s head acts as highly sensitive radar. Using this fin to sense movements of water and air, this POKéMON can determine what is taking place around it without using its eyes."
+259,marshtomp,Mud Fish Pokémon,water,ground,blue,generation-iii,"The surface of MARSHTOMP’s body is enveloped by a thin, sticky film that enables it to live on land. This POKéMON plays in mud on beaches when the ocean tide is low."
+260,swampert,Mud Fish Pokémon,water,ground,blue,generation-iii,SWAMPERT is very strong. It has enough power to easily drag a boulder weighing more than a ton. This POKéMON also has powerful vision that lets it see even in murky water.
+261,poochyena,Bite Pokémon,dark,,gray,generation-iii,"At first sight, POOCHYENA takes a bite at anything that moves. This POKéMON chases after prey until the victim becomes exhausted. However, it may turn tail if the prey strikes back."
+262,mightyena,Bite Pokémon,dark,,gray,generation-iii,MIGHTYENA gives obvious signals when it is preparing to attack. It starts to growl deeply and then flattens its body. This POKéMON will bite savagely with its sharply pointed fangs.
+263,zigzagoon,Tiny Raccoon Pokémon,normal,,brown,generation-iii,ZIGZAGOON restlessly wanders everywhere at all times. This POKéMON does so because it is very curious. It becomes interested in anything that it happens to see.
+264,linoone,Rushing Pokémon,normal,,white,generation-iii,"LINOONE always runs full speed and only in straight lines. If facing an obstacle, it makes a right-angle turn to evade it. This POKéMON is very challenged by gently curving roads."
+265,wurmple,Worm Pokémon,bug,,red,generation-iii,"Using the spikes on its rear end, WURMPLE peels the bark off trees and feeds on the sap that oozes out. This POKéMON’s feet are tipped with suction pads that allow it to cling to glass without slipping."
+266,silcoon,Cocoon Pokémon,bug,,white,generation-iii,"SILCOON tethers itself to a tree branch using silk to keep from falling. There, this POKéMON hangs quietly while it awaits evolution. It peers out of the silk cocoon through a small hole."
+267,beautifly,Butterfly Pokémon,bug,flying,yellow,generation-iii,"BEAUTIFLY’s favorite food is the sweet pollen of flowers. If you want to see this POKéMON, just leave a potted flower by an open window. BEAUTIFLY is sure to come looking for pollen."
+268,cascoon,Cocoon Pokémon,bug,,purple,generation-iii,"CASCOON makes its protective cocoon by wrapping its body entirely with a fine silk from its mouth. Once the silk goes around its body, it hardens. This POKéMON prepares for its evolution inside the cocoon."
+269,dustox,Poison Moth Pokémon,bug,poison,green,generation-iii,"DUSTOX is instinctively drawn to light. Swarms of this POKéMON are attracted by the bright lights of cities, where they wreak havoc by stripping the leaves off roadside trees for food."
+270,lotad,Water Weed Pokémon,water,grass,green,generation-iii,"LOTAD live in ponds and lakes, where they float on the surface. It grows weak if its broad leaf dies. On rare occasions, this POKéMON travels on land in search of clean water."
+271,lombre,Jolly Pokémon,water,grass,green,generation-iii,"LOMBRE is nocturnal - it will get active after dusk. It is also a mischief-maker. When this POKéMON spots anglers, it tugs on their fishing lines from beneath the surface and enjoys their consternation."
+272,ludicolo,Carefree Pokémon,water,grass,green,generation-iii,"LUDICOLO begins dancing as soon as it hears cheerful, festive music. This POKéMON is said to appear when it hears the singing of children on hiking outings."
+273,seedot,Acorn Pokémon,grass,,brown,generation-iii,"SEEDOT attaches itself to a tree branch using the top of its head. It sucks moisture from the tree while hanging off the branch. The more water it drinks, the glossier this POKéMON’s body becomes."
+274,nuzleaf,Wily Pokémon,grass,dark,brown,generation-iii,NUZLEAF live in densely overgrown forests. They occasionally venture out of the forest to startle people. This POKéMON dislikes having its long nose pinched.
+275,shiftry,Wicked Pokémon,grass,dark,brown,generation-iii,SHIFTRY is a mysterious POKéMON that is said to live atop towering trees dating back over a thousand years. It creates terrific windstorms with the fans it holds.
+276,taillow,Tiny Swallow Pokémon,normal,flying,blue,generation-iii,"TAILLOW courageously stands its ground against foes, however strong they may be. This gutsy POKéMON will remain defiant even after a loss. On the other hand, it cries loudly if it becomes hungry."
+277,swellow,Swallow Pokémon,normal,flying,blue,generation-iii,"SWELLOW flies high above our heads, making graceful arcs in the sky. This POKéMON dives at a steep angle as soon as it spots its prey. The hapless prey is tightly grasped by SWELLOW’s clawed feet, preventing escape."
+278,wingull,Seagull Pokémon,water,flying,white,generation-iii,WINGULL has the habit of carrying prey and valuables in its beak and hiding them in all sorts of locations. This POKéMON rides the winds and flies as if it were skating across the sky.
+279,pelipper,Water Bird Pokémon,water,flying,yellow,generation-iii,PELIPPER is a flying transporter that carries small POKéMON and eggs inside its massive bill. This POKéMON builds its nest on steep cliffs facing the sea.
+280,ralts,Feeling Pokémon,psychic,fairy,white,generation-iii,"RALTS senses the emotions of people using the horns on its head. This POKéMON rarely appears before people. But when it does, it draws closer if it senses that the person has a positive disposition."
+281,kirlia,Emotion Pokémon,psychic,fairy,white,generation-iii,It is said that a KIRLIA that is exposed to the positive emotions of its TRAINER grows beautiful. This POKéMON controls psychokinetic powers with its highly developed brain.
+282,gardevoir,Embrace Pokémon,psychic,fairy,white,generation-iii,"GARDEVOIR has the ability to read the future. If it senses impending danger to its TRAINER, this POKéMON is said to unleash its psychokinetic energy at full power."
+283,surskit,Pond Skater Pokémon,bug,water,blue,generation-iii,"From the tips of its feet, SURSKIT secretes an oil that enables it to walk on water as if it were skating. This POKéMON feeds on microscopic organisms in ponds and lakes."
+284,masquerain,Eyeball Pokémon,bug,flying,blue,generation-iii,MASQUERAIN intimidates enemies with the eyelike patterns on its antennas. This POKéMON flaps its four wings to freely fly in any direction - even sideways and backwards - as if it were a helicopter.
+285,shroomish,Mushroom Pokémon,grass,,brown,generation-iii,"SHROOMISH live in damp soil in the dark depths of forests. They are often found keeping still under fallen leaves. This POKéMON feeds on compost that is made up of fallen, rotted leaves."
+286,breloom,Mushroom Pokémon,grass,fighting,green,generation-iii,"BRELOOM closes in on its foe with light and sprightly footwork, then throws punches with its stretchy arms. This POKéMON’s fighting technique puts boxers to shame."
+287,slakoth,Slacker Pokémon,normal,,brown,generation-iii,"SLAKOTH lolls around for over twenty hours every day. Because it moves so little, it does not need much food. This POKéMON’s sole daily meal consists of just three leaves."
+288,vigoroth,Wild Monkey Pokémon,normal,,white,generation-iii,VIGOROTH is always itching and agitated to go on a wild rampage. It simply can’t tolerate sitting still for even a minute. This POKéMON’s stress level rises if it can’t be moving constantly.
+289,slaking,Lazy Pokémon,normal,,brown,generation-iii,"SLAKING spends all day lying down and lolling about. It eats grass growing within its reach. If it eats all the grass it can reach, this POKéMON reluctantly moves to another spot."
+290,nincada,Trainee Pokémon,bug,ground,gray,generation-iii,NINCADA lives underground for many years in complete darkness. This POKéMON absorbs nutrients from the roots of trees. It stays motionless as it waits for evolution.
+291,ninjask,Ninja Pokémon,bug,flying,yellow,generation-iii,"NINJASK moves around at such a high speed that it cannot be seen, even while its crying can be clearly heard. For that reason, this POKéMON was long believed to be invisible."
+292,shedinja,Shed Pokémon,bug,ghost,brown,generation-iii,"SHEDINJA’s hard body doesn’t move - not even a twitch. In fact, its body appears to be merely a hollow shell. It is believed that this POKéMON will steal the spirit of anyone peering into its hollow body from its back."
+293,whismur,Whisper Pokémon,normal,,pink,generation-iii,"Normally, WHISMUR’s voice is very quiet - it is barely audible even if one is paying close attention. However, if this POKéMON senses danger, it starts crying at an earsplitting volume."
+294,loudred,Big Voice Pokémon,normal,,blue,generation-iii,LOUDRED’s bellowing can completely decimate a wood-frame house. It uses its voice to punish its foes. This POKéMON’s round ears serve as loudspeakers.
+295,exploud,Loud Noise Pokémon,normal,,blue,generation-iii,"EXPLOUD triggers earthquakes with the tremors it creates by bellowing. If this POKéMON violently inhales from the ports on its body, it’s a sign that it is preparing to let loose a huge bellow."
+296,makuhita,Guts Pokémon,fighting,,yellow,generation-iii,"MAKUHITA is tenacious - it will keep getting up and attacking its foe however many times it is knocked down. Every time it gets back up, this POKéMON stores more energy in its body for evolving."
+297,hariyama,Arm Thrust Pokémon,fighting,,brown,generation-iii,"HARIYAMA practices its straight-arm slaps in any number of locations. One hit of this POKéMON’s powerful, openhanded, straight-arm punches could snap a telephone pole in two."
+298,azurill,Polka Dot Pokémon,normal,fairy,blue,generation-iii,"AZURILL spins its tail as if it were a lasso, then hurls it far. The momentum of the throw sends its body flying, too. Using this unique action, one of these POKéMON managed to hurl itself a record 33 feet."
+299,nosepass,Compass Pokémon,rock,,gray,generation-iii,"NOSEPASS’s magnetic nose is always pointed to the north. If two of these POKéMON meet, they cannot turn their faces to each other when they are close because their magnetic noses repel one another."
+300,skitty,Kitten Pokémon,normal,,pink,generation-iii,SKITTY has the habit of becoming fascinated by moving objects and chasing them around. This POKéMON is known to chase after its own tail and become dizzy.
+301,delcatty,Prim Pokémon,normal,,purple,generation-iii,"DELCATTY prefers to live an unfettered existence in which it can do as it pleases at its own pace. Because this POKéMON eats and sleeps whenever it decides, its daily routines are completely random."
+302,sableye,Darkness Pokémon,dark,ghost,purple,generation-iii,"SABLEYE lead quiet lives deep inside caverns. They are feared, however, because these POKéMON are thought to steal the spirits of people when their eyes burn with a sinister glow in the darkness."
+303,mawile,Deceiver Pokémon,steel,fairy,black,generation-iii,"MAWHILE’s huge jaws are actually steel horns that have been transformed. Its docile-looking face serves to lull its foe into letting down its guard. When the foe least expects it, MAWHILE chomps it with its gaping jaws."
+304,aron,Iron Armor Pokémon,steel,rock,gray,generation-iii,"This POKéMON has a body of steel. To make its body, ARON feeds on iron ore that it digs from mountains. Occasionally, it causes major trouble by eating bridges and rails."
+305,lairon,Iron Armor Pokémon,steel,rock,gray,generation-iii,LAIRON tempers its steel body by drinking highly nutritious mineral springwater until it is bloated. This POKéMON makes its nest close to springs of delicious water.
+306,aggron,Iron Armor Pokémon,steel,rock,gray,generation-iii,AGGRON claims an entire mountain as its own territory. It mercilessly beats up anything that violates its environment. This POKéMON vigilantly patrols its territory at all times.
+307,meditite,Meditate Pokémon,fighting,psychic,blue,generation-iii,"MEDITITE undertakes rigorous mental training deep in the mountains. However, whenever it meditates, this POKéMON always loses its concentration and focus. As a result, its training never ends."
+308,medicham,Meditate Pokémon,fighting,psychic,red,generation-iii,"It is said that through meditation, MEDICHAM heightens energy inside its body and sharpens its sixth sense. This POKéMON hides its presence by merging itself with fields and mountains."
+309,electrike,Lightning Pokémon,electric,,green,generation-iii,ELECTRIKE stores electricity in its long body hair. This POKéMON stimulates its leg muscles with electric charges. These jolts of power give its legs explosive acceleration performance.
+310,manectric,Discharge Pokémon,electric,,yellow,generation-iii,"MANECTRIC is constantly discharging electricity from its mane. The sparks sometimes ignite forest fires. When it enters a battle, this POKéMON creates thunderclouds."
+311,plusle,Cheering Pokémon,electric,,yellow,generation-iii,"PLUSLE always acts as a cheerleader for its partners. Whenever a teammate puts out a good effort in battle, this POKéMON shorts out its body to create the crackling noises of sparks to show its joy."
+312,minun,Cheering Pokémon,electric,,yellow,generation-iii,MINUN is more concerned about cheering on its partners than its own safety. It shorts out the electricity in its body to create brilliant showers of sparks to cheer on its teammates.
+313,volbeat,Firefly Pokémon,bug,,gray,generation-iii,"With the arrival of night, VOLBEAT emits light from its tail. It communicates with others by adjusting the intensity and flashing of its light. This POKéMON is attracted by the sweet aroma of ILLUMISE."
+314,illumise,Firefly Pokémon,bug,,purple,generation-iii,"ILLUMISE attracts a swarm of VOLBEAT using a sweet fragrance. Once the VOLBEAT have gathered, this POKéMON leads the lit-up swarm in drawing geometric designs on the canvas of the night sky."
+315,roselia,Thorn Pokémon,grass,poison,green,generation-iii,ROSELIA shoots sharp thorns as projectiles at any opponent that tries to steal the flowers on its arms. The aroma of this POKéMON brings serenity to living things.
+316,gulpin,Stomach Pokémon,poison,,green,generation-iii,"Virtually all of GULPIN’s body is its stomach. As a result, it can swallow something its own size. This POKéMON’s stomach contains a special fluid that digests anything."
+317,swalot,Poison Bag Pokémon,poison,,purple,generation-iii,"When SWALOT spots prey, it spurts out a hideously toxic fluid from its pores and sprays the target. Once the prey has weakened, this POKéMON gulps it down whole with its cavernous mouth."
+318,carvanha,Savage Pokémon,water,dark,red,generation-iii,CARVANHA’s strongly developed jaws and its sharply pointed fangs pack the destructive power to rip out boat hulls. Many boats have been attacked and sunk by this POKéMON.
+319,sharpedo,Brutal Pokémon,water,dark,blue,generation-iii,"Nicknamed “the bully of the sea,” SHARPEDO is widely feared. Its cruel fangs grow back immediately if they snap off. Just one of these POKéMON can thoroughly tear apart a supertanker."
+320,wailmer,Ball Whale Pokémon,water,,blue,generation-iii,WAILMER’s nostrils are located above its eyes. This playful POKéMON loves to startle people by forcefully snorting out seawater it stores inside its body out of its nostrils.
+321,wailord,Float Whale Pokémon,water,,blue,generation-iii,"WAILORD is the largest of all identified POKéMON up to now. This giant POKéMON swims languorously in the vast open sea, eating massive amounts of food at once with its enormous mouth."
+322,numel,Numb Pokémon,fire,ground,yellow,generation-iii,"NUMEL is extremely dull witted - it doesn’t notice being hit. However, it can’t stand hunger for even a second. This POKéMON’s body is a seething cauldron of boiling magma."
+323,camerupt,Eruption Pokémon,fire,ground,red,generation-iii,"CAMERUPT has a volcano inside its body. Magma of 18,000 degrees F courses through its body. Occasionally, the humps on this POKéMON’s back erupt, spewing the superheated magma."
+324,torkoal,Coal Pokémon,fire,,brown,generation-iii,"TORKOAL digs through mountains in search of coal. If it finds some, it fills hollow spaces on its shell with the coal and burns it. If it is attacked, this POKéMON spouts thick black smoke to beat a retreat."
+325,spoink,Bounce Pokémon,psychic,,black,generation-iii,"SPOINK bounces around on its tail. The shock of its bouncing makes its heart pump. As a result, this POKéMON cannot afford to stop bouncing - if it stops, its heart will stop."
+326,grumpig,Manipulate Pokémon,psychic,,purple,generation-iii,"GRUMPIG uses the black pearls on its body to amplify its psychic power waves for gaining total control over its foe. When this POKéMON uses its special power, its snorting breath grows labored."
+327,spinda,Spot Panda Pokémon,normal,,brown,generation-iii,"All the SPINDA that exist in the world are said to have utterly unique spot patterns. The shaky, tottering steps of this POKéMON give it the appearance of dancing."
+328,trapinch,Ant Pit Pokémon,ground,,brown,generation-iii,"TRAPINCH’s nest is a sloped, bowl-like pit dug in sand. This POKéMON patiently waits for prey to tumble down the pit. Its giant jaws have enough strength to crush even boulders."
+329,vibrava,Vibration Pokémon,ground,dragon,green,generation-iii,"To make prey faint, VIBRAVA generates ultrasonic waves by vigorously making its two wings vibrate. This POKéMON’s ultrasonic waves are so powerful, they can bring on headaches in people."
+330,flygon,Mystic Pokémon,ground,dragon,green,generation-iii,"FLYGON is nicknamed “the elemental spirit of the desert.” Because its flapping wings whip up a cloud of sand, this POKéMON is always enveloped in a sandstorm while flying."
+331,cacnea,Cactus Pokémon,grass,,green,generation-iii,"CACNEA lives in arid locations such as deserts. It releases a strong aroma from its flower to attract prey. When prey comes near, this POKéMON shoots sharp thorns from its body to bring the victim down."
+332,cacturne,Scarecrow Pokémon,grass,dark,green,generation-iii,"During the daytime, CACTURNE remains unmoving so that it does not lose any moisture to the harsh desert sun. This POKéMON becomes active at night when the temperature drops."
+333,swablu,Cotton Bird Pokémon,normal,flying,blue,generation-iii,SWABLU has light and fluffy wings that are like cottony clouds. This POKéMON is not frightened of people. It lands on the heads of people and sits there like a cotton-fluff hat.
+334,altaria,Humming Pokémon,dragon,flying,blue,generation-iii,"ALTARIA dances and wheels through the sky among billowing, cotton-like clouds. By singing melodies in its crystal-clear voice, this POKéMON makes its listeners experience dreamy wonderment."
+335,zangoose,Cat Ferret Pokémon,normal,,white,generation-iii,Memories of battling its arch-rival SEVIPER are etched into every cell of ZANGOOSE’s body. This POKéMON adroitly dodges attacks with incredible agility.
+336,seviper,Fang Snake Pokémon,poison,,black,generation-iii,SEVIPER shares a generations-long feud with ZANGOOSE. The scars on its body are evidence of vicious battles. This POKéMON attacks using its sword- edged tail.
+337,lunatone,Meteorite Pokémon,rock,psychic,yellow,generation-iii,"LUNATONE was discovered at a location where a meteorite fell. As a result, some people theorize that this POKéMON came from space. However, no one has been able to prove this theory so far."
+338,solrock,Meteorite Pokémon,rock,psychic,red,generation-iii,"SOLROCK is a new species of POKéMON that is said to have fallen from space. It floats in air and moves silently. In battle, this POKéMON releases intensely bright light."
+339,barboach,Whiskers Pokémon,water,ground,gray,generation-iii,"BARBOACH’s sensitive whiskers serve as a superb radar system. This POKéMON hides in mud, leaving only its two whiskers exposed while it waits for prey to come along."
+340,whiscash,Whiskers Pokémon,water,ground,blue,generation-iii,"WHISCASH is extremely territorial. Just one of these POKéMON will claim a large pond as its exclusive territory. If a foe approaches it, it thrashes about and triggers a massive earthquake."
+341,corphish,Ruffian Pokémon,water,,red,generation-iii,CORPHISH were originally foreign POKéMON that were imported as pets. They eventually turned up in the wild. This POKéMON is very hardy and has greatly increased its population.
+342,crawdaunt,Rogue Pokémon,water,dark,red,generation-iii,"CRAWDAUNT has an extremely violent nature that compels it to challenge other living things to battle. Other life-forms refuse to live in ponds inhabited by this POKéMON, making them desolate places."
+343,baltoy,Clay Doll Pokémon,ground,psychic,brown,generation-iii,BALTOY moves while spinning around on its one foot. Primitive wall paintings depicting this POKéMON living among people were discovered in some ancient ruins.
+344,claydol,Clay Doll Pokémon,ground,psychic,black,generation-iii,CLAYDOL are said to be dolls of mud made by primitive humans and brought to life by exposure to a mysterious ray. This POKéMON moves about while levitating.
+345,lileep,Sea Lily Pokémon,rock,grass,purple,generation-iii,LILEEP became extinct approximately a hundred million years ago. This ancient POKéMON attaches itself to a rock on the seafloor and catches approaching prey using tentacles shaped like flower petals.
+346,cradily,Barnacle Pokémon,rock,grass,green,generation-iii,CRADILY roams around the ocean floor in search of food. This POKéMON freely extends its tree trunk-like neck and captures unwary prey using its eight tentacles.
+347,anorith,Old Shrimp Pokémon,rock,bug,gray,generation-iii,ANORITH was regenerated from a prehistoric fossil. This primitive POKéMON once lived in warm seas. It grips its prey firmly between its two large claws.
+348,armaldo,Plate Pokémon,rock,bug,gray,generation-iii,ARMALDO’s tough armor makes all attacks bounce off. This POKéMON’s two enormous claws can be freely extended or contracted. They have the power to punch right through a steel slab.
+349,feebas,Fish Pokémon,water,,brown,generation-iii,"FEEBAS’s fins are ragged and tattered from the start of its life. Because of its shoddy appearance, this POKéMON is largely ignored. It is capable of living in both the sea and in rivers."
+350,milotic,Tender Pokémon,water,,pink,generation-iii,MILOTIC is said to be the most beautiful of all the POKéMON. It has the power to becalm such emotions as anger and hostility to quell bitter feuding.
+351,castform,Weather Pokémon,normal,,gray,generation-iii,CASTFORM’s appearance changes with the weather. This POKéMON gained the ability to use the vast power of nature to protect its tiny body.
+352,kecleon,Color Swap Pokémon,normal,,green,generation-iii,KECLEON is capable of changing its body colors at will to blend in with its surroundings. There is one exception - this POKéMON can’t change the zigzag pattern on its belly.
+353,shuppet,Puppet Pokémon,ghost,,black,generation-iii,"SHUPPET is attracted by feelings of jealousy and vindictiveness. If someone develops strong feelings of vengeance, this POKéMON will appear in a swarm and line up beneath the eaves of that person’s home."
+354,banette,Marionette Pokémon,ghost,,black,generation-iii,BANETTE generates energy for laying strong curses by sticking pins into its own body. This POKéMON was originally a pitiful plush doll that was thrown away.
+355,duskull,Requiem Pokémon,ghost,,black,generation-iii,"DUSKULL can pass through any wall no matter how thick it may be. Once this POKéMON chooses a target, it will doggedly pursue the intended victim until the break of dawn."
+356,dusclops,Beckon Pokémon,ghost,,black,generation-iii,"DUSCLOPS’s body is completely hollow - there is nothing at all inside. It is said that its body is like a black hole. This POKéMON will absorb anything into its body, but nothing will ever come back out."
+357,tropius,Fruit Pokémon,grass,flying,green,generation-iii,"The bunches of fruit around TROPIUS’s neck are very popular with children. This POKéMON loves fruit, and eats it continuously. Apparently, its love for fruit resulted in its own outgrowth of fruit."
+358,chimecho,Wind Chime Pokémon,psychic,,blue,generation-iii,"CHIMECHO makes its cries echo inside its hollow body. When this POKéMON becomes enraged, its cries result in ultrasonic waves that have the power to knock foes flying."
+359,absol,Disaster Pokémon,dark,,white,generation-iii,"Every time ABSOL appears before people, it is followed by a disaster such as an earthquake or a tidal wave. As a result, it came to be known as the disaster POKéMON."
+360,wynaut,Bright Pokémon,psychic,,blue,generation-iii,"WYNAUT can always be seen with a big, happy smile on its face. Look at its tail to determine if it is angry. When angered, this POKéMON will be slapping the ground with its tail."
+361,snorunt,Snow Hat Pokémon,ice,,gray,generation-iii,"SNORUNT live in regions with heavy snowfall. In seasons without snow, such as spring and summer, this POKéMON steals away to live quietly among stalactites and stalagmites deep in caverns."
+362,glalie,Face Pokémon,ice,,gray,generation-iii,"GLALIE has a body made of rock, which it hardens with an armor of ice. This POKéMON has the ability to freeze moisture in the atmosphere into any shape it desires."
+363,spheal,Clap Pokémon,ice,water,blue,generation-iii,"SPHEAL is much faster rolling than walking to get around. When groups of this POKéMON eat, they all clap at once to show their pleasure. Because of this, their mealtimes are noisy."
+364,sealeo,Ball Roll Pokémon,ice,water,blue,generation-iii,SEALEO has the habit of always juggling on the tip of its nose anything it sees for the first time. This POKéMON occasionally entertains itself by balancing and rolling a SPHEAL on its nose.
+365,walrein,Ice Break Pokémon,ice,water,blue,generation-iii,WALREIN’s two massively developed tusks can totally shatter blocks of ice weighing ten tons with one blow. This POKéMON’s thick coat of blubber insulates it from subzero temperatures.
+366,clamperl,Bivalve Pokémon,water,,blue,generation-iii,CLAMPERL’s sturdy shell is not only good for protection - it is also used for clamping and catching prey. A fully grown CLAMPERL’s shell will be scored with nicks and scratches all over.
+367,huntail,Deep Sea Pokémon,water,,blue,generation-iii,HUNTAIL’s presence went unnoticed by people for a long time because it lives at extreme depths in the sea. This POKéMON’s eyes can see clearly even in the murky dark depths of the ocean.
+368,gorebyss,South Sea Pokémon,water,,pink,generation-iii,"GOREBYSS lives in the southern seas at extreme depths. Its body is built to withstand the enormous pressure of water at incredible depths. Because of this, this POKéMON’s body is unharmed by ordinary attacks."
+369,relicanth,Longevity Pokémon,water,rock,gray,generation-iii,RELICANTH is a POKéMON species that existed for a hundred million years without ever changing its form. This ancient POKéMON feeds on microscopic organisms with its toothless mouth.
+370,luvdisc,Rendezvous Pokémon,water,,pink,generation-iii,LUVDISC live in shallow seas in the tropics. This heart-shaped POKéMON earned its name by swimming after loving couples it spotted in the ocean’s waves.
+371,bagon,Rock Head Pokémon,dragon,,blue,generation-iii,"BAGON has a dream of one day soaring in the sky. In doomed efforts to fly, this POKéMON hurls itself off cliffs. As a result of its dives, its head has grown tough and as hard as tempered steel."
+372,shelgon,Endurance Pokémon,dragon,,white,generation-iii,"Inside SHELGON’s armor-like shell, cells are in the midst of transformation to create an entirely new body. This POKéMON’s shell is extremely heavy, making its movements sluggish."
+373,salamence,Dragon Pokémon,dragon,flying,blue,generation-iii,"SALAMENCE came about as a result of a strong, long-held dream of growing wings. It is said that this powerful desire triggered a sudden mutation in this POKéMON’s cells, causing it to sprout its magnificent wings."
+374,beldum,Iron Ball Pokémon,steel,psychic,blue,generation-iii,"Instead of blood, a powerful magnetic force courses throughout BELDUM’s body. This POKéMON communicates with others by sending controlled pulses of magnetism."
+375,metang,Iron Claw Pokémon,steel,psychic,blue,generation-iii,"When two BELDUM fuse together, METANG is formed. The brains of the BELDUM are joined by a magnetic nervous system. By linking its brains magnetically, this POKéMON generates strong psychokinetic power."
+376,metagross,Iron Leg Pokémon,steel,psychic,blue,generation-iii,"METAGROSS has four brains in total. Combined, the four brains can breeze through difficult calculations faster than a supercomputer. This POKéMON can float in the air by tucking in its four legs."
+377,regirock,Rock Peak Pokémon,rock,,brown,generation-iii,"REGIROCK was sealed away by people long ago. If this POKéMON’s body is damaged in battle, it is said to seek out suitable rocks on its own to repair itself."
+378,regice,Iceberg Pokémon,ice,,blue,generation-iii,"REGICE’s body was made during an ice age. The deep-frozen body can’t be melted, even by fire. This POKéMON controls frigid air of minus 328 degrees F."
+379,registeel,Iron Pokémon,steel,,gray,generation-iii,REGISTEEL has a body that is harder than any kind of metal. Its body is apparently hollow. No one has any idea what this POKéMON eats.
+380,latias,Eon Pokémon,dragon,psychic,red,generation-iii,"LATIAS is highly sensitive to the emotions of people. If it senses any hostility, this POKéMON ruffles the feathers all over its body and cries shrilly to intimidate the foe."
+381,latios,Eon Pokémon,dragon,psychic,blue,generation-iii,LATIOS has the ability to make its foe see an image of what it has seen or imagines in its head. This POKéMON is intelligent and understands human speech.
+382,kyogre,Sea Basin Pokémon,water,,blue,generation-iii,KYOGRE has the power to create massive rain clouds that cover the entire sky and bring about torrential downpours. This POKéMON saved people who were suffering from droughts.
+383,groudon,Continent Pokémon,ground,,red,generation-iii,GROUDON has long been described in mythology as the POKéMON that raised lands and expanded continents. This POKéMON took to sleep after a cataclysmic battle with KYOGRE.
+384,rayquaza,Sky High Pokémon,dragon,flying,green,generation-iii,"RAYQUAZA lived for hundreds of millions of years in the earth’s ozone layer, never descending to the ground. This POKéMON appears to feed on water and particles in the atmosphere."
+385,jirachi,Wish Pokémon,steel,psychic,yellow,generation-iii,"A legend states that JIRACHI will make true any wish that is written on notes attached to its head when it awakens. If this POKéMON senses danger, it will fight without awakening."
+386,deoxys,DNA Pokémon,,,red,generation-iii,The DNA of a space virus underwent a sudden mutation upon exposure to a laser beam and resulted in DEOXYS. The crystalline organ on this POKéMON’s chest appears to be its brain.
+387,turtwig,Tiny Leaf Pokémon,grass,,green,generation-iv,"Made from soil, the shell on its back hardens when it drinks water. It lives along lakes."
+388,grotle,Grove Pokémon,grass,,green,generation-iv,"It lives along water in forests. In the daytime, it leaves the forest to sunbathe its treed shell."
+389,torterra,Continent Pokémon,grass,ground,green,generation-iv,Small Pokémon occasionally gather on its unmoving back to begin building their nests.
+390,chimchar,Chimp Pokémon,fire,,brown,generation-iv,It agilely scales sheer cliffs to live atop craggy mountains. Its fire is put out when it sleeps.
+391,monferno,Playful Pokémon,fire,fighting,brown,generation-iv,"To intimidate attackers, it stretches the fire on its tail to make itself appear bigger."
+392,infernape,Flame Pokémon,fire,fighting,brown,generation-iv,It uses a special kind of martial arts involving all its limbs. Its fire never goes out.
+393,piplup,Penguin Pokémon,water,,blue,generation-iv,"Because it is very proud, it hates accepting food from people. Its thick down guards it from cold."
+394,prinplup,Penguin Pokémon,water,,blue,generation-iv,"It lives alone, away from others. Apparently, every one of them believes it is the most important."
+395,empoleon,Emperor Pokémon,water,steel,blue,generation-iv,The three horns that extend from its beak attest to its power. The leader has the biggest horns.
+396,starly,Starling Pokémon,normal,flying,brown,generation-iv,"They flock in great numbers. Though small, they flap their wings with great power."
+397,staravia,Starling Pokémon,normal,flying,brown,generation-iv,It flies around forests and fields in search of bug Pokémon. It stays within a huge flock.
+398,staraptor,Predator Pokémon,normal,flying,brown,generation-iv,It has a savage nature. It will courageously challenge foes that are much larger.
+399,bidoof,Plump Mouse Pokémon,normal,,brown,generation-iv,"With nerves of steel, nothing can perturb it. It is more agile and active than it appears."
+400,bibarel,Beaver Pokémon,normal,water,brown,generation-iv,It makes its nest by damming streams with bark and mud. It is known as an industrious worker.
+401,kricketot,Cricket Pokémon,bug,,red,generation-iv,"It shakes its head back to front, causing its antennae to hit each other and sound like a xylophone."
+402,kricketune,Cricket Pokémon,bug,,red,generation-iv,It crosses its knifelike arms in front of its chest when it cries. It can compose melodies ad lib.
+403,shinx,Flash Pokémon,electric,,blue,generation-iv,All of its fur dazzles if danger is sensed. It flees while the foe is momentarily blinded.
+404,luxio,Spark Pokémon,electric,,blue,generation-iv,Its claws loose electricity with enough amperage to cause fainting. They live in small groups.
+405,luxray,Gleam Eyes Pokémon,electric,,blue,generation-iv,It has eyes that can see through anything. It spots and captures prey hiding behind objects.
+406,budew,Bud Pokémon,grass,poison,green,generation-iv,"Over the winter, it closes its bud and endures the cold. In spring, the bud opens and releases pollen."
+407,roserade,Bouquet Pokémon,grass,poison,green,generation-iv,"It attracts prey with a sweet aroma, then downs it with thorny whips hidden in its arms."
+408,cranidos,Head Butt Pokémon,rock,,blue,generation-iv,It lived in jungles around 100 million years ago. Its skull is as hard as iron.
+409,rampardos,Head Butt Pokémon,rock,,blue,generation-iv,Its powerful head butt has enough power to shatter even the most durable things upon impact.
+410,shieldon,Shield Pokémon,rock,steel,gray,generation-iv,A Pokémon that lived in jungles around 100 million years ago. Its facial hide is extremely hard.
+411,bastiodon,Shield Pokémon,rock,steel,gray,generation-iv,Any frontal attack is repulsed. It is a docile Pokémon that feeds on grass and berries.
+412,burmy,Bagworm Pokémon,bug,,green,generation-iv,"To shelter itself from cold, wintry winds, it covers itself with a cloak made of twigs and leaves."
+413,wormadam,Bagworm Pokémon,,,green,generation-iv,"When BURMY evolved, its cloak became a part of this Pokémon’s body. The cloak is never shed."
+414,mothim,Moth Pokémon,bug,flying,yellow,generation-iv,It loves the honey of flowers and steals honey collected by COMBEE.
+415,combee,Tiny Bee Pokémon,bug,flying,yellow,generation-iv,A Pokémon formed by three others. It busily carries sweet floral honey to VESPIQUEN.
+416,vespiquen,Beehive Pokémon,bug,flying,yellow,generation-iv,Its abdomen is a honeycomb for grubs. It raises its grubs on honey collected by COMBEE.
+417,pachirisu,EleSquirrel Pokémon,electric,,white,generation-iv,It makes fur balls that crackle with static electricity. It stores them with berries in tree holes.
+418,buizel,Sea Weasel Pokémon,water,,brown,generation-iv,It has a flotation sac that is like an inflatable collar. It floats on water with its head out.
+419,floatzel,Sea Weasel Pokémon,water,,brown,generation-iv,It floats using its well-developed flotation sac. It assists in the rescues of drowning people.
+420,cherubi,Cherry Pokémon,grass,,pink,generation-iv,"The small ball holds the nutrients needed for evolution. Apparently, it is very sweet and tasty."
+421,cherrim,Blossom Pokémon,grass,,purple,generation-iv,It blooms during times of strong sunlight. It tries to make up for everything it endured as a bud.
+422,shellos,Sea Slug Pokémon,water,,purple,generation-iv,"Its colors and shapes differ from region to region. In the Sinnoh region, two types are confirmed."
+423,gastrodon,Sea Slug Pokémon,water,ground,purple,generation-iv,"It has a pliable body without any bones. If any part of its body is torn off, it grows right back."
+424,ambipom,Long Tail Pokémon,normal,,purple,generation-iv,"To eat, it deftly shucks nuts with its two tails. It rarely uses its arms now."
+425,drifloon,Balloon Pokémon,ghost,flying,purple,generation-iv,"A Pokémon formed by the spirits of people and Pokémon. It loves damp, humid seasons."
+426,drifblim,Blimp Pokémon,ghost,flying,purple,generation-iv,"It’s drowzy in daytime, but flies off in the evening in big groups. No one knows where they go."
+427,buneary,Rabbit Pokémon,normal,,brown,generation-iv,It slams foes by sharply uncoiling its rolled ears. It stings enough to make a grown-up cry in pain.
+428,lopunny,Rabbit Pokémon,normal,,brown,generation-iv,An extremely cautious Pokémon. It cloaks its body with its fluffy ear fur when it senses danger.
+429,mismagius,Magical Pokémon,ghost,,purple,generation-iv,Its cries sound like incantations. Those hearing it are tormented by headaches and hallucinations.
+430,honchkrow,Big Boss Pokémon,dark,flying,black,generation-iv,"Becoming active at night, it is known to swarm with numerous MURKROW in tow."
+431,glameow,Catty Pokémon,normal,,gray,generation-iv,It claws if displeased and purrs when affectionate. Its fickleness is very popular among some.
+432,purugly,Tiger Cat Pokémon,normal,,gray,generation-iv,It is a brazen brute that barges its way into another Pokémon’s nest and claims it as its own.
+433,chingling,Bell Pokémon,psychic,,yellow,generation-iv,It emits cries by agitating an orb at the back of its throat. It moves with flouncing hops.
+434,stunky,Skunk Pokémon,poison,dark,purple,generation-iv,It protects itself by spraying a noxious fluid from its rear. The stench lingers for 24 hours.
+435,skuntank,Skunk Pokémon,poison,dark,purple,generation-iv,It sprays a vile-smelling fluid from the tip of its tail to attack. Its range is over 160 feet.
+436,bronzor,Bronze Pokémon,steel,psychic,green,generation-iv,Implements shaped like it were discovered in ancient tombs. It is unknown if they are related.
+437,bronzong,Bronze Bell Pokémon,steel,psychic,green,generation-iv,"One caused a news sensation when it was dug up at a construction site after a 2,000-year sleep."
+438,bonsly,Bonsai Pokémon,rock,,brown,generation-iv,It looks as if it is always crying. It is actually adjusting its body’s fluid levels by eliminating excess.
+439,mime-jr,Mime Pokémon,psychic,fairy,pink,generation-iv,"It habitually mimics foes. Once mimicked, the foe cannot take its eyes off this Pokémon."
+440,happiny,Playhouse Pokémon,normal,,pink,generation-iv,It loves round white things. It carries an egg-shaped rock in imitation of CHANSEY.
+441,chatot,Music Note Pokémon,normal,flying,black,generation-iv,"It can learn and speak human words. If they gather, they all learn the same saying."
+442,spiritomb,Forbidden Pokémon,ghost,dark,purple,generation-iv,A Pokémon that was formed by 108 spirits. It is bound to a fissure in an odd keystone.
+443,gible,Land Shark Pokémon,dragon,ground,blue,generation-iv,"It nests in small, horizontal holes in cave walls. It pounces to catch prey that stray too close."
+444,gabite,Cave Pokémon,dragon,ground,blue,generation-iv,There is a long-held belief that medicine made from its scales will heal even incurable illnesses.
+445,garchomp,Mach Pokémon,dragon,ground,blue,generation-iv,"When it folds up its body and extends its wings, it looks like a jet plane. It flies at sonic speed."
+446,munchlax,Big Eater Pokémon,normal,,black,generation-iv,"It wolfs down its weight in food once a day, swallowing food whole with almost no chewing."
+447,riolu,Emanation Pokémon,fighting,,blue,generation-iv,The aura that emanates from its body intensifies to alert others if it is afraid or sad.
+448,lucario,Aura Pokémon,fighting,steel,blue,generation-iv,It has the ability to sense the auras of all things. It understands human speech.
+449,hippopotas,Hippo Pokémon,ground,,brown,generation-iv,"It lives in arid places. Instead of perspiration, it expels grainy sand from its body."
+450,hippowdon,Heavyweight Pokémon,ground,,brown,generation-iv,It blasts internally stored sand from ports on its body to create a towering twister for attack.
+451,skorupi,Scorpion Pokémon,poison,bug,purple,generation-iv,It grips prey with its tail claws and injects poison. It tenaciously hangs on until the poison takes.
+452,drapion,Ogre Scorpion Pokémon,poison,dark,purple,generation-iv,It has the power in its clawed arms to make scrap of a car. The tips of its claws release poison.
+453,croagunk,Toxic Mouth Pokémon,poison,fighting,blue,generation-iv,Its cheeks hold poison sacs. It tries to catch foes off guard to jab them with toxic fingers.
+454,toxicroak,Toxic Mouth Pokémon,poison,fighting,blue,generation-iv,Its knuckle claws secrete a toxin so vile that even a scratch could prove fatal.
+455,carnivine,Bug Catcher Pokémon,grass,,green,generation-iv,"It attracts prey with its sweet- smelling saliva, then chomps down. It takes a whole day to eat prey."
+456,finneon,Wing Fish Pokémon,water,,blue,generation-iv,"After long exposure to sunlight, the patterns on its tail fins shine vividly when darkness arrives."
+457,lumineon,Neon Pokémon,water,,blue,generation-iv,It lives on the deep-sea floor. It attracts prey by flashing the patterns on its four tail fins.
+458,mantyke,Kite Pokémon,water,flying,blue,generation-iv,A friendly Pokémon that captures the subtle flows of seawater using its two antennae.
+459,snover,Frost Tree Pokémon,grass,ice,white,generation-iv,"It lives on snowy mountains. Having had little contact with humans, it is boldly inquisitive."
+460,abomasnow,Frost Tree Pokémon,grass,ice,white,generation-iv,It whips up blizzards in mountains that are always buried in snow. It is the abominable snowman.
+461,weavile,Sharp Claw Pokémon,dark,ice,black,generation-iv,"They live in cold regions, forming groups of four or five that hunt prey with impressive coordination."
+462,magnezone,Magnet Area Pokémon,electric,steel,gray,generation-iv,It evolved from exposure to a special magnetic field. Three units generate magnetism.
+463,lickilicky,Licking Pokémon,normal,,pink,generation-iv,It wraps things with its extensible tongue. Getting too close to it will leave you soaked with drool.
+464,rhyperior,Drill Pokémon,ground,rock,gray,generation-iv,It puts rocks in holes in its palms and uses its muscles to shoot them. GEODUDE are shot at rare times.
+465,tangrowth,Vine Pokémon,grass,,blue,generation-iv,It ensnares prey by extending arms made of vines. Losing arms to predators does not trouble it.
+466,electivire,Thunderbolt Pokémon,electric,,yellow,generation-iv,"It pushes the tips of its two tails against the foe, then lets loose with over 20,000 volts of power."
+467,magmortar,Blast Pokémon,fire,,red,generation-iv,"It blasts fireballs of over 3,600 degrees F from the ends of its arms. It lives in volcanic craters."
+468,togekiss,Jubilee Pokémon,fairy,flying,white,generation-iv,It will never appear where there is strife. Its sightings have become rare recently.
+469,yanmega,Ogre Darner Pokémon,bug,flying,green,generation-iv,"By churning its wings, it creates shock waves that inflict critical internal injuries to foes."
+470,leafeon,Verdant Pokémon,grass,,green,generation-iv,"Just like a plant, it uses photosynthesis. As a result, it is always enveloped in clear air."
+471,glaceon,Fresh Snow Pokémon,ice,,blue,generation-iv,"As a protective technique, it can completely freeze its fur to make its hairs stand like needles."
+472,gliscor,Fang Scorpion Pokémon,ground,flying,purple,generation-iv,"It observes prey while hanging inverted from branches. When the chance presents itself, it swoops!"
+473,mamoswine,Twin Tusk Pokémon,ice,ground,brown,generation-iv,Its impressive tusks are made of ice. The population thinned when it turned warm after the ice age.
+474,porygon-z,Virtual Pokémon,normal,,red,generation-iv,"Additional software was installed to make it a better Pokémon. It began acting oddly, however."
+475,gallade,Blade Pokémon,psychic,fighting,white,generation-iv,"A master of courtesy and swordsmanship, it fights using extending swords on its elbows."
+476,probopass,Compass Pokémon,rock,steel,gray,generation-iv,It exudes strong magnetism from all over. It controls three small units called Mini-Noses.
+477,dusknoir,Gripper Pokémon,ghost,,black,generation-iv,The antenna on its head captures radio waves from the world of spirits that command it to take people there.
+478,froslass,Snow Land Pokémon,ice,ghost,white,generation-iv,It freezes foes with an icy breath nearly -60 degrees F. What seems to be its body is actually hollow.
+479,rotom,Plasma Pokémon,electric,ghost,red,generation-iv,Its body is composed of plasma. It is known to infiltrate electronic devices and wreak havoc.
+480,uxie,Knowledge Pokémon,psychic,,yellow,generation-iv,Known as “The Being of Knowledge.” It is said that it can wipe out the memory of those who see its eyes.
+481,mesprit,Emotion Pokémon,psychic,,pink,generation-iv,"Known as “The Being of Emotion.” It taught humans the nobility of sorrow, pain, and joy."
+482,azelf,Willpower Pokémon,psychic,,blue,generation-iv,Known as “The Being of Willpower.” It sleeps at the bottom of a lake to keep the world in balance.
+483,dialga,Temporal Pokémon,steel,dragon,white,generation-iv,It has the power to control time. It appears in Sinnoh-region myths as an ancient deity.
+484,palkia,Spatial Pokémon,water,dragon,purple,generation-iv,It has the ability to distort space. It is described as a deity in Sinnoh-region mythology.
+485,heatran,Lava Dome Pokémon,fire,steel,brown,generation-iv,It dwells in volcanic caves. It digs in with its cross-shaped feet to crawl on ceilings and walls.
+486,regigigas,Colossal Pokémon,normal,,white,generation-iv,There is an enduring legend that states this Pokémon towed continents with ropes.
+487,giratina,Renegade Pokémon,,,black,generation-iv,A Pokémon that is said to live in a world on the reverse side of ours. It appears in an ancient cemetery.
+488,cresselia,Lunar Pokémon,psychic,,yellow,generation-iv,Shiny particles are released from its wings like a veil. It is said to represent the crescent moon.
+489,phione,Sea Drifter Pokémon,water,,blue,generation-iv,A Pokémon that lives in warm seas. It inflates the flotation sac on its head to drift and search for food.
+490,manaphy,Seafaring Pokémon,water,,blue,generation-iv,"Born on a cold seafloor, it will swim great distances to return to its birthplace."
+491,darkrai,Pitch-Black Pokémon,dark,,black,generation-iv,It can lull people to sleep and make them dream. It is active during nights of the new moon.
+492,shaymin,Gratitude Pokémon,,,green,generation-iv,It lives in flower patches and avoids detection by curling up to look like a flowering plant.
+493,arceus,Alpha Pokémon,normal,,white,generation-iv,"It is described in mythology as the Pokémon that shaped the universe with its 1,000 arms."
+494,victini,Victory Pokémon,psychic,fire,yellow,generation-v,"This Pokémon brings victory. It is said that Trainers with Victini always win, regardless of the type of encounter."
+495,snivy,Grass Snake Pokémon,grass,,green,generation-v,It is very intelligent and calm. Being exposed to lots of sunlight makes its movements swifter.
+496,servine,Grass Snake Pokémon,grass,,green,generation-v,"It moves along the ground as if sliding. Its swift movements befuddle its foes, and it then attacks with a vine whip."
+497,serperior,Regal Pokémon,grass,,green,generation-v,It can stop its opponents’ movements with just a glare. It takes in solar energy and boosts it internally.
+498,tepig,Fire Pig Pokémon,fire,,red,generation-v,It can deftly dodge its foe’s attacks while shooting fireballs from its nose. It roasts berries before it eats them.
+499,pignite,Fire Pig Pokémon,fire,fighting,red,generation-v,"When its internal fire flares up, its movements grow sharper and faster. When in trouble, it emits smoke."
+500,emboar,Mega Fire Pig Pokémon,fire,fighting,red,generation-v,It can throw a fire punch by setting its fists on fire with its fiery chin. It cares deeply about its friends.
+501,oshawott,Sea Otter Pokémon,water,,blue,generation-v,"It fights using the scalchop on its stomach. In response to an attack, it retaliates immediately by slashing."
+502,dewott,Discipline Pokémon,water,,blue,generation-v,Strict training is how it learns its flowing double-scalchop technique.
+503,samurott,Formidable Pokémon,water,,blue,generation-v,One swing of the sword incorporated in its armor can fell an opponent. A simple glare from one of them quiets everybody.
+504,patrat,Scout Pokémon,normal,,brown,generation-v,"Using food stored in cheek pouches, they can keep watch for days. They use their tails to communicate with others."
+505,watchog,Lookout Pokémon,normal,,brown,generation-v,"When they see an enemy, their tails stand high, and they spit the seeds of berries stored in their cheek pouches."
+506,lillipup,Puppy Pokémon,normal,,brown,generation-v,"It faces strong opponents with great courage. But, when at a disadvantage in a fight, this intelligent Pokémon flees."
+507,herdier,Loyal Dog Pokémon,normal,,gray,generation-v,"It has black, cape-like fur that is very hard and decreases the amount of damage it receives."
+508,stoutland,Big-Hearted Pokémon,normal,,gray,generation-v,It rescues people stranded by blizzards in the mountains. Its shaggy fur shields it from the cold.
+509,purrloin,Devious Pokémon,dark,,purple,generation-v,"They steal from people for fun, but their victims can’t help but forgive them. Their deceptively cute act is perfect."
+510,liepard,Cruel Pokémon,dark,,purple,generation-v,These Pokémon vanish and appear unexpectedly. Many Trainers are drawn to their beautiful form and fur.
+511,pansage,Grass Monkey Pokémon,grass,,green,generation-v,This Pokémon dwells deep in the forest. Eating a leaf from its head whisks weariness away as if by magic.
+512,simisage,Thorn Monkey Pokémon,grass,,green,generation-v,"Ill tempered, it fights by swinging its barbed tail around wildly. The leaf growing on its head is very bitter."
+513,pansear,High Temp Pokémon,fire,,red,generation-v,"When it is angered, the temperature of its head tuft reaches 600° F. It uses its tuft to roast berries."
+514,simisear,Ember Pokémon,fire,,red,generation-v,It loves sweets because they become energy for the fire burning inside its body.
+515,panpour,Spray Pokémon,water,,blue,generation-v,The water stored inside the tuft on its head is full of nutrients. Plants that receive its water grow large.
+516,simipour,Geyser Pokémon,water,,blue,generation-v,"The tuft on its head holds water. When the level runs low, it replenishes the tuft by siphoning up water with its tail."
+517,munna,Dream Eater Pokémon,psychic,,pink,generation-v,Munna always float in the air. People whose dreams are eaten by them forget what the dreams had been about.
+518,musharna,Drowsing Pokémon,psychic,,pink,generation-v,The mist emanating from their foreheads is packed with the dreams of people and Pokémon.
+519,pidove,Tiny Pigeon Pokémon,normal,flying,gray,generation-v,"Each follows its Trainer’s orders as best it can, but they sometimes fail to understand complicated commands."
+520,tranquill,Wild Pigeon Pokémon,normal,flying,gray,generation-v,It can return to its Trainer’s location regardless of the distance separating them.
+521,unfezant,Proud Pokémon,normal,flying,gray,generation-v,Males swing their head plumage to threaten opponents. The females’ flying abilities surpass those of the males.
+522,blitzle,Electrified Pokémon,electric,,black,generation-v,Its mane shines when it discharges electricity. They use their flashing manes to communicate with one another.
+523,zebstrika,Thunderbolt Pokémon,electric,,black,generation-v,"They have lightning-like movements. When Zebstrika run at full speed, the sound of thunder reverberates."
+524,roggenrola,Mantle Pokémon,rock,,blue,generation-v,"Its ear is hexagonal in shape. Compressed underground, its body is as hard as steel."
+525,boldore,Ore Pokémon,rock,,blue,generation-v,"When it overflows with power, the orange crystal on its body glows. It looks for underground water in caves."
+526,gigalith,Compressed Pokémon,rock,,blue,generation-v,Compressing the energy from its internal core lets it fire off an attack capable of blowing away a mountain.
+527,woobat,Bat Pokémon,psychic,flying,blue,generation-v,Its habitat is dark forests and caves. It emits ultrasonic waves from its nose to learn about its surroundings.
+528,swoobat,Courting Pokémon,psychic,flying,blue,generation-v,"It emits sound waves of various frequencies from its nose, including some powerful enough to destroy rocks."
+529,drilbur,Mole Pokémon,ground,,gray,generation-v,It can dig through the ground at a speed of 30 mph. It could give a car running aboveground a good race.
+530,excadrill,Subterrene Pokémon,ground,steel,gray,generation-v,It can help in tunnel construction. Its drill has evolved into steel strong enough to bore through iron plates.
+531,audino,Hearing Pokémon,normal,,pink,generation-v,"It touches others with the feelers on its ears, using the sound of their heartbeats to tell how they are feeling."
+532,timburr,Muscular Pokémon,fighting,,gray,generation-v,It fights by swinging a piece of lumber around. It is close to evolving when it can handle the lumber without difficulty.
+533,gurdurr,Muscular Pokémon,fighting,,gray,generation-v,This Pokémon is so muscular and strongly built that even a group of wrestlers could not make it budge an inch.
+534,conkeldurr,Muscular Pokémon,fighting,,brown,generation-v,"It is thought that Conkeldurr taught humans how to make concrete more than 2,000 years ago."
+535,tympole,Tadpole Pokémon,water,,blue,generation-v,They warn others of danger by vibrating their cheeks to create a high-pitched sound.
+536,palpitoad,Vibration Pokémon,water,ground,blue,generation-v,"When they vibrate the bumps on their heads, they can make waves in water or earthquake-like vibrations on land."
+537,seismitoad,Vibration Pokémon,water,ground,blue,generation-v,They shoot paralyzing liquid from their head bumps. They use vibration to hurt their opponents.
+538,throh,Judo Pokémon,fighting,,red,generation-v,"When it tightens its belt, it becomes stronger. Wild Throh use vines to weave their own belts."
+539,sawk,Karate Pokémon,fighting,,blue,generation-v,The sound of Sawk punching boulders and trees can be heard all the way from the mountains where they train.
+540,sewaddle,Sewing Pokémon,bug,grass,yellow,generation-v,Leavanny dress it in clothes they made for it when it hatched. It hides its head in its hood while it is sleeping.
+541,swadloon,Leaf-Wrapped Pokémon,bug,grass,green,generation-v,Forests where Swadloon live have superb foliage because the nutrients they make from fallen leaves nourish the plant life.
+542,leavanny,Nurturing Pokémon,bug,grass,yellow,generation-v,"Upon finding a small Pokémon, it weaves clothing for it from leaves, using the cutters on its arms and sticky silk."
+543,venipede,Centipede Pokémon,bug,poison,red,generation-v,"Its bite injects a potent poison, enough to paralyze large bird Pokémon that try to prey on it."
+544,whirlipede,Curlipede Pokémon,bug,poison,gray,generation-v,"Protected by a hard shell, it spins its body like a wheel and crashes furiously into its enemies."
+545,scolipede,Megapede Pokémon,bug,poison,red,generation-v,"With quick movements, it chases down its foes, attacking relentlessly with its horns until it prevails."
+546,cottonee,Cotton Puff Pokémon,grass,fairy,green,generation-v,"When attacked, it escapes by shooting cotton from its body. The cotton serves as a decoy to distract the attacker."
+547,whimsicott,Windveiled Pokémon,grass,fairy,green,generation-v,"Like the wind, it can slip through any gap, no matter how small. It leaves balls of white fluff behind."
+548,petilil,Bulb Pokémon,grass,,green,generation-v,The leaves on its head are very bitter. Eating one of these leaves is known to refresh a tired body.
+549,lilligant,Flowering Pokémon,grass,,green,generation-v,Even veteran Trainers face a challenge in getting its beautiful flower to bloom. This Pokémon is popular with celebrities.
+550,basculin,Hostile Pokémon,,,green,generation-v,"Red and blue Basculin get along so poorly, they’ll start fighting instantly. These Pokémon are very hostile."
+551,sandile,Desert Croc Pokémon,ground,dark,brown,generation-v,They live buried in the sands of the desert. The sun-warmed sands prevent their body temperature from dropping.
+552,krokorok,Desert Croc Pokémon,ground,dark,brown,generation-v,They live in groups of a few individuals. Protective membranes shield their eyes from sandstorms.
+553,krookodile,Intimidation Pokémon,ground,dark,red,generation-v,"They never allow prey to escape. Their jaws are so powerful, they can crush the body of an automobile."
+554,darumaka,Zen Charm Pokémon,fire,,red,generation-v,"When its internal fire is burning, it cannot calm down and it runs around. When the fire diminishes, it falls asleep."
+555,darmanitan,Blazing Pokémon,,,red,generation-v,"Its internal fire burns at 2,500° F, making enough power that it can destroy a dump truck with one punch."
+556,maractus,Cactus Pokémon,grass,,green,generation-v,It uses an up-tempo song and dance to drive away the bird Pokémon that prey on its flower seeds.
+557,dwebble,Rock Inn Pokémon,bug,rock,red,generation-v,This Pokémon can easily melt holes in hard rocks with a liquid secreted from its mouth.
+558,crustle,Stone Home Pokémon,bug,rock,red,generation-v,"Competing for territory, Crustle fight viciously. The one whose boulder is broken is the loser of the battle."
+559,scraggy,Shedding Pokémon,dark,fighting,yellow,generation-v,"Its skin has a rubbery elasticity, so it can reduce damage by defensively pulling its skin up to its neck."
+560,scrafty,Hoodlum Pokémon,dark,fighting,red,generation-v,Groups of them beat up anything that enters their territory. Each can spit acidic liquid from its mouth.
+561,sigilyph,Avianoid Pokémon,psychic,flying,black,generation-v,"They never vary the route they fly, because their memories of guarding an ancient city remain steadfast."
+562,yamask,Spirit Pokémon,ghost,,black,generation-v,Each of them carries a mask that used to be its face when it was human. Sometimes they look at it and cry.
+563,cofagrigus,Coffin Pokémon,ghost,,yellow,generation-v,It has been said that they swallow those who get too close and turn them into mummies. They like to eat gold nuggets.
+564,tirtouga,Prototurtle Pokémon,water,rock,blue,generation-v,"Restored from a fossil, this Pokémon can dive to depths beyond half a mile."
+565,carracosta,Prototurtle Pokémon,water,rock,blue,generation-v,They can live both in the ocean and on land. A slap from one of them is enough to open a hole in the bottom of a tanker.
+566,archen,First Bird Pokémon,rock,flying,yellow,generation-v,"Said to be an ancestor of bird Pokémon, they were unable to fly and moved about by hopping from one branch to another."
+567,archeops,First Bird Pokémon,rock,flying,yellow,generation-v,"They are intelligent and will cooperate to catch prey. From the ground, they use a running start to take flight."
+568,trubbish,Trash Bag Pokémon,poison,,green,generation-v,Inhaling the gas they belch will make you sleep for a week. They prefer unsanitary places.
+569,garbodor,Trash Heap Pokémon,poison,,green,generation-v,It clenches opponents with its left arm and finishes them off with foul-smelling poison gas belched from its mouth.
+570,zorua,Tricky Fox Pokémon,dark,,gray,generation-v,"It changes into the forms of others to surprise them. Apparently, it often transforms into a silent child."
+571,zoroark,Illusion Fox Pokémon,dark,,gray,generation-v,Bonds between these Pokémon are very strong. It protects the safety of its pack by tricking its opponents.
+572,minccino,Chinchilla Pokémon,normal,,gray,generation-v,"They greet one another by rubbing each other with their tails, which are always kept well groomed and clean."
+573,cinccino,Scarf Pokémon,normal,,gray,generation-v,Their white fur is coated in a special oil that makes it easy for them to deflect attacks.
+574,gothita,Fixation Pokémon,psychic,,purple,generation-v,Their ribbonlike feelers increase their psychic power. They are always staring at something.
+575,gothorita,Manipulate Pokémon,psychic,,purple,generation-v,They use hypnosis to control people and Pokémon. Tales of Gothorita leading people astray are told in every corner.
+576,gothitelle,Astral Body Pokémon,psychic,,purple,generation-v,Starry skies thousands of light-years away are visible in the space distorted by their intense psychic power.
+577,solosis,Cell Pokémon,psychic,,green,generation-v,They drive away attackers by unleashing psychic power. They can use telepathy to talk with others.
+578,duosion,Mitosis Pokémon,psychic,,green,generation-v,"Since they have two divided brains, at times they suddenly try to take two different actions at once."
+579,reuniclus,Multiplying Pokémon,psychic,,green,generation-v,"When Reuniclus shake hands, a network forms between their brains, increasing their psychic power."
+580,ducklett,Water Bird Pokémon,water,flying,blue,generation-v,These bird Pokémon are excellent divers. They swim around in the water eating their favorite food--peat moss.
+581,swanna,White Bird Pokémon,water,flying,white,generation-v,Swanna start to dance at dusk. The one dancing in the middle is the leader of the flock.
+582,vanillite,Fresh Snow Pokémon,ice,,white,generation-v,The temperature of their breath is -58° F. They create snow crystals and make snow fall in the areas around them.
+583,vanillish,Icy Snow Pokémon,ice,,white,generation-v,"Snowy mountains are this Pokémon’s habitat. During an ancient ice age, they moved to southern areas."
+584,vanilluxe,Snowstorm Pokémon,ice,,white,generation-v,"Swallowing large amounts of water, they make snow clouds inside their bodies and attack their foes with violent blizzards."
+585,deerling,Season Pokémon,normal,grass,pink,generation-v,"The color and scent of their fur changes to match the mountain grass. When they sense hostility, they hide in the grass."
+586,sawsbuck,Season Pokémon,normal,grass,brown,generation-v,They migrate according to the seasons. People can tell the season by looking at Sawsbuck’s horns.
+587,emolga,Sky Squirrel Pokémon,electric,flying,white,generation-v,The energy made in its cheeks’ electric pouches is stored inside its membrane and released while it is gliding.
+588,karrablast,Clamping Pokémon,bug,,blue,generation-v,These mysterious Pokémon evolve when they receive electrical stimulation while they are in the same place as Shelmet.
+589,escavalier,Cavalry Pokémon,bug,steel,gray,generation-v,"They fly around at high speed, striking with their pointed spears. Even when in trouble, they face opponents bravely."
+590,foongus,Mushroom Pokémon,grass,poison,white,generation-v,"It lures people in with its Poké Ball pattern, then releases poison spores. Why it resembles a Poké Ball is unknown."
+591,amoonguss,Mushroom Pokémon,grass,poison,white,generation-v,"It lures prey close by dancing and waving its arm caps, which resemble Poké Balls, in a swaying motion."
+592,frillish,Floating Pokémon,,,white,generation-v,"With its thin, veil-like arms wrapped around the body of its opponent, it sinks to the ocean floor."
+593,jellicent,Floating Pokémon,,,white,generation-v,"The fate of the ships and crew that wander into Jellicent’s habitat: all sunken, all lost, all vanished."
+594,alomomola,Caring Pokémon,water,,pink,generation-v,The special membrane enveloping Alomomola has the ability to heal wounds.
+595,joltik,Attaching Pokémon,bug,electric,yellow,generation-v,Joltik that live in cities have learned a technique for sucking electricity from the outlets in houses.
+596,galvantula,EleSpider Pokémon,bug,electric,yellow,generation-v,"When attacked, they create an electric barrier by spitting out many electrically charged threads."
+597,ferroseed,Thorn Seed Pokémon,grass,steel,gray,generation-v,"When threatened, it attacks by shooting a barrage of spikes, which gives it a chance to escape by rolling away."
+598,ferrothorn,Thorn Pod Pokémon,grass,steel,gray,generation-v,It fights by swinging around its three spiky feelers. A hit from these steel spikes can reduce a boulder to rubble.
+599,klink,Gear Pokémon,steel,,gray,generation-v,The two minigears that mesh together are predetermined. Each will rebound from other minigears without meshing.
+600,klang,Gear Pokémon,steel,,gray,generation-v,"By changing the direction in which it rotates, it communicates its feelings to others. When angry, it rotates faster."
+601,klinklang,Gear Pokémon,steel,,gray,generation-v,Its red core functions as an energy tank. It fires the charged energy through its spikes into an area.
+602,tynamo,EleFish Pokémon,electric,,white,generation-v,"While one alone doesn’t have much power, a chain of many Tynamo can be as powerful as lightning."
+603,eelektrik,EleFish Pokémon,electric,,blue,generation-v,They coil around foes and shock them with electricity-generating organs that seem simply to be circular patterns.
+604,eelektross,EleFish Pokémon,electric,,blue,generation-v,They crawl out of the ocean using their arms. They will attack prey on shore and immediately drag it into the ocean.
+605,elgyem,Cerebral Pokémon,psychic,,blue,generation-v,"It uses its strong psychic power to squeeze its opponent’s brain, causing unendurable headaches."
+606,beheeyem,Cerebral Pokémon,psychic,,brown,generation-v,"It can manipulate an opponent’s memory. Apparently, it communicates by flashing its three different-colored fingers."
+607,litwick,Candle Pokémon,ghost,fire,white,generation-v,"Litwick shines a light that absorbs the life energy of people and Pokémon, which becomes the fuel that it burns."
+608,lampent,Lamp Pokémon,ghost,fire,black,generation-v,"This ominous Pokémon is feared. Through cities it wanders, searching for the spirits of the fallen."
+609,chandelure,Luring Pokémon,ghost,fire,black,generation-v,"It absorbs a spirit, which it then burns. By waving the flames on its arms, it puts its foes into a hypnotic trance."
+610,axew,Tusk Pokémon,dragon,,green,generation-v,They use their tusks to crush the berries they eat. Repeated regrowth makes their tusks strong and sharp.
+611,fraxure,Axe Jaw Pokémon,dragon,,green,generation-v,"Since a broken tusk will not grow back, they diligently sharpen their tusks on river rocks after they’ve been fighting."
+612,haxorus,Axe Jaw Pokémon,dragon,,yellow,generation-v,They are kind but can be relentless when defending territory. They challenge foes with tusks that can cut steel.
+613,cubchoo,Chill Pokémon,ice,,white,generation-v,"When it is not feeling well, its mucus gets watery and the power of its Ice-type moves decreases."
+614,beartic,Freezing Pokémon,ice,,white,generation-v,"It can make its breath freeze at will. Very able in the water, it swims around in northern seas and catches prey."
+615,cryogonal,Crystallizing Pokémon,ice,,blue,generation-v,"When its body temperature goes up, it turns into steam and vanishes. When its temperature lowers, it returns to ice."
+616,shelmet,Snail Pokémon,bug,,red,generation-v,"When attacked, it defends itself by closing the lid of its shell. It can spit a sticky, poisonous liquid."
+617,accelgor,Shell Out Pokémon,bug,,red,generation-v,"When its body dries out, it weakens. So, to prevent dehydration, it wraps itself in many layers of thin membrane."
+618,stunfisk,Trap Pokémon,ground,electric,brown,generation-v,"Its skin is very hard, so it is unhurt even if stepped on by sumo wrestlers. It smiles when transmitting electricity."
+619,mienfoo,Martial Arts Pokémon,fighting,,yellow,generation-v,"In fights, they dominate with onslaughts of flowing, continuous attacks. With their sharp claws, they cut enemies."
+620,mienshao,Martial Arts Pokémon,fighting,,purple,generation-v,It wields the fur on its arms like a whip. Its arm attacks come with such rapidity that they cannot even be seen.
+621,druddigon,Cave Pokémon,dragon,,red,generation-v,"It warms its body by absorbing sunlight with its wings. When its body temperature falls, it can no longer move."
+622,golett,Automaton Pokémon,ground,ghost,green,generation-v,"The energy that burns inside it enables it to move, but no one has yet been able to identify this energy."
+623,golurk,Automaton Pokémon,ground,ghost,green,generation-v,It flies across the sky at Mach speeds. Removing the seal on its chest makes its internal energy go out of control.
+624,pawniard,Sharp Blade Pokémon,dark,steel,red,generation-v,"Blades comprise this Pokémon’s entire body. If battling dulls the blades, it sharpens them on stones by the river."
+625,bisharp,Sword Blade Pokémon,dark,steel,red,generation-v,"It leads a group of Pawniard. It battles to become the boss, but will be driven from the group if it loses."
+626,bouffalant,Bash Buffalo Pokémon,normal,,brown,generation-v,"Their fluffy fur absorbs damage, even if they strike foes with a fierce headbutt."
+627,rufflet,Eaglet Pokémon,normal,flying,white,generation-v,"They crush berries with their talons. They bravely stand up to any opponent, no matter how strong it is."
+628,braviary,Valiant Pokémon,normal,flying,red,generation-v,They fight for their friends without any thought about danger to themselves. One can carry a car while flying.
+629,vullaby,Diapered Pokémon,dark,flying,brown,generation-v,"Its wings are too tiny to allow it to fly. As the time approaches for it to evolve, it discards the bones it was wearing."
+630,mandibuzz,Bone Vulture Pokémon,dark,flying,brown,generation-v,It makes a nest out of bones it finds. It grabs weakened prey in its talons and hauls it to its nest of bones.
+631,heatmor,Anteater Pokémon,fire,,red,generation-v,It breathes through a hole in its tail while it burns with an internal fire. Durant is its prey.
+632,durant,Iron Ant Pokémon,bug,steel,gray,generation-v,"They attack in groups, covering themselves in steel armor to protect themselves from Heatmor."
+633,deino,Irate Pokémon,dark,dragon,blue,generation-v,"It tends to bite everything, and it is not a picky eater. Approaching it carelessly is dangerous."
+634,zweilous,Hostile Pokémon,dark,dragon,blue,generation-v,"After it has eaten up all the food in its territory, it moves to another area. Its two heads do not get along."
+635,hydreigon,Brutal Pokémon,dark,dragon,blue,generation-v,"This brutal Pokémon travels the skies on its six wings. Anything that moves seems like a foe to it, triggering its attack."
+636,larvesta,Torch Pokémon,bug,fire,white,generation-v,"This Pokémon was believed to have been born from the sun. When it evolves, its entire body is engulfed in flames."
+637,volcarona,Sun Pokémon,bug,fire,white,generation-v,"When volcanic ash darkened the atmosphere, it is said that Volcarona’s fire provided a replacement for the sun."
+638,cobalion,Iron Will Pokémon,steel,fighting,blue,generation-v,This legendary Pokémon battled against humans to protect Pokémon. Its personality is calm and composed.
+639,terrakion,Cavern Pokémon,rock,fighting,gray,generation-v,This Pokémon came to the defense of Pokémon that had lost their homes in a war among humans.
+640,virizion,Grassland Pokémon,grass,fighting,green,generation-v,This Pokémon fought humans in order to protect its friends. Legends about it continue to be passed down.
+641,tornadus,Cyclone Pokémon,,,green,generation-v,The lower half of its body is wrapped in a cloud of energy. It zooms through the sky at 200 mph.
+642,thundurus,Bolt Strike Pokémon,,,blue,generation-v,Countless charred remains mar the landscape of places through which Thundurus has passed.
+643,reshiram,Vast White Pokémon,dragon,fire,white,generation-v,"This Pokémon appears in legends. It sends flames into the air from its tail, burning up everything around it."
+644,zekrom,Deep Black Pokémon,dragon,electric,black,generation-v,"Concealing itself in lightning clouds, it flies throughout the Unova region. It creates electricity in its tail."
+645,landorus,Abundance Pokémon,,,brown,generation-v,Lands visited by Landorus grant such bountiful crops that it has been hailed as “The Guardian of the Fields.”
+646,kyurem,Boundary Pokémon,dragon,ice,gray,generation-v,"It generates a powerful, freezing energy inside itself, but its body became frozen when the energy leaked out."
+647,keldeo,Colt Pokémon,,,yellow,generation-v,"By blasting water from its hooves, it can glide across water. It excels at using leg moves while battling."
+648,meloetta,Melody Pokémon,,,white,generation-v,Its melodies are sung with a special vocalization method that can control the feelings of those who hear it.
+649,genesect,Paleozoic Pokémon,bug,steel,purple,generation-v,"Over 300 million years ago, it was feared as the strongest of hunters. It has been modified by Team Plasma."
+650,chespin,Spiny Nut Pokémon,grass,,green,generation-vi,"The quills on its head are usually soft. When it flexes them, the points become so hard and sharp that they can pierce rock."
+651,quilladin,Spiny Armor Pokémon,grass,,green,generation-vi,It relies on its sturdy shell to deflect predators’ attacks. It counterattacks with its sharp quills.
+652,chesnaught,Spiny Armor Pokémon,grass,fighting,green,generation-vi,Its Tackle is forceful enough to flip a 50-ton tank. It shields its allies from danger with its own body.
+653,fennekin,Fox Pokémon,fire,,red,generation-vi,"Eating a twig fills it with energy, and its roomy ears give vent to air hotter than 390 degrees Fahrenheit."
+654,braixen,Fox Pokémon,fire,,red,generation-vi,"It has a twig stuck in its tail. With friction from its tail fur, it sets the twig on fire and launches into battle."
+655,delphox,Fox Pokémon,fire,psychic,red,generation-vi,"It gazes into the flame at the tip of its branch to achieve a focused state, which allows it to see into the future."
+656,froakie,Bubble Frog Pokémon,water,,blue,generation-vi,It secretes flexible bubbles from its chest and back. The bubbles reduce the damage it would otherwise take when attacked.
+657,frogadier,Bubble Frog Pokémon,water,,blue,generation-vi,"It can throw bubble-covered pebbles with precise control, hitting empty cans up to a hundred feet away."
+658,greninja,Ninja Pokémon,water,dark,blue,generation-vi,"It creates throwing stars out of compressed water. When it spins them and throws them at high speed, these stars can split metal in two."
+659,bunnelby,Digging Pokémon,normal,,brown,generation-vi,They use their large ears to dig burrows. They will dig the whole night through.
+660,diggersby,Digging Pokémon,normal,ground,brown,generation-vi,"With their powerful ears, they can heft boulders of a ton or more with ease. They can be a big help at construction sites."
+661,fletchling,Tiny Robin Pokémon,normal,flying,red,generation-vi,These friendly Pokémon send signals to one another with beautiful chirps and tail-feather movements.
+662,fletchinder,Ember Pokémon,fire,flying,red,generation-vi,"From its beak, it expels embers that set the tall grass on fire. Then it pounces on the bewildered prey that pop out of the grass."
+663,talonflame,Scorching Pokémon,fire,flying,red,generation-vi,"In the fever of an exciting battle, it showers embers from the gaps between its feathers and takes to the air."
+664,scatterbug,Scatterdust Pokémon,bug,,black,generation-vi,"When under attack from bird Pokémon, it spews a poisonous black powder that causes paralysis on contact."
+665,spewpa,Scatterdust Pokémon,bug,,black,generation-vi,"It lives hidden within thicket shadows. When predators attack, it quickly bristles the fur covering its body in an effort to threaten them."
+666,vivillon,Scale Pokémon,bug,flying,white,generation-vi,Vivillon with many different patterns are found all over the world. These patterns are affected by the climate of their habitat.
+667,litleo,Lion Cub Pokémon,fire,normal,brown,generation-vi,"The stronger the opponent it faces, the more heat surges from its mane and the more power flows through its body."
+668,pyroar,Royal Pokémon,,,brown,generation-vi,The male with the largest mane of fire is the leader of the pride.
+669,flabebe,Single Bloom Pokémon,fairy,,white,generation-vi,It draws out and controls the hidden power of flowers. The flower Flabébé holds is most likely part of its body.
+670,floette,Single Bloom Pokémon,fairy,,white,generation-vi,It flutters around fields of flowers and cares for flowers that are starting to wilt. It draws out the hidden power of flowers to battle.
+671,florges,Garden Pokémon,fairy,,white,generation-vi,"It claims exquisite flower gardens as its territory, and it obtains power from basking in the energy emitted by flowering plants."
+672,skiddo,Mount Pokémon,grass,,brown,generation-vi,"Thought to be one of the first Pokémon to live in harmony with humans, it has a placid disposition."
+673,gogoat,Mount Pokémon,grass,,brown,generation-vi,It can tell how its Trainer is feeling by subtle shifts in the grip on its horns. This empathic sense lets them run as if one being.
+674,pancham,Playful Pokémon,fighting,,white,generation-vi,"It does its best to be taken seriously by its enemies, but its glare is not sufficiently intimidating. Chewing on a leaf is its trademark."
+675,pangoro,Daunting Pokémon,fighting,dark,white,generation-vi,"Although it possesses a violent temperament, it won’t put up with bullying. It uses the leaf in its mouth to sense the movements of its enemies."
+676,furfrou,Poodle Pokémon,normal,,white,generation-vi,Trimming its fluffy fur not only makes it more elegant but also increases the swiftness of its movements.
+677,espurr,Restraint Pokémon,psychic,,gray,generation-vi,The organ that emits its intense psychic power is sheltered by its ears to keep power from leaking out.
+678,meowstic,Constraint Pokémon,,,blue,generation-vi,"When in danger, it raises its ears and releases enough psychic power to grind a 10-ton truck into dust."
+679,honedge,Sword Pokémon,steel,ghost,brown,generation-vi,Apparently this Pokémon is born when a departed spirit inhabits a sword. It attaches itself to people and drinks their life force.
+680,doublade,Sword Pokémon,steel,ghost,brown,generation-vi,"When Honedge evolves, it divides into two swords, which cooperate via telepathy to coordinate attacks and slash their enemies to ribbons."
+681,aegislash,Royal Sword Pokémon,,,brown,generation-vi,"Generations of kings were attended by these Pokémon, which used their spectral power to manipulate and control people and Pokémon."
+682,spritzee,Perfume Pokémon,fairy,,pink,generation-vi,It emits a scent that enraptures those who smell it. This fragrance changes depending on what it has eaten.
+683,aromatisse,Fragrance Pokémon,fairy,,pink,generation-vi,"It devises various scents, pleasant and unpleasant, and emits scents that its enemies dislike in order to gain an edge in battle."
+684,swirlix,Cotton Candy Pokémon,fairy,,white,generation-vi,"To entangle its opponents in battle, it extrudes white threads as sweet and sticky as cotton candy."
+685,slurpuff,Meringue Pokémon,fairy,,white,generation-vi,It can distinguish the faintest of scents. It puts its sensitive sense of smell to use by helping pastry chefs in their work.
+686,inkay,Revolving Pokémon,dark,psychic,blue,generation-vi,Opponents who stare at the flashing of the light-emitting spots on its body become dazed and lose their will to fight.
+687,malamar,Overturning Pokémon,dark,psychic,blue,generation-vi,"It wields the most compelling hypnotic powers of any Pokémon, and it forces others to do whatever it wants."
+688,binacle,Two-Handed Pokémon,rock,water,brown,generation-vi,"Two Binacle live together on one rock. When they fight, one of them will move to a different rock."
+689,barbaracle,Collective Pokémon,rock,water,brown,generation-vi,"When they evolve, two Binacle multiply into seven. They fight with the power of seven Binacle."
+690,skrelp,Mock Kelp Pokémon,poison,water,brown,generation-vi,"Camouflaged as rotten kelp, they spray liquid poison on prey that approaches unawares and then finish it off."
+691,dragalge,Mock Kelp Pokémon,poison,dragon,brown,generation-vi,"Their poison is strong enough to eat through the hull of a tanker, and they spit it indiscriminately at anything that enters their territory."
+692,clauncher,Water Gun Pokémon,water,,blue,generation-vi,They knock down flying prey by firing compressed water from their massive claws like shooting a pistol.
+693,clawitzer,Howitzer Pokémon,water,,blue,generation-vi,Their enormous claws launch cannonballs of water powerful enough to pierce tanker hulls.
+694,helioptile,Generator Pokémon,electric,normal,yellow,generation-vi,"They make their home in deserts. They can generate their energy from basking in the sun, so eating food is not a requirement."
+695,heliolisk,Generator Pokémon,electric,normal,yellow,generation-vi,They flare their frills and generate energy. A single Heliolisk can generate sufficient electricity to power a skyscraper.
+696,tyrunt,Royal Heir Pokémon,rock,dragon,brown,generation-vi,"This Pokémon was restored from a fossil. If something happens that it doesn’t like, it throws a tantrum and runs wild."
+697,tyrantrum,Despot Pokémon,rock,dragon,red,generation-vi,"Thanks to its gargantuan jaws, which could shred thick metal plates as if they were paper, it was invincible in the ancient world it once inhabited."
+698,amaura,Tundra Pokémon,rock,ice,blue,generation-vi,This ancient Pokémon was restored from part of its body that had been frozen in ice for over 100 million years.
+699,aurorus,Tundra Pokémon,rock,ice,blue,generation-vi,"The diamond-shaped crystals on its body expel air as cold as -240 degrees Fahrenheit, surrounding its enemies and encasing them in ice."
+700,sylveon,Intertwining Pokémon,fairy,,pink,generation-vi,It sends a soothing aura from its ribbonlike feelers to calm fights.
+701,hawlucha,Wrestling Pokémon,fighting,flying,green,generation-vi,"Although its body is small, its proficient fighting skills enable it to keep up with big bruisers like Machamp and Hariyama."
+702,dedenne,Antenna Pokémon,electric,fairy,yellow,generation-vi,"Its whiskers serve as antennas. By sending and receiving electrical waves, it can communicate with others over vast distances."
+703,carbink,Jewel Pokémon,rock,fairy,gray,generation-vi,"Born from the temperatures and pressures deep underground, it fires beams from the stone in its head."
+704,goomy,Soft Tissue Pokémon,dragon,,purple,generation-vi,"The weakest Dragon-type Pokémon, it lives in damp, shady places, so its body doesn’t dry out."
+705,sliggoo,Soft Tissue Pokémon,dragon,,purple,generation-vi,"It drives away opponents by excreting a sticky liquid that can dissolve anything. Its eyes devolved, so it can’t see anything."
+706,goodra,Dragon Pokémon,dragon,,purple,generation-vi,"This very friendly Dragon-type Pokémon will hug its beloved Trainer, leaving that Trainer covered in sticky slime."
+707,klefki,Key Ring Pokémon,steel,fairy,gray,generation-vi,These key collectors threaten any attackers by fiercely jingling their keys at them.
+708,phantump,Stump Pokémon,ghost,grass,brown,generation-vi,These Pokémon are created when spirits possess rotten tree stumps. They prefer to live in abandoned forests.
+709,trevenant,Elder Tree Pokémon,ghost,grass,brown,generation-vi,"It can control trees at will. It will trap people who harm the forest, so they can never leave."
+710,pumpkaboo,Pumpkin Pokémon,,,brown,generation-vi,"The pumpkin body is inhabited by a spirit trapped in this world. As the sun sets, it becomes restless and active."
+711,gourgeist,Pumpkin Pokémon,,,brown,generation-vi,"Singing in eerie voices, they wander town streets on the night of the new moon. Anyone who hears their song is cursed."
+712,bergmite,Ice Chunk Pokémon,ice,,blue,generation-vi,It blocks opponents’ attacks with the ice that shields its body. It uses cold air to repair any cracks with new ice.
+713,avalugg,Iceberg Pokémon,ice,,blue,generation-vi,Its ice-covered body is as hard as steel. Its cumbersome frame crushes anything that stands in its way.
+714,noibat,Sound Wave Pokémon,flying,dragon,purple,generation-vi,"They live in pitch-black caves. Their enormous ears can emit ultrasonic waves of 200,000 hertz."
+715,noivern,Sound Wave Pokémon,flying,dragon,purple,generation-vi,They fly around on moonless nights and attack careless prey. Nothing can beat them in a battle in the dark.
+716,xerneas,Life Pokémon,fairy,,blue,generation-vi,Legends say it can share eternal life. It slept for a thousand years in the form of a tree before its revival.
+717,yveltal,Destruction Pokémon,dark,flying,red,generation-vi,"When this legendary Pokémon’s wings and tail feathers spread wide and glow red, it absorbs the life force of living creatures."
+718,zygarde,Order Pokémon,,,green,generation-vi,"When the Kalos region’s ecosystem falls into disarray, it appears and reveals its secret power."
+719,diancie,Jewel Pokémon,rock,fairy,pink,generation-vi,"A sudden transformation of Carbink, its pink, glimmering body is said to be the loveliest sight in the whole world."
+720,hoopa,Mischief Pokémon,psychic,ghost,purple,generation-vi,"This troublemaker sends anything and everything to faraway places using its loop, which can warp space."
+721,volcanion,Steam Pokémon,fire,water,brown,generation-vi,It lets out billows of steam and disappears into the dense fog. It’s said to live in mountains where humans do not tread.
+722,rowlet,Grass Quill Pokémon,grass,flying,brown,generation-vii,"This wary Pokémon uses photosynthesis to store up energy during the day, while becoming active at night."
+723,dartrix,Blade Quill Pokémon,grass,flying,brown,generation-vii,"A bit of a dandy, it spends its free time preening its wings. Its preoccupation with any dirt on its plumage can leave it unable to battle."
+724,decidueye,Arrow Quill Pokémon,grass,ghost,brown,generation-vii,"It fires arrow quills from its wings with such precision, they can pierce a pebble at distances over a hundred yards."
+725,litten,Fire Cat Pokémon,fire,,red,generation-vii,"While grooming itself, it builds up fur inside its stomach. It sets the fur alight and spews fiery attacks, which change based on how it coughs."
+726,torracat,Fire Cat Pokémon,fire,,red,generation-vii,"At its throat, it bears a bell of fire. The bell rings brightly whenever this Pokémon spits fire."
+727,incineroar,Heel Pokémon,fire,dark,red,generation-vii,"This Pokémon has a violent, selfish disposition. If it’s not in the mood to listen, it will ignore its Trainer’s orders with complete nonchalance."
+728,popplio,Sea Lion Pokémon,water,,blue,generation-vii,"This Pokémon snorts body fluids from its nose, blowing balloons to smash into its foes. It’s famous for being a hard worker."
+729,brionne,Pop Star Pokémon,water,,blue,generation-vii,"A skillful dancer, it creates a sequence of water balloons as it dances, and briskly bombards its enemies."
+730,primarina,Soloist Pokémon,water,fairy,blue,generation-vii,It controls its water balloons with song. The melody is learned from others of its kind and is passed down from one generation to the next.
+731,pikipek,Woodpecker Pokémon,normal,flying,black,generation-vii,It can peck at a rate of 16 times a second to drill holes in trees. It uses the holes for food storage and for nesting.
+732,trumbeak,Bugle Beak Pokémon,normal,flying,black,generation-vii,"It eats berries and stores their seeds in its beak. When it encounters enemies or prey, it fires off all the seeds in a burst."
+733,toucannon,Cannon Pokémon,normal,flying,black,generation-vii,"When it battles, its beak heats up. The temperature can easily exceed 212 degrees Fahrenheit, causing severe burns when it hits."
+734,yungoos,Loitering Pokémon,normal,,brown,generation-vii,"With its sharp fangs, it will bite anything. It did not originally live in Alola but was imported from another region."
+735,gumshoos,Stakeout Pokémon,normal,,brown,generation-vii,"When it finds a trace of its prey, it patiently stakes out the location...but it’s always snoozing by nightfall."
+736,grubbin,Larva Pokémon,bug,,gray,generation-vii,Its strong jaw enables it to scrape trees and slurp out the sap. It normally lives underground.
+737,charjabug,Battery Pokémon,bug,electric,green,generation-vii,"Its body is capable of storing electricity. On camping trips, people are grateful to have one around."
+738,vikavolt,Stag Beetle Pokémon,bug,electric,blue,generation-vii,"It zips around, on sharp lookout for an opening. It concentrates electrical energy within its large jaws and uses it to zap its enemies."
+739,crabrawler,Boxing Pokémon,fighting,,purple,generation-vii,"While guarding its weak points with its pincers, it looks for an opening and unleashes punches. When it loses, it foams at the mouth and faints."
+740,crabominable,Woolly Crab Pokémon,fighting,ice,white,generation-vii,"It aimed for the top but got lost and ended up on a snowy mountain. Being forced to endure the cold, this Pokémon evolved and grew fur."
+741,oricorio,Dancing Pokémon,,,red,generation-vii,"It beats its wings together to create fire. As it moves in the steps of its beautiful dance, it bathes opponents in intense flames."
+742,cutiefly,Bee Fly Pokémon,bug,fairy,yellow,generation-vii,"It feeds on the nectar and pollen of flowers. Because it’s able to sense auras, it can identify which flowers are about to bloom."
+743,ribombee,Bee Fly Pokémon,bug,fairy,yellow,generation-vii,"It rolls up pollen into puffs. It makes many different varieties, some used as food and others used in battle."
+744,rockruff,Puppy Pokémon,rock,,brown,generation-vii,"It’s considered to be a good Pokémon for beginners because of its friendliness, but its disposition grows rougher as it grows up."
+745,lycanroc,Wolf Pokémon,,,brown,generation-vii,"Its quick movements confuse its enemies. Well equipped with claws and fangs, it also uses the sharp rocks in its mane as weapons."
+746,wishiwashi,Small Fry Pokémon,,,blue,generation-vii,"When it’s in trouble, its eyes moisten and begin to shine. The shining light attracts its comrades, and they stand together against their enemies."
+747,mareanie,Brutal Star Pokémon,poison,water,blue,generation-vii,"It plunges the poison spike on its head into its prey. When the prey has weakened, Mareanie deals the finishing blow with its 10 tentacles."
+748,toxapex,Brutal Star Pokémon,poison,water,blue,generation-vii,Toxapex crawls along the ocean floor on its 12 legs. It leaves a trail of Corsola bits scattered in its wake.
+749,mudbray,Donkey Pokémon,ground,,brown,generation-vii,The mud stuck to Mudbray’s hooves enhances its grip and its powerful running gait.
+750,mudsdale,Draft Horse Pokémon,ground,,brown,generation-vii,"It spits a mud that provides resistance to both wind and rain, so the walls of old houses were often coated with it."
+751,dewpider,Water Bubble Pokémon,water,bug,green,generation-vii,It crawls onto the land in search of food. Its water bubble allows it to breathe and protects its soft head.
+752,araquanid,Water Bubble Pokémon,water,bug,green,generation-vii,"It delivers headbutts with the water bubble on its head. Small Pokémon get sucked into the bubble, where they drown."
+753,fomantis,Sickle Grass Pokémon,grass,,pink,generation-vii,"During the day, it sleeps and soaks up light. When night falls, it walks around looking for a safer place to sleep."
+754,lurantis,Bloom Sickle Pokémon,grass,,pink,generation-vii,"It requires a lot of effort to maintain Lurantis’s vivid coloring, but some collectors enjoy this work and treat it as their hobby."
+755,morelull,Illuminating Pokémon,grass,fairy,purple,generation-vii,It scatters spores that flicker and glow. Anyone seeing these lights falls into a deep slumber.
+756,shiinotic,Illuminating Pokémon,grass,fairy,purple,generation-vii,Forests where Shiinotic live are treacherous to enter at night. People confused by its strange lights can never find their way home again.
+757,salandit,Toxic Lizard Pokémon,poison,fire,black,generation-vii,"It burns its bodily fluids to create a poisonous gas. When its enemies become disoriented from inhaling the gas, it attacks them."
+758,salazzle,Toxic Lizard Pokémon,poison,fire,black,generation-vii,"For some reason, only females have been found. It creates a reverse harem of male Salandit that it lives with."
+759,stufful,Flailing Pokémon,normal,fighting,pink,generation-vii,"Despite its adorable appearance, when it gets angry and flails about, its arms and legs could knock a pro wrestler sprawling."
+760,bewear,Strong Arm Pokémon,normal,fighting,pink,generation-vii,This immensely dangerous Pokémon possesses overwhelming physical strength. Its habitat is generally off-limits.
+761,bounsweet,Fruit Pokémon,grass,,purple,generation-vii,A delectable aroma pours from its body. They are often swallowed whole by Toucannon lured by that wafting deliciousness.
+762,steenee,Fruit Pokémon,grass,,purple,generation-vii,"The sepals on its head developed to protect its body. These are quite hard, so even if pecked by bird Pokémon, this Pokémon is totally fine."
+763,tsareena,Fruit Pokémon,grass,,purple,generation-vii,"Its long, striking legs aren’t just for show but to be used to kick with skill. In victory, it shows off by kicking the defeated, laughing boisterously."
+764,comfey,Posy Picker Pokémon,fairy,,green,generation-vii,"It attaches flowers to its highly nutritious vine. This revitalizes the flowers, and they give off an aromatic scent."
+765,oranguru,Sage Pokémon,normal,psychic,white,generation-vii,"Known for its extreme intelligence, this Pokémon will look down on inexperienced Trainers, so it’s best suited to veteran Trainers."
+766,passimian,Teamwork Pokémon,fighting,,white,generation-vii,They form groups of roughly 20 individuals. Their mutual bond is remarkable—they will never let down a comrade.
+767,wimpod,Turn Tail Pokémon,bug,water,gray,generation-vii,"This Pokémon is a coward. As it desperately dashes off, the flailing of its many legs leaves a sparkling clean path in its wake."
+768,golisopod,Hard Scale Pokémon,bug,water,gray,generation-vii,"With a flashing slash of its giant sharp claws, it cleaves seawater—or even air—right in two."
+769,sandygast,Sand Heap Pokémon,ghost,ground,brown,generation-vii,"Born from a sand mound playfully built by a child, this Pokémon embodies the grudges of the departed."
+770,palossand,Sand Castle Pokémon,ghost,ground,brown,generation-vii,"Possessed people controlled by this Pokémon transformed its sand mound into a castle. As it evolved, its power to curse grew ever stronger."
+771,pyukumuku,Sea Cucumber Pokémon,water,,black,generation-vii,"It lives in shallow seas, such as areas near a beach. It can eject its internal organs, which it uses to engulf its prey or battle enemies."
+772,type-null,Synthetic Pokémon,normal,,gray,generation-vii,The heavy control mask it wears suppresses its intrinsic capabilities. This Pokémon has some hidden special power.
+773,silvally,Synthetic Pokémon,normal,,gray,generation-vii,"Its trust in its partner is what awakens it. This Pokémon is capable of changing its type, a flexibility that is well displayed in battle."
+774,minior,Meteor Pokémon,,,brown,generation-vii,"Originally making its home in the ozone layer, it hurtles to the ground when the shell enclosing its body grows too heavy."
+775,komala,Drowsing Pokémon,normal,,blue,generation-vii,"It is born asleep, and it dies asleep. All its movements are apparently no more than the results of it tossing and turning in its dreams."
+776,turtonator,Blast Turtle Pokémon,fire,dragon,red,generation-vii,The shell on its back is chemically unstable and explodes violently if struck. The hole in its stomach is its weak point.
+777,togedemaru,Roly-Poly Pokémon,electric,steel,gray,generation-vii,"The spiny fur on its back is normally at rest. When this Pokémon becomes agitated, its fur stands on end and stabs into its attackers."
+778,mimikyu,Disguise Pokémon,,,yellow,generation-vii,Its actual appearance is unknown. A scholar who saw what was under its rag was overwhelmed by terror and died from the shock.
+779,bruxish,Gnash Teeth Pokémon,water,psychic,pink,generation-vii,"When it unleashes its psychic power from the protuberance on its head, the grating sound of grinding teeth echoes through the area."
+780,drampa,Placid Pokémon,normal,dragon,white,generation-vii,"It has a compassionate personality, but if it is angered, it completely destroys its surroundings with its intense breath."
+781,dhelmise,Sea Creeper Pokémon,ghost,grass,green,generation-vii,"Swinging its massive anchor, it can KO Wailord in a single blow. What appears to be green seaweed is actually its body."
+782,jangmo-o,Scaly Pokémon,dragon,,gray,generation-vii,It expresses its feelings by smacking its scales. Metallic sounds echo through the tall mountains where Jangmo-o lives.
+783,hakamo-o,Scaly Pokémon,dragon,fighting,gray,generation-vii,It leaps at its prey with a courageous shout. Its scaly punches tear its opponents to shreds.
+784,kommo-o,Scaly Pokémon,dragon,fighting,gray,generation-vii,"When it spots enemies, it threatens them by jingling the scales on its tail. Weak opponents will crack and flee in panic."
+785,tapu-koko,Land Spirit Pokémon,electric,fairy,yellow,generation-vii,This guardian deity of Melemele is brimming with curiosity. It summons thunderclouds and stores their lightning inside its body.
+786,tapu-lele,Land Spirit Pokémon,psychic,fairy,pink,generation-vii,This guardian deity of Akala is guilelessly cruel. The fragrant aroma of flowers is the source of its energy.
+787,tapu-bulu,Land Spirit Pokémon,grass,fairy,red,generation-vii,"It pulls large trees up by the roots and swings them around. It causes vegetation to grow, and then it absorbs energy from the growth."
+788,tapu-fini,Land Spirit Pokémon,water,fairy,purple,generation-vii,The dense fog it creates brings the downfall and destruction of its confused enemies. Ocean currents are the source of its energy.
+789,cosmog,Nebula Pokémon,psychic,,blue,generation-vii,Its body is gaseous and frail. It slowly grows as it collects dust from the atmosphere.
+790,cosmoem,Protostar Pokémon,psychic,,blue,generation-vii,"Motionless as if dead, its body is faintly warm to the touch. In the distant past, it was called the cocoon of the stars."
+791,solgaleo,Sunne Pokémon,psychic,steel,white,generation-vii,It is said to live in another world. The intense light it radiates from the surface of its body can make the darkest of nights light up like midday.
+792,lunala,Moone Pokémon,psychic,ghost,purple,generation-vii,"It is said to be a female evolution of Cosmog. When its third eye activates, away it flies to another world."
+793,nihilego,Parasite Pokémon,rock,poison,white,generation-vii,One of several mysterious Ultra Beasts. People on the street report observing those infested by it suddenly becoming violent.
+794,buzzwole,Swollen Pokémon,bug,fighting,red,generation-vii,"This Ultra Beast appeared from another world. It shows off its body, but whether that display is a boast or a threat remains unclear."
+795,pheromosa,Lissome Pokémon,bug,fighting,white,generation-vii,"One of the dangerous Ultra Beasts, it has been spotted running across the land at terrific speeds."
+796,xurkitree,Glowing Pokémon,electric,,black,generation-vii,"One of the mysterious life-forms known as Ultra Beasts. Astonishing electric shocks emanate from its entire body, according to witnesses."
+797,celesteela,Launch Pokémon,steel,flying,green,generation-vii,It appeared from the Ultra Wormhole. Witnesses observed it flying across the sky at high speed.
+798,kartana,Drawn Sword Pokémon,grass,steel,white,generation-vii,"This Ultra Beast came from the Ultra Wormhole. It seems not to attack enemies on its own, but its sharp body is a dangerous weapon in itself."
+799,guzzlord,Junkivore Pokémon,dark,dragon,black,generation-vii,"It has gobbled mountains and swallowed whole buildings, according to reports. It’s one of the Ultra Beasts."
+800,necrozma,Prism Pokémon,psychic,,black,generation-vii,"Reminiscent of the Ultra Beasts, this life-form, apparently asleep underground, is thought to have come from another world in ancient times."
+801,magearna,Artificial Pokémon,steel,fairy,gray,generation-vii,"This artificial Pokémon, constructed more than 500 years ago, can understand human speech but cannot itself speak."
+802,marshadow,Gloomdweller Pokémon,fighting,ghost,gray,generation-vii,"Able to conceal itself in shadows, it never appears before humans, so its very existence was the stuff of myth."
+803,poipole,Poison Pin Pokémon,poison,,purple,generation-vii,This Ultra Beast is well enough liked to be chosen as a first partner in its own world.
+804,naganadel,Poison Pin Pokémon,poison,dragon,purple,generation-vii,It stores hundreds of liters of poisonous liquid inside its body. It is one of the organisms known as UBs.
+805,stakataka,Rampart Pokémon,rock,steel,gray,generation-vii,It appeared from an Ultra Wormhole. Each one appears to be made up of many life-forms stacked one on top of each other.
+806,blacephalon,Fireworks Pokémon,fire,ghost,white,generation-vii,"It slithers toward people. Then, without warning, it triggers the explosion of its own head. It’s apparently one kind of Ultra Beast."
+807,zeraora,Thunderclap Pokémon,electric,,yellow,generation-vii,"It electrifies its claws and tears its opponents apart with them. Even if they dodge its attack, they’ll be electrocuted by the flying sparks."
+808,meltan,Hex Nut Pokémon,steel,,gray,generation-vii,"It melts particles of iron and other metals found in the subsoil, so it can absorb them into its body of molten steel."
+809,melmetal,Hex Nut Pokémon,steel,,gray,generation-vii,"Revered long ago for its capacity to create iron from nothing, for some reason it has come back to life after 3,000 years."
+810,grookey,Chimp Pokémon,grass,,green,generation-viii,"When it uses its special stick to strike up a beat, the sound waves produced carry revitalizing energy to the plants and flowers in the area."
+811,thwackey,Beat Pokémon,grass,,green,generation-viii,"The faster a Thwackey can beat out a rhythm with its two sticks, the more respect it wins from its peers."
+812,rillaboom,Drummer Pokémon,grass,,green,generation-viii,"By drumming, it taps into the power of its special tree stump. The roots of the stump follow its direction in battle."
+813,scorbunny,Rabbit Pokémon,fire,,white,generation-viii,"A warm-up of running around gets fire energy coursing through this Pokémon’s body. Once that happens, it’s ready to fight at full power."
+814,raboot,Rabbit Pokémon,fire,,gray,generation-viii,Its thick and fluffy fur protects it from the cold and enables it to use hotter fire moves.
+815,cinderace,Striker Pokémon,fire,,white,generation-viii,"It juggles a pebble with its feet, turning it into a burning soccer ball. Its shots strike opponents hard and leave them scorched."
+816,sobble,Water Lizard Pokémon,water,,blue,generation-viii,"When scared, this Pokémon cries. Its tears pack the chemical punch of 100 onions, and attackers won’t be able to resist weeping."
+817,drizzile,Water Lizard Pokémon,water,,blue,generation-viii,"A clever combatant, this Pokémon battles using water balloons created with moisture secreted from its palms."
+818,inteleon,Secret Agent Pokémon,water,,blue,generation-viii,"It has many hidden capabilities, such as fingertips that can shoot water and a membrane on its back that it can use to glide through the air."
+819,skwovet,Cheeky Pokémon,normal,,brown,generation-viii,"Found throughout the Galar region, this Pokémon becomes uneasy if its cheeks are ever completely empty of berries."
+820,greedent,Greedy Pokémon,normal,,brown,generation-viii,"It stashes berries in its tail—so many berries that they fall out constantly. But this Pokémon is a bit slow-witted, so it doesn’t notice the loss."
+821,rookidee,Tiny Bird Pokémon,flying,,blue,generation-viii,"It will bravely challenge any opponent, no matter how powerful. This Pokémon benefits from every battle—even a defeat increases its strength a bit."
+822,corvisquire,Raven Pokémon,flying,,blue,generation-viii,"Smart enough to use tools in battle, these Pokémon have been seen picking up rocks and flinging them or using ropes to wrap up enemies."
+823,corviknight,Raven Pokémon,flying,steel,purple,generation-viii,This Pokémon reigns supreme in the skies of the Galar region. The black luster of its steel body could drive terror into the heart of any foe.
+824,blipbug,Larva Pokémon,bug,,blue,generation-viii,"A constant collector of information, this Pokémon is very smart. Very strong is what it isn’t."
+825,dottler,Radome Pokémon,bug,psychic,yellow,generation-viii,"It barely moves, but it’s still alive. Hiding in its shell without food or water seems to have awakened its psychic powers."
+826,orbeetle,Seven Spot Pokémon,bug,psychic,red,generation-viii,"It’s famous for its high level of intelligence, and the large size of its brain is proof that it also possesses immense psychic power."
+827,nickit,Fox Pokémon,dark,,brown,generation-viii,"Aided by the soft pads on its feet, it silently raids the food stores of other Pokémon. It survives off its ill-gotten gains."
+828,thievul,Fox Pokémon,dark,,brown,generation-viii,"It secretly marks potential targets with a scent. By following the scent, it stalks its targets and steals from them when they least expect it."
+829,gossifleur,Flowering Pokémon,grass,,green,generation-viii,"It anchors itself in the ground with its single leg, then basks in the sun. After absorbing enough sunlight, its petals spread as it blooms brilliantly."
+830,eldegoss,Cotton Bloom Pokémon,grass,,green,generation-viii,The seeds attached to its cotton fluff are full of nutrients. It spreads them on the wind so that plants and other Pokémon can benefit from them.
+831,wooloo,Sheep Pokémon,normal,,white,generation-viii,"Its curly fleece is such an effective cushion that this Pokémon could fall off a cliff and stand right back up at the bottom, unharmed."
+832,dubwool,Sheep Pokémon,normal,,white,generation-viii,"Weave a carpet from its springy wool, and you end up with something closer to a trampoline. You’ll start to bounce the moment you set foot on it."
+833,chewtle,Snapping Pokémon,water,,green,generation-viii,Apparently the itch of its teething impels it to snap its jaws at anything in front of it.
+834,drednaw,Bite Pokémon,water,rock,green,generation-viii,"With jaws that can shear through steel rods, this highly aggressive Pokémon chomps down on its unfortunate prey."
+835,yamper,Puppy Pokémon,electric,,yellow,generation-viii,"This Pokémon is very popular as a herding dog in the Galar region. As it runs, it generates electricity from the base of its tail."
+836,boltund,Dog Pokémon,electric,,yellow,generation-viii,This Pokémon generates electricity and channels it into its legs to keep them going strong. Boltund can run nonstop for three full days.
+837,rolycoly,Coal Pokémon,rock,,black,generation-viii,"Most of its body has the same composition as coal. Fittingly, this Pokémon was first discovered in coal mines about 400 years ago."
+838,carkol,Coal Pokémon,rock,fire,black,generation-viii,It forms coal inside its body. Coal dropped by this Pokémon once helped fuel the lives of people in the Galar region.
+839,coalossal,Coal Pokémon,rock,fire,black,generation-viii,"It’s usually peaceful, but the vandalism of mines enrages it. Offenders will be incinerated with flames that reach 2,700 degrees Fahrenheit."
+840,applin,Apple Core Pokémon,grass,dragon,green,generation-viii,"It spends its entire life inside an apple. It hides from its natural enemies, bird Pokémon, by pretending it’s just an apple and nothing more."
+841,flapple,Apple Wing Pokémon,grass,dragon,green,generation-viii,"It ate a sour apple, and that induced its evolution. In its cheeks, it stores an acid capable of causing chemical burns."
+842,appletun,Apple Nectar Pokémon,grass,dragon,green,generation-viii,"Eating a sweet apple caused its evolution. A nectarous scent wafts from its body, luring in the bug Pokémon it preys on."
+843,silicobra,Sand Snake Pokémon,ground,,green,generation-viii,"As it digs, it swallows sand and stores it in its neck pouch. The pouch can hold more than 17 pounds of sand."
+844,sandaconda,Sand Snake Pokémon,ground,,green,generation-viii,"When it contracts its body, over 220 pounds of sand sprays from its nose. If it ever runs out of sand, it becomes disheartened."
+845,cramorant,Gulp Pokémon,flying,water,blue,generation-viii,"It’s so strong that it can knock out some opponents in a single hit, but it also may forget what it’s battling midfight."
+846,arrokuda,Rush Pokémon,water,,brown,generation-viii,"If it sees any movement around it, this Pokémon charges for it straightaway, leading with its sharply pointed jaw. It’s very proud of that jaw."
+847,barraskewda,Skewer Pokémon,water,,brown,generation-viii,"This Pokémon has a jaw that’s as sharp as a spear and as strong as steel. Apparently Barraskewda’s flesh is surprisingly tasty, too."
+848,toxel,Baby Pokémon,electric,poison,purple,generation-viii,"It stores poison in an internal poison sac and secretes that poison through its skin. If you touch this Pokémon, a tingling sensation follows."
+849,toxtricity,Punk Pokémon,,,purple,generation-viii,"When this Pokémon sounds as if it’s strumming a guitar, it’s actually clawing at the protrusions on its chest to generate electricity."
+850,sizzlipede,Radiator Pokémon,fire,bug,red,generation-viii,It stores flammable gas in its body and uses it to generate heat. The yellow sections on its belly get particularly hot.
+851,centiskorch,Radiator Pokémon,fire,bug,red,generation-viii,"When it heats up, its body temperature reaches about 1,500 degrees Fahrenheit. It lashes its body like a whip and launches itself at enemies."
+852,clobbopus,Tantrum Pokémon,fighting,,brown,generation-viii,"It’s very curious, but its means of investigating things is to try to punch them with its tentacles. The search for food is what brings it onto land."
+853,grapploct,Jujitsu Pokémon,fighting,,blue,generation-viii,A body made up of nothing but muscle makes the grappling moves this Pokémon performs with its tentacles tremendously powerful.
+854,sinistea,Black Tea Pokémon,ghost,,purple,generation-viii,"This Pokémon is said to have been born when a lonely spirit possessed a cold, leftover cup of tea."
+855,polteageist,Black Tea Pokémon,ghost,,purple,generation-viii,"This species lives in antique teapots. Most pots are forgeries, but on rare occasions, an authentic work is found."
+856,hatenna,Calm Pokémon,psychic,,pink,generation-viii,"Via the protrusion on its head, it senses other creatures’ emotions. If you don’t have a calm disposition, it will never warm up to you."
+857,hattrem,Serene Pokémon,psychic,,pink,generation-viii,"No matter who you are, if you bring strong emotions near this Pokémon, it will silence you violently."
+858,hatterene,Silent Pokémon,psychic,fairy,pink,generation-viii,It emits psychic power strong enough to cause headaches as a deterrent to the approach of others.
+859,impidimp,Wily Pokémon,dark,fairy,pink,generation-viii,"Through its nose, it sucks in the emanations produced by people and Pokémon when they feel annoyed. It thrives off this negative energy."
+860,morgrem,Devious Pokémon,dark,fairy,pink,generation-viii,"When it gets down on all fours as if to beg for forgiveness, it’s trying to lure opponents in so that it can stab them with its spear-like hair."
+861,grimmsnarl,Bulk Up Pokémon,dark,fairy,purple,generation-viii,"With the hair wrapped around its body helping to enhance its muscles, this Pokémon can overwhelm even Machamp."
+862,obstagoon,Blocking Pokémon,dark,normal,gray,generation-viii,Its voice is staggering in volume. Obstagoon has a tendency to take on a threatening posture and shout—this move is known as Obstruct.
+863,perrserker,Viking Pokémon,steel,,brown,generation-viii,What appears to be an iron helmet is actually hardened hair. This Pokémon lives for the thrill of battle.
+864,cursola,Coral Pokémon,ghost,,white,generation-viii,Its shell is overflowing with its heightened otherworldly energy. The ectoplasm serves as protection for this Pokémon’s core spirit.
+865,sirfetchd,Wild Duck Pokémon,fighting,,white,generation-viii,"Only Farfetch’d that have survived many battles can attain this evolution. When this Pokémon’s leek withers, it will retire from combat."
+866,mr-rime,Comedian Pokémon,ice,psychic,purple,generation-viii,It’s highly skilled at tap-dancing. It waves its cane of ice in time with its graceful movements.
+867,runerigus,Grudge Pokémon,ground,ghost,gray,generation-viii,"A powerful curse was woven into an ancient painting. After absorbing the spirit of a Yamask, the painting began to move."
+868,milcery,Cream Pokémon,fairy,,white,generation-viii,This Pokémon was born from sweet-smelling particles in the air. Its body is made of cream.
+869,alcremie,Cream Pokémon,fairy,,white,generation-viii,"When it trusts a Trainer, it will treat them to berries it’s decorated with cream."
+870,falinks,Formation Pokémon,fighting,,yellow,generation-viii,"Five of them are troopers, and one is the brass. The brass’s orders are absolute."
+871,pincurchin,Sea Urchin Pokémon,electric,,purple,generation-viii,"It feeds on seaweed, using its teeth to scrape it off rocks. Electric current flows from the tips of its spines."
+872,snom,Worm Pokémon,ice,bug,white,generation-viii,"It spits out thread imbued with a frigid sort of energy and uses it to tie its body to branches, disguising itself as an icicle while it sleeps."
+873,frosmoth,Frost Moth Pokémon,ice,bug,white,generation-viii,Icy scales fall from its wings like snow as it flies over fields and mountains. The temperature of its wings is less than −290 degrees Fahrenheit.
+874,stonjourner,Big Rock Pokémon,rock,,gray,generation-viii,"It stands in grasslands, watching the sun’s descent from zenith to horizon. This Pokémon has a talent for delivering dynamic kicks."
+875,eiscue,Penguin Pokémon,,,blue,generation-viii,It drifted in on the flow of ocean waters from a frigid place. It keeps its head iced constantly to make sure it stays nice and cold.
+876,indeedee,Emotion Pokémon,,,purple,generation-viii,"It uses the horns on its head to sense the emotions of others. Males will act as valets for those they serve, looking after their every need."
+877,morpeko,Two-Sided Pokémon,,,yellow,generation-viii,"As it eats the seeds stored up in its pocket-like pouches, this Pokémon is not just satisfying its constant hunger. It’s also generating electricity."
+878,cufant,Copperderm Pokémon,steel,,yellow,generation-viii,"It digs up the ground with its trunk. It’s also very strong, being able to carry loads of over five tons without any problem at all."
+879,copperajah,Copperderm Pokémon,steel,,green,generation-viii,They came over from another region long ago and worked together with humans. Their green skin is resistant to water.
+880,dracozolt,Fossil Pokémon,electric,dragon,green,generation-viii,"In ancient times, it was unbeatable thanks to its powerful lower body, but it went extinct anyway after it depleted all its plant-based food sources."
+881,arctozolt,Fossil Pokémon,electric,ice,blue,generation-viii,The shaking of its freezing upper half is what generates its electricity. It has a hard time walking around.
+882,dracovish,Fossil Pokémon,water,dragon,green,generation-viii,Powerful legs and jaws made it the apex predator of its time. Its own overhunting of its prey was what drove it to extinction.
+883,arctovish,Fossil Pokémon,water,ice,blue,generation-viii,"Though it’s able to capture prey by freezing its surroundings, it has trouble eating the prey afterward because its mouth is on top of its head."
+884,duraludon,Alloy Pokémon,steel,dragon,white,generation-viii,"Its body resembles polished metal, and it’s both lightweight and strong. The only drawback is that it rusts easily."
+885,dreepy,Lingering Pokémon,dragon,ghost,green,generation-viii,"After being reborn as a ghost Pokémon, Dreepy wanders the areas it used to inhabit back when it was alive in prehistoric seas."
+886,drakloak,Caretaker Pokémon,dragon,ghost,green,generation-viii,It’s capable of flying faster than 120 mph. It battles alongside Dreepy and dotes on them until they successfully evolve.
+887,dragapult,Stealth Pokémon,dragon,ghost,green,generation-viii,"When it isn’t battling, it keeps Dreepy in the holes on its horns. Once a fight starts, it launches the Dreepy like supersonic missiles."
+888,zacian,Warrior Pokémon,fairy,,blue,generation-viii,"Known as a legendary hero, this Pokémon absorbs metal particles, transforming them into a weapon it uses to battle."
+889,zamazenta,Warrior Pokémon,fighting,,red,generation-viii,"In times past, it worked together with a king of the people to save the Galar region. It absorbs metal that it then uses in battle."
+890,eternatus,Gigantic Pokémon,poison,dragon,purple,generation-viii,The core on its chest absorbs energy emanating from the lands of the Galar region. This energy is what allows Eternatus to stay active.
+891,kubfu,Wushu Pokémon,fighting,,gray,generation-viii,Kubfu trains hard to perfect its moves. The moves it masters will determine which form it takes when it evolves.
+892,urshifu,Wushu Pokémon,,,gray,generation-viii,This form of Urshifu is a strong believer in the one-hit KO. Its strategy is to leap in close to foes and land a devastating blow with a hardened fist.
+893,zarude,Rogue Monkey Pokémon,dark,grass,green,generation-viii,"Within dense forests, this Pokémon lives in a pack with others of its kind. It’s incredibly aggressive, and the other Pokémon of the forest fear it."
+894,regieleki,Electron Pokémon,electric,,yellow,generation-viii,This Pokémon is a cluster of electrical energy. It’s said that removing the rings on Regieleki’s body will unleash the Pokémon’s latent power.
+895,regidrago,Dragon Orb Pokémon,dragon,,green,generation-viii,An academic theory proposes that Regidrago’s arms were once the head of an ancient dragon Pokémon. The theory remains unproven.
+896,glastrier,Wild Horse Pokémon,ice,,white,generation-viii,"Glastrier emits intense cold from its hooves. It’s also a belligerent Pokémon—anything it wants, it takes by force."
+897,spectrier,Swift Horse Pokémon,ghost,,black,generation-viii,It probes its surroundings with all its senses save one—it doesn’t use its sense of sight. Spectrier’s kicks are said to separate soul from body.
+898,calyrex,King Pokémon,psychic,grass,green,generation-viii,"Calyrex is a merciful Pokémon, capable of providing healing and blessings. It reigned over the Galar region in times of yore."
+899,wyrdeer,Big Horn Pokémon,normal,psychic,gray,generation-viii,The black orbs shine with an uncanny light when the Pokémon is erecting invisible barriers. The fur shed from its beard retains heat well and is a highly useful material for winter clothing.
+900,kleavor,Axe Pokémon,bug,rock,brown,generation-viii,"A violent creature that fells towering trees with its crude axes and shields itself with hard stone. If one should chance upon this Pokémon in the wilds, one's only recourse is to flee."
+901,ursaluna,Peat Pokémon,ground,normal,brown,generation-viii,I believe it was Hisui's swampy terrain that gave Ursaluna its burly physique and newfound capacity to manipulate peat at will.
+902,basculegion,Big Fish Pokémon,,,green,generation-viii,Clads itself in the souls of comrades that perished before fulfilling their goals of journeying upstream. No other species throughout all Hisui's rivers is Basculegion's equal.
+903,sneasler,Free Climb Pokémon,fighting,poison,gray,generation-viii,"Because of Sneasler's virulent poison and daunting physical prowess, no other species could hope to best it on the frozen highlands. Preferring solitude, this species does not form packs."
+904,overqwil,Pin Cluster Pokémon,dark,poison,black,generation-viii,Its lancelike spikes and savage temperament have earned it the nickname ”sea fiend.” It slurps up poison to nourish itself.
+905,enamorus,Love-Hate Pokémon,,,pink,generation-viii,"When it flies to this land from across the sea, the bitter winter comes to an end. According to legend, this Pokémon's love gives rise to the budding of fresh life across Hisui."
+906,sprigatito,Grass Cat Pokémon,grass,,green,generation-ix,Its fluffy fur is similar in composition to plants. This Pokémon frequently washes its face to keep it from drying out.
+907,floragato,Grass Cat Pokémon,grass,,green,generation-ix,"Floragato deftly wields the vine hidden beneath its long fur, slamming the hard flower bud against its opponents."
+908,meowscarada,Magician Pokémon,grass,dark,green,generation-ix,"This Pokémon uses the reflective fur lining its cape to camouflage the stem of its flower, creating the illusion that the flower is floating."
+909,fuecoco,Fire Croc Pokémon,fire,,red,generation-ix,It lies on warm rocks and uses the heat absorbed by its square-shaped scales to create fire energy.
+910,crocalor,Fire Croc Pokémon,fire,,red,generation-ix,The combination of Crocalor’s fire energy and overflowing vitality has caused an egg-shaped fireball to appear on the Pokémon’s head.
+911,skeledirge,Singer Pokémon,fire,ghost,red,generation-ix,The fiery bird changes shape when Skeledirge sings. Rumor has it that the bird was born when the fireball on Skeledirge’s head gained a soul.
+912,quaxly,Duckling Pokémon,water,,white,generation-ix,This Pokémon migrated to Paldea from distant lands long ago. The gel secreted by its feathers repels water and grime.
+913,quaxwell,Practicing Pokémon,water,,blue,generation-ix,"These Pokémon constantly run through shallow waters to train their legs, then compete with each other to see which of them kicks most gracefully."
+914,quaquaval,Dancer Pokémon,water,fighting,blue,generation-ix,A single kick from a Quaquaval can send a truck rolling. This Pokémon uses its powerful legs to perform striking dances from far-off lands.
+915,lechonk,Hog Pokémon,normal,,gray,generation-ix,It searches for food all day. It possesses a keen sense of smell but doesn’t use it for anything other than foraging.
+916,oinkologne,Hog Pokémon,,,gray,generation-ix,"Oinkologne is proud of its fine, glossy skin. It emits a concentrated scent from the tip of its tail."
+917,tarountula,String Ball Pokémon,bug,,white,generation-ix,"The ball of threads wrapped around its body is elastic enough to deflect the scythes of Scyther, this Pokémon’s natural enemy."
+918,spidops,Trap Pokémon,bug,,green,generation-ix,It clings to branches and ceilings using its threads and moves without a sound. It takes out its prey before the prey even notices it.
+919,nymble,Grasshopper Pokémon,bug,,gray,generation-ix,"It has its third set of legs folded up. When it’s in a tough spot, this Pokémon jumps over 30 feet using the strength of its legs."
+920,lokix,Grasshopper Pokémon,bug,dark,gray,generation-ix,"When it decides to fight all out, it stands on its previously folded legs to enter Showdown Mode. It neutralizes its enemies in short order."
+921,pawmi,Mouse Pokémon,electric,,yellow,generation-ix,It has underdeveloped electric sacs on its cheeks. These sacs can produce electricity only if Pawmi rubs them furiously with the pads on its forepaws.
+922,pawmo,Mouse Pokémon,electric,fighting,yellow,generation-ix,"When its group is attacked, Pawmo is the first to leap into battle, defeating enemies with a fighting technique that utilizes electric shocks."
+923,pawmot,Hands-On Pokémon,electric,fighting,yellow,generation-ix,"This Pokémon normally is slow to react, but once it enters battle, it will strike down its enemies with lightning-fast movements."
+924,tandemaus,Couple Pokémon,normal,,white,generation-ix,"Exhibiting great teamwork, they use their incisors to cut pieces out of any material that might be useful for a nest, then make off with them."
+925,maushold,Family Pokémon,,,white,generation-ix,"The two little ones just appeared one day. The group might be a family of related Pokémon, but nobody knows for sure."
+926,fidough,Puppy Pokémon,fairy,,yellow,generation-ix,This Pokémon is smooth and moist to the touch. Yeast in Fidough’s breath induces fermentation in the Pokémon’s vicinity.
+927,dachsbun,Dog Pokémon,fairy,,brown,generation-ix,"The pleasant aroma that emanates from this Pokémon’s body helps wheat grow, so Dachsbun has been treasured by farming villages."
+928,smoliv,Olive Pokémon,grass,normal,green,generation-ix,It protects itself from enemies by emitting oil from the fruit on its head. This oil is bitter and astringent enough to make someone flinch.
+929,dolliv,Olive Pokémon,grass,normal,green,generation-ix,"Dolliv shares its tasty, fresh-scented oil with others. This species has coexisted with humans since times long gone."
+930,arboliva,Olive Pokémon,grass,normal,green,generation-ix,"This calm Pokémon is very compassionate. It will share its delicious, nutrient-rich oil with weakened Pokémon."
+931,squawkabilly,Parrot Pokémon,,,green,generation-ix,"These Pokémon prefer to live in cities. They form flocks based on the color of their feathers, and they fight over territory."
+932,nacli,Rock Salt Pokémon,rock,,brown,generation-ix,"It was born in a layer of rock salt deep under the earth. This species was particularly treasured in the old days, as they would share precious salt."
+933,naclstack,Rock Salt Pokémon,rock,,brown,generation-ix,This Pokémon dry cures its prey by spraying salt over them. The curing process steals away the water in the prey’s body.
+934,garganacl,Rock Salt Pokémon,rock,,brown,generation-ix,Garganacl will rub its fingertips together and sprinkle injured Pokémon with salt. Even severe wounds will promptly heal afterward.
+935,charcadet,Fire Child Pokémon,fire,,red,generation-ix,"Burnt charcoal came to life and became a Pokémon. Possessing a fiery fighting spirit, Charcadet will battle even tough opponents."
+936,armarouge,Fire Warrior Pokémon,fire,psychic,red,generation-ix,Armarouge evolved through the use of a set of armor that belonged to a distinguished warrior. This Pokémon is incredibly loyal.
+937,ceruledge,Fire Blades Pokémon,fire,ghost,blue,generation-ix,The fiery blades on its arms burn fiercely with the lingering resentment of a sword wielder who fell before accomplishing their goal.
+938,tadbulb,EleTadpole Pokémon,electric,,yellow,generation-ix,"Tadbulb shakes its tail to generate electricity. If it senses danger, it will make its head blink on and off to alert its allies."
+939,bellibolt,EleFrog Pokémon,electric,,green,generation-ix,"When this Pokémon expands and contracts its wobbly body, the belly-button dynamo in its stomach produces a huge amount of electricity."
+940,wattrel,Storm Petrel Pokémon,electric,flying,black,generation-ix,"When its wings catch the wind, the bones within produce electricity. This Pokémon dives into the ocean, catching prey by electrocuting them."
+941,kilowattrel,Frigatebird Pokémon,electric,flying,yellow,generation-ix,"Kilowattrel inflates its throat sac to amplify its electricity. By riding the wind, this Pokémon can fly over 430 miles in a day."
+942,maschiff,Rascal Pokémon,dark,,brown,generation-ix,"It always scowls in an attempt to make opponents take it seriously, but even crying children will burst into laughter when they see Maschiff’s face."
+943,mabosstiff,Boss Pokémon,dark,,gray,generation-ix,This Pokémon can store energy in its large dewlap. Mabosstiff unleashes this energy all at once to blow away enemies.
+944,shroodle,Toxic Mouse Pokémon,poison,normal,gray,generation-ix,"Though usually a mellow Pokémon, it will sink its sharp, poison-soaked front teeth into any that anger it, causing paralysis in the object of its ire."
+945,grafaiai,Toxic Monkey Pokémon,poison,normal,gray,generation-ix,The color of the poisonous saliva depends on what the Pokémon eats. Grafaiai covers its fingers in its saliva and draws patterns on trees in forests.
+946,bramblin,Tumbleweed Pokémon,grass,ghost,brown,generation-ix,A soul unable to move on to the afterlife was blown around by the wind until it got tangled up with dried grass and became a Pokémon.
+947,brambleghast,Tumbleweed Pokémon,grass,ghost,brown,generation-ix,"It will open the branches of its head to envelop its prey. Once it absorbs all the life energy it needs, it expels the prey and discards it."
+948,toedscool,Woodear Pokémon,ground,grass,yellow,generation-ix,Toedscool lives in muggy forests. The flaps that fall from its body are chewy and very delicious.
+949,toedscruel,Woodear Pokémon,ground,grass,black,generation-ix,These Pokémon gather into groups and form colonies deep within forests. They absolutely hate it when strangers approach.
+950,klawf,Ambush Pokémon,rock,,red,generation-ix,"Klawf hangs upside-down from cliffs, waiting for prey. But Klawf can’t remain in this position for long because its blood rushes to its head."
+951,capsakid,Spicy Pepper Pokémon,grass,,green,generation-ix,"The more sunlight this Pokémon bathes in, the more spicy chemicals are produced by its body, and thus the spicier its moves become."
+952,scovillain,Spicy Pepper Pokémon,grass,fire,green,generation-ix,The red head converts spicy chemicals into fire energy and blasts the surrounding area with a super spicy stream of flame.
+953,rellor,Rolling Pokémon,bug,,brown,generation-ix,This Pokémon creates a mud ball by mixing sand and dirt with psychic energy. It treasures its mud ball more than its own life.
+954,rabsca,Rolling Pokémon,bug,psychic,green,generation-ix,"The body that supports the ball barely moves. Therefore, it is thought that the true body of this Pokémon is actually inside the ball."
+955,flittle,Frill Pokémon,psychic,,yellow,generation-ix,Flittle’s toes levitate about half an inch above the ground because of the psychic power emitted from the frills on the Pokémon’s belly.
+956,espathra,Ostrich Pokémon,psychic,,yellow,generation-ix,"It immobilizes opponents by bathing them in psychic power from its large eyes. Despite its appearance, it has a vicious temperament."
+957,tinkatink,Metalsmith Pokémon,fairy,steel,pink,generation-ix,"It swings its handmade hammer around to protect itself, but the hammer is often stolen by Pokémon that eat metal."
+958,tinkatuff,Hammer Pokémon,fairy,steel,pink,generation-ix,"This Pokémon will attack groups of Pawniard and Bisharp, gathering metal from them in order to create a large and sturdy hammer."
+959,tinkaton,Hammer Pokémon,fairy,steel,pink,generation-ix,"This intelligent Pokémon has a very daring disposition. It knocks rocks into the sky with its hammer, aiming for flying Corviknight."
+960,wiglett,Garden Eel Pokémon,water,,white,generation-ix,This Pokémon can pick up the scent of a Veluza just over 65 feet away and will hide itself in the sand.
+961,wugtrio,Garden Eel Pokémon,water,,red,generation-ix,"It has a vicious temperament, contrary to what its appearance may suggest. It wraps its long bodies around prey, then drags the prey into its den."
+962,bombirdier,Item Drop Pokémon,flying,dark,white,generation-ix,"It gathers things up in an apron made from shed feathers added to the Pokémon’s chest feathers, then drops those things from high places for fun."
+963,finizen,Dolphin Pokémon,water,,blue,generation-ix,It likes playing with others of its kind using the water ring on its tail. It uses ultrasonic waves to sense the emotions of other living creatures.
+964,palafin,Dolphin Pokémon,,,blue,generation-ix,This Pokémon changes its appearance if it hears its allies calling for help. Palafin will never show anybody its moment of transformation.
+965,varoom,Single-Cyl Pokémon,steel,poison,gray,generation-ix,It is said that this Pokémon was born when an unknown poison Pokémon entered and inspirited an engine left at a scrap-processing factory.
+966,revavroom,Multi-Cyl Pokémon,steel,poison,gray,generation-ix,It creates a gas out of poison and minerals from rocks. It then detonates the gas in its cylinders—now numbering eight—to generate energy.
+967,cyclizar,Mount Pokémon,dragon,normal,green,generation-ix,"Apparently Cyclizar has been allowing people to ride on its back since ancient times. Depictions of this have been found in 10,000-year-old murals."
+968,orthworm,Earthworm Pokémon,steel,,pink,generation-ix,"When attacked, this Pokémon will wield the tendrils on its body like fists and pelt the opponent with a storm of punches."
+969,glimmet,Ore Pokémon,rock,poison,blue,generation-ix,It absorbs nutrients from cave walls. The petals it wears are made of crystallized poison.
+970,glimmora,Ore Pokémon,rock,poison,blue,generation-ix,"When this Pokémon detects danger, it will open up its crystalline petals and fire beams from its conical body."
+971,greavard,Ghost Dog Pokémon,ghost,,white,generation-ix,It is said that a dog Pokémon that died in the wild without ever interacting with a human was reborn as this Pokémon.
+972,houndstone,Ghost Dog Pokémon,ghost,,white,generation-ix,"Houndstone spends most of its time sleeping in graveyards. Among all the dog Pokémon, this one is most loyal to its master."
+973,flamigo,Synchronize Pokémon,flying,fighting,pink,generation-ix,This Pokémon apparently ties the base of its neck into a knot so that energy stored in its belly does not escape from its beak.
+974,cetoddle,Terra Whale Pokémon,ice,,white,generation-ix,This species left the ocean and began living on land a very long time ago. It seems to be closely related to Wailmer.
+975,cetitan,Terra Whale Pokémon,ice,,white,generation-ix,"This Pokémon wanders around snowy, icy areas. It protects its body with powerful muscles and a thick layer of fat under its skin."
+976,veluza,Jettison Pokémon,water,psychic,gray,generation-ix,"When Veluza discards unnecessary flesh, its mind becomes honed and its psychic power increases. The spare flesh has a mild but delicious flavor."
+977,dondozo,Big Catfish Pokémon,water,,blue,generation-ix,"This Pokémon is a glutton, but it’s bad at getting food. It teams up with a Tatsugiri to catch prey."
+978,tatsugiri,Mimicry Pokémon,,,pink,generation-ix,This is a small dragon Pokémon. It lives inside the mouth of Dondozo to protect itself from enemies on the outside.
+979,annihilape,Rage Monkey Pokémon,fighting,ghost,gray,generation-ix,"When its anger rose beyond a critical point, this Pokémon gained power that is unfettered by the limits of its physical body."
+980,clodsire,Spiny Fish Pokémon,poison,ground,brown,generation-ix,"When attacked, this Pokémon will retaliate by sticking thick spines out from its body. It’s a risky move that puts everything on the line."
+981,farigiraf,Long Neck Pokémon,normal,psychic,brown,generation-ix,"Now that the brain waves from the head and tail are synced up, the psychic power of this Pokémon is 10 times stronger than Girafarig’s."
+982,dudunsparce,Land Snake Pokémon,,,yellow,generation-ix,This Pokémon uses its hard tail to make its nest by boring holes into bedrock deep underground. The nest can reach lengths of over six miles.
+983,kingambit,Big Blade Pokémon,dark,steel,black,generation-ix,Only a Bisharp that stands above all others in its vast army can evolve into Kingambit.
+984,great-tusk,Paradox Pokémon,ground,fighting,purple,generation-ix,Sightings of this Pokémon have occurred in recent years. The name Great Tusk was taken from a creature listed in a certain book.
+985,scream-tail,Paradox Pokémon,fairy,psychic,pink,generation-ix,There has been only one reported sighting of this Pokémon. It resembles a mysterious creature depicted in an old expedition journal.
+986,brute-bonnet,Paradox Pokémon,grass,dark,gray,generation-ix,It is possible that the creature listed as Brute Bonnet in a certain book could actually be this Pokémon.
+987,flutter-mane,Paradox Pokémon,ghost,fairy,gray,generation-ix,"This Pokémon has characteristics similar to those of Flutter Mane, a creature mentioned in a certain book."
+988,slither-wing,Paradox Pokémon,bug,fighting,red,generation-ix,This mysterious Pokémon has some similarities to a creature that an old book introduced as Slither Wing.
+989,sandy-shocks,Paradox Pokémon,electric,ground,gray,generation-ix,"No records exist of this Pokémon being caught. Data is lacking, but the Pokémon’s traits match up with a creature shown in an expedition journal."
+990,iron-treads,Paradox Pokémon,ground,steel,gray,generation-ix,This Pokémon closely resembles a scientific weapon that a paranormal magazine claimed was sent to this planet by aliens.
+991,iron-bundle,Paradox Pokémon,ice,water,red,generation-ix,Its shape is similar to a robot featured in a paranormal magazine article. The robot was said to have been created by an ancient civilization.
+992,iron-hands,Paradox Pokémon,fighting,electric,gray,generation-ix,It is very similar to a cyborg covered exclusively by a paranormal magazine. The cyborg was said to be the modified form of a certain athlete.
+993,iron-jugulis,Paradox Pokémon,dark,flying,blue,generation-ix,"It resembles a certain Pokémon introduced in a paranormal magazine, described as the offspring of a Hydreigon that fell in love with a robot."
+994,iron-moth,Paradox Pokémon,fire,poison,yellow,generation-ix,This Pokémon resembles an unknown object described in a paranormal magazine as a UFO sent to observe humanity.
+995,iron-thorns,Paradox Pokémon,rock,electric,green,generation-ix,It has some similarities to a Pokémon introduced in a dubious magazine as a Tyranitar from one billion years into the future.
+996,frigibax,Ice Fin Pokémon,dragon,ice,gray,generation-ix,"Frigibax absorbs heat through its dorsal fin and converts the heat into ice energy. The higher the temperature, the more energy Frigibax stores."
+997,arctibax,Ice Fin Pokémon,dragon,ice,gray,generation-ix,"Arctibax freezes the air around it, protecting its face with an ice mask and turning its dorsal fin into a blade of ice."
+998,baxcalibur,Ice Dragon Pokémon,dragon,ice,gray,generation-ix,This Pokémon blasts cryogenic air out from its mouth. This air can instantly freeze even liquid-hot lava.
+999,gimmighoul,Coin Chest Pokémon,ghost,,brown,generation-ix,"This Pokémon was born inside a treasure chest about 1,500 years ago. It sucks the life-force out of scoundrels who try to steal the treasure."
+1000,gholdengo,Coin Entity Pokémon,steel,ghost,yellow,generation-ix,"Its body seems to be made up of 1,000 coins. This Pokémon gets along well with others and is quick to make friends with anybody."
+1001,wo-chien,Ruinous Pokémon,dark,grass,brown,generation-ix,The grudge of a person punished for writing the king’s evil deeds upon wooden tablets has clad itself in dead leaves to become a Pokémon.
+1002,chien-pao,Ruinous Pokémon,dark,ice,white,generation-ix,This Pokémon can control 100 tons of fallen snow. It plays around innocently by leaping in and out of avalanches it has caused.
+1003,ting-lu,Ruinous Pokémon,dark,ground,brown,generation-ix,The fear poured into an ancient ritual vessel has clad itself in rocks and dirt to become a Pokémon.
+1004,chi-yu,Ruinous Pokémon,dark,fire,red,generation-ix,"It controls flames burning at over 5,400 degrees Fahrenheit. It casually swims through the sea of lava it creates by melting rock and sand."
+1005,roaring-moon,Paradox Pokémon,dragon,dark,green,generation-ix,It is possible that this is the creature listed as Roaring Moon in an expedition journal that still holds many mysteries.
+1006,iron-valiant,Paradox Pokémon,fairy,fighting,white,generation-ix,It has some similarities to a mad scientist’s invention covered in a paranormal magazine.
+1007,koraidon,Paradox Pokémon,fighting,dragon,red,generation-ix,This seems to be the Winged King mentioned in an old expedition journal. It was said to have split the land with its bare fists.
+1008,miraidon,Paradox Pokémon,electric,dragon,blue,generation-ix,"Much remains unknown about this creature. It resembles Cyclizar, but it is far more ruthless and powerful."
+1009,walking-wake,Paradox Pokémon,water,dragon,blue,generation-ix,This ferocious creature is shrouded in mystery. It's named after an aquatic monster mentioned in an old expedition journal.
+1010,iron-leaves,Paradox Pokémon,grass,psychic,green,generation-ix,Many of its physical characteristics match those of a Virizion from the future that was covered in a paranormal magazine.
+1011,dipplin,Candy Apple Pokémon,grass,dragon,green,generation-ix,Dipplin is two creatures in one Pokémon. Its evolution was triggered by a special apple grown only in one place.
+1012,poltchageist,Matcha Pokémon,grass,ghost,green,generation-ix,"Supposedly, the regrets of a tea ceremony master who died before perfecting his craft lingered in some matcha and became a Pokémon."
+1013,sinistcha,Matcha Pokémon,grass,ghost,green,generation-ix,"It pretends to be tea, trying to fool people into drinking it so it can drain their life-force. Its ruse is generally unsuccessful."
+1014,okidogi,Retainer Pokémon,poison,fighting,black,generation-ix,"After all its muscles were stimulated by the toxic chain around its neck, Okidogi transformed and gained a powerful physique."
+1015,munkidori,Retainer Pokémon,poison,psychic,black,generation-ix,The chain is made from toxins that enhance capabilities. It stimulated Munkidori's brain and caused the Pokémon's psychic powers to bloom.
+1016,fezandipiti,Retainer Pokémon,poison,fairy,black,generation-ix,Fezandipiti owes its beautiful looks and lovely voice to the toxic stimulants emanating from the chain wrapped around its body.
+1017,ogerpon,Mask Pokémon,grass,,green,generation-ix,This Pokémon's type changes based on which mask it's wearing. It confounds its enemies with nimble movements and kicks.
+1018,archaludon,Alloy Pokémon,steel,dragon,white,generation-ix,It gathers static electricity from its surroundings. The beams it launches when down on all fours are tremendously powerful.
+1019,hydrapple,Apple Hydra Pokémon,grass,dragon,green,generation-ix,Seven syrpents live inside an apple made of syrup. The syrpent in the center is the commander.
+1020,gouging-fire,Paradox Pokémon,fire,dragon,brown,generation-ix,There are scant few reports of this creature being sighted. One short video shows it rampaging and spouting pillars of flame.
+1021,raging-bolt,Paradox Pokémon,electric,dragon,yellow,generation-ix,It's said to incinerate everything around it with lightning launched from its fur. Very little is known about this creature.
+1022,iron-boulder,Paradox Pokémon,rock,psychic,gray,generation-ix,It resembles a Pokémon described in a dubious magazine as a Terrakion that had been modified by an evil organization.
+1023,iron-crown,Paradox Pokémon,steel,psychic,blue,generation-ix,It resembles a mysterious object introduced in a paranormal magazine as a cutting-edge weapon shaped like a Cobalion.
+1024,terapagos,Tera Pokémon,normal,,blue,generation-ix,Terapagos protects itself using its power to transform energy into hard crystals. This Pokémon is the source of the Terastal phenomenon.
+1025,pecharunt,Subjugation Pokémon,poison,ghost,purple,generation-ix,"It feeds others toxic mochi that draw out desires and capabilities. Those who eat the mochi fall under Pecharunt’s control, chained to its will."
