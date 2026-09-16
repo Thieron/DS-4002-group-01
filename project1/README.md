@@ -1,1 +1,2 @@
-Group Leader:
+## Outline
+This folder within the repo is broken down into multiple parts. The DATA folder containes the csv file we gathered from the pokeAPI, the code used to gather that data, and our cleaned data. The Output folder containes multiple graphs including our main objecteve of clustering out data to see what pokemon types most clostly allign, our exploritory plots, and any other key findings made during our analysis. Finally we have the SCRIPTS folder, the main goal of this folder is to store all code used during the project. Outside of these folders we have uploaded all course work related to this project as PDFs to demonstrate our pitch, and a license file. 
