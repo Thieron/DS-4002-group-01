@@ -1,0 +1,526 @@
+---
+title: "DS4002 Pokemon Project Data Cleaning"
+author: "Caroline Clippinger"
+date: "`r Sys.Date()`"
+output: github_document
+---
+
+# General Information
+This data cleaning script is purposed with preparing the Pokemon type x word and Pokemon generation x word matrices to use for our hierarchical clustering analysis. The necessary data file can be found at DS-4002-group-01/project1/DATA/pokedex.csv in the github. It also requires the following packages: `here`, `tidyverse`, `tidytext`, `textdata`, and `udpipe`. To install these packages use the `install.packages("package_name")` syntax.
+
+
+# Loading Packages and Data
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE)
+library(here) # for loading data
+library(tidyverse) # for general data wrangling and string manipulation
+library(tidytext) # for working with the text
+library(textdata) # for afinn lexicon to do sentiment analysis
+library(udpipe) # for the smart word cleaning and lemmatization
+
+
+pokemon <- read.csv(here("project1/DATA/", "pokedex.csv"))
+```
+
+# Data Cleaning
+## Adressing Missing Type Data
+```{r}
+# Checking for pokemon missing type information
+cat("The following", length(pokemon[pokemon$type_1 == "" | is.na(pokemon$type_1), "name"]), "pokemon have missing type information:\n", paste(pokemon[pokemon$type_1 == "" | is.na(pokemon$type_1), "name"]))
+
+# Researching the type information for those pokemon and creating a reference table
+researched_types <- tribble(
+  ~name, ~type_1, ~type_2,
+  "deoxys", "psychic", NA,
+  "wormadam", "bug", NA, # depending on cloak second type changes so leaving it empty since its basic cloak is bug
+  "giratina", "ghost", "dragon", 
+  "shaymin", "grass", NA, # using the sky form type because description talks about flowering plant
+  "basculin", "water", NA,
+  "darmanitan", "fire", NA,
+  "frillish", "water", "ghost", 
+  "jellicent", "water", "ghost",
+  "tornadus", "flying", NA,
+  "thundurus", "electric", "flying",
+  "landorus", "ground", "flying",
+  "keldeo", "water", "fighting", 
+  "meloetta", "normal", "psychic", # this is default form types
+  "pyroar", "fire", "normal",
+  "meowstic", "psychic", NA,
+  "aegislash", "steel", "ghost",
+  "pumpkaboo", "ghost", "grass",
+  "gourgeist", "ghost", "grass",
+  "zygarde", "dragon", "ground",
+  "oricorio", "fire", "flying", # based on the color and description i can assume its referencing the fire baile style form
+  "lycanroc", "rock", NA,
+  "wishiwashi", "water", NA,
+  "minior", "rock", "flying",
+  "mimikyu", "ghost", "fairy", 
+  "toxtricity", "electric", "poison",
+  "eiscue", "ice", NA,
+  "indeedee", "psychic", "normal",
+  "morpeko", "electric", "dark", 
+  "urshifu", "fighting", "dark", # looked up description depending on form to determine if it is dark or water
+  "basculegion", "water", "ghost", 
+  "enamorus", "fairy", "flying",
+  "oinkologne", "normal", NA,
+  "maushold", "normal", NA,
+  "squawkabilly", "normal", "fighting",
+  "palafin", "water", NA,
+  "tatsugiri", "dragon", "water",
+  "dudunsparce", "normal", NA
+)
+
+# Updating types with reference table and checking if still no missings
+pokemon_updated <- pokemon %>% 
+  rows_update(researched_types, by = "name", unmatched = "ignore")
+
+cat("\n\nAfter updating the data with the reference table there are now these pokemon missing type information:\n")
+print(pokemon_updated[pokemon_updated$type_1 == "" | is.na(pokemon_updated$type_1), "name"])
+```
+
+## Extracting Words Using NLP
+```{r}
+# Loading English NLP model for tokenizing data
+ud_model <- udpipe_download_model(language = "english")
+
+# Extracting the file model
+ud_model <- udpipe_load_model(ud_model$file_model)
+
+# Conducting preliminary pokedex entry cleaning to prevent confusing the model
+pokemon_smart_clean <- pokemon_updated %>% 
+  mutate(
+    pokedex_entry_clean = str_replace_all(pokedex_entry, "é", "e"),
+    pokedex_entry_clean = str_remove_all(pokedex_entry_clean, "[“”'’‘\"−°—-]"),
+    pokedex_entry_clean = str_replace_all(pokedex_entry, "an other", "another"), # noticed this typo when exploring entries
+    pokedex_entry_clean = str_replace_all(pokedex_entry, "elec tricity", "electricity") # noticed this typo when exploring entries
+  )
+
+# "Annotating" the pokedex entry data, dividing documents by the pokemon name
+entry_analysis <- udpipe_annotate(
+  ud_model, # model loaded then extracted earlier
+  x = pokemon_smart_clean$pokedex_entry_clean, # the text we want the NLP to run on 
+  doc_id = pokemon_smart_clean$name, # how to differentiate documents (in our case pokedex entries)
+) %>% 
+  as.data.frame() # converting to data frame
+
+# Selecting relevant columns from the NLP annotation and applying filtering
+pokemon_words <- entry_analysis %>% 
+  select(name = doc_id, entry_sentence = sentence, word_og = token, word_root = lemma, pos = upos) %>% 
+  filter(!pos %in% c("PUNCT","NUM")) %>% # We do not care about punctuation or numbers as 'descriptive language'
+  filter(!str_detect(word_root, "'s")) %>% # We do not want to handle 's (shouldn't happen because of earlier cleaning, but just in case)
+  mutate(word_root = str_to_lower(word_root)) %>% # Converting roots (lemmas) to lowercase (should do automatically, but extra precaution)
+  filter(nchar(word_root) > 2) # Removing any words with a lemma of 2 characters or less 
+```
+
+### Visualizing output
+```{r}
+head(pokemon_words, 25) # visualizing
+```
+
+## Additional word cleaning
+```{r}
+# Preparing vectors of unqualified descriptive words
+# Pokemon names - extracting from data itself
+poke_names <- unique(str_to_lower(str_trim(pokemon_updated$name, side = "both")))
+
+# Pokemon region names (one per game/generation) - googled these
+poke_regions <- c("kanto", "johto", "hoenn", "sinnoh", "unova", "kalos", "alola", "galar", "paldea")
+
+# Pokemon types - extracting from data itself
+poke_types <- unique(pokemon_updated$type_1)
+
+# General in-game Pokemon terminology (in their lemma form)
+poke_game_terms <- c("pokemon", "version", "game", "attack", "battle", "region", "evolve", "move", "mega", "legendary")  
+
+pokemon_words <- pokemon_words %>% 
+  # Removal Rule 1: Removing any words that are generation specific (region name), that are the names of types, that are the names of pokemon, and that are basic pokemon game mechanic language
+  mutate(word_root = str_trim(word_root, side = "both")) %>% # making sure no whitespace messes up the filtering
+  filter(!word_root %in% poke_names) %>% # removing pokemon names
+  filter(!word_root %in% poke_regions) %>% # removing pokemon game regions
+  filter(!word_root %in% poke_types) %>% # removing pokemon types
+  filter(!word_root %in% poke_game_terms) # removing pokemon in-game terminology
+
+# Loading filler words from tidytext
+data("stop_words") # returns a dataframe of various stop words (AKA filler words) in English which are not informative
+
+pokemon_words <- pokemon_words %>% 
+  # Removal Rule 2: Removing any basic filler words using "stop_words"
+  anti_join(stop_words, by = c("word_root" = "word")) %>%  # essentially removes the words that have crossover, in this case fillers
+  # Rule 3: Removing any word fragment that may exist like hp
+  filter(nchar(word_root) > 2) # removing very short word fragments (did this earlier too, but incase they made it through because why not)
+
+# Checking effect of Rule 1
+# The following pokemon had examples of Rule 1 cases
+# Ekans has pokemon names in it; Dialga has region name in it; Wartortle has type in it
+print("Checking Rule 1 using the following examples:\n\tEkans for pokemon names\n\tDialga for region name\n\tWartortle for type name")
+print(pokemon_words[pokemon_words$name %in% c("ekans", "dialga", "wartortle"), ])
+
+
+# Joining the cleaned words with the rest of the data
+pokemon_cleaned <- left_join(pokemon_smart_clean, pokemon_words, by = "name") %>% 
+  select(-pokedex_entry) # removing the pokedex entry variable that wasn't used when extracting words (keeping the cleaned one we fed into function instead)
+
+# Making missings all be NA (will need this once we pivot-long for type data)
+pokemon_cleaned[pokemon_cleaned == ""] <- NA
+```
+
+## Applying TF-IDF
+**Explaining terminology:**   
+TF (Term Frequency) = how often a word appears within a Pokemon type (count of word in type / count of all words in type)
+
+IDF (Inverse Document Frequency) = how rare a word is across all Pokemon types (math is log(n_types/n_types using word at least once)) - there are 18 types (`pokemon_long`)
+
+TF_IDF = how unique a word is for a type (TF * IDF), will be higher when a word appears a lot within a type (high TF) and when it only appears in a select few types (high IDF)
+
+
+### Type-based profiles computations
+```{r}
+# Making type long so that dual-types are considered in the counts for both types
+pokemon_type_long <- pokemon_cleaned %>% 
+  pivot_longer(
+    cols = c(type_1, type_2),
+    names_to = "type_slot",
+    values_to = "type",
+    values_drop_na = TRUE # this way pokemon with only one type stick to having one row
+  )
+
+# Creating type profiles by using tf-idf
+type_profiles <- pokemon_type_long %>% 
+  group_by(type, word_root) %>% # want a unique tf-idf for each word for each pokemon type
+  summarise(
+    n = n(), # will say how many times the word appears in that type
+    n_pokemon = n_distinct(name), # will say how many pokemon of that type have this word in their description
+    .groups = "drop"
+  ) %>% 
+  filter(n_pokemon >= 2) %>% # Setting condition that at least two pokemon need to have that descriptive word within their entry
+  bind_tf_idf(word_root, type, n) %>% # calculating tf-idf
+  arrange(type, desc(tf_idf)) # Organizing how it looks so higher tf-idf appears first
+
+# Calculating average TF-IDF score across types
+type_word_scores <- type_profiles %>% 
+  group_by(word_root) %>% 
+  summarise(
+    type_mean_tfidf = mean(tf_idf)
+  ) %>% 
+  arrange(desc(type_mean_tfidf))
+
+# Checking basic things:
+cat("In the type-profiles there are", length(unique(type_profiles$type)), "unique types.") # should indicate 18 unique types
+
+# Getting an idea of how many unique words there are in general
+cat("\n\nThere are", length(unique(type_profiles$word_root)), "unique words in the type-profiles")
+```
+
+### Generation-based profile computations
+```{r}
+# Creating generation profiles by using tf-idf
+
+# Check the type-profiles for code explanation (it is identical except for using generation instead of type)
+gen_profiles <- pokemon_cleaned %>% 
+  group_by(generation, word_root) %>% 
+  summarise(
+    n = n(),
+    n_pokemon = n_distinct(name),
+    .groups = "drop"
+  ) %>% 
+  filter(n_pokemon >= 2) %>% # Setting condition that at least two pokemon need to have that descriptive word within their entry
+  bind_tf_idf(word_root, generation, n) %>% 
+  arrange(generation, desc(tf_idf))
+
+# Calculating average TF-IDF score across generations
+gen_word_scores <- gen_profiles %>% 
+  group_by(word_root) %>% 
+  summarise(
+    gen_mean_tfidf = mean(tf_idf)
+  ) %>% 
+  arrange(desc(gen_mean_tfidf))
+
+# Checking basic things:
+cat("In the generation-profiles there are", length(unique(gen_profiles$generation)), "unique generations") # should indicate 9 unique generations
+
+# Getting an idea of how many unique words there are in general
+cat("\n\nThere are", length(unique(gen_profiles$word_root)), "unique words in the generation-profiles")
+```
+
+### Assessing TF-IDF
+```{r}
+print("Top 20 TF-IDF words in type-based profiles")
+print(head(type_word_scores, 20))
+
+print("Top 20 TF-IDF words in generation-based profiles")
+print(head(gen_word_scores, 20))
+
+# Merging the two
+common_words <- type_word_scores %>% 
+  inner_join(gen_word_scores, by = "word_root") %>% 
+  mutate(
+    avg_tfidf = (type_mean_tfidf + gen_mean_tfidf)/2
+  ) %>% 
+  arrange(desc(avg_tfidf))
+
+print("Top 20 averaged TF-IDF words across type and generation profiles")
+print(head(common_words, 20))
+
+# Extracting the top 150 words to use for clustering features
+top_150_df <- common_words %>% 
+  slice_head(n = 150)
+
+top_150_words <- top_150_df$word_root
+```
+
+## Creating matrices
+### Type-word matrix
+```{r}
+# Creating the matrix by pivoting original profiles wide after filtering to only the selected 150 words (we want each row to be a unique type so that we can cluster across types during HCA with the words as features)
+type_matrix <- type_profiles %>% 
+  filter(word_root %in% top_150_words) %>% 
+  select(type, word_root, tf_idf) %>% 
+  rename(pokemon_type = type) %>% 
+  pivot_wider(names_from = word_root,
+              values_from = tf_idf,
+              values_fill = 0) # filling in cases where a word is not reported in a type to be 0
+
+print(type_matrix)
+
+# Preparing quick visualization of the number of types that have a word value greater than 0 to get an idea of how exclusive words are to certain types
+word_type_counts <- type_matrix %>% 
+  summarise(across(-pokemon_type, 
+                   ~ sum(. > 0))) %>% 
+  pivot_longer(
+    cols = everything(),
+    names_to = "word_root",
+    values_to =  "types_with_word"
+  )
+
+print(word_type_counts)
+```
+
+### Generation-word matrix
+```{r}
+# Creating the matrix by pivoting original profiles wide after filtering to only the selected 150 words (we want each row to be a unique generation so that we can cluster across types during HCA with the words as features)
+gen_matrix <- gen_profiles %>% 
+  filter(word_root %in% top_150_words) %>% 
+  select(generation, word_root, tf_idf) %>% 
+  rename(pokemon_gen = generation) %>% 
+  pivot_wider(names_from = word_root,
+              values_from = tf_idf,
+              values_fill = 0) # filling in cases where a word is not reported in a type to be 0
+
+print(gen_matrix)
+
+# Preparing quick visualization of the number of generations that have a word value greater than 0 to get an idea of how exclusive words are to certain generations
+word_gen_counts <- gen_matrix %>% 
+  summarise(across(-pokemon_gen, 
+                   ~ sum(. > 0))) %>% 
+  pivot_longer(
+    cols = everything(),
+    names_to = "word_root",
+    values_to =  "gens_with_word"
+  )
+
+print(word_gen_counts)
+```
+### Extra checks and descriptives
+```{r}
+# checking that the words used in the two matrices are the same for comparison purposes
+cat(sum(sort(colnames(type_matrix)[2:151]) == sort(colnames(gen_matrix)[2:151])), "out of 150 words match in the matrices for type and generation.\n\n")
+
+# checking descriptives of the number of types/generations that have a word value greater than 0 to get an idea of how exclusive words are to certain types/generations
+
+cat("Descriptives for number of types with a descriptive word\n")
+print(psych::describe(word_type_counts$types_with_word))
+
+cat("\nDescriptives for number of generations with a descriptive word\n")
+print(psych::describe(word_gen_counts$gens_with_word))
+
+# Making sure all of the types/generations have a word in the top 150 with a non-zero TF-IDF score
+cat("\n", sum(rowSums(is.na(type_matrix[, 2:151])) > 0), "rows in the type-word matrix contain all 0 values.")
+
+cat("\n\n", sum(rowSums(is.na(gen_matrix[, 2:151])) > 0), "rows in the generation-word matrix contain all 0 values.")
+```
+## Creating Sensitivy Check Matrices
+### Extracting new word counts
+```{r}
+# Extracting the top 50 words to use for clustering features
+top_50_words <- common_words %>% 
+  slice_head(n = 50) %>% 
+  pull(word_root)
+
+# Extracting the top 100 words to use for clustering features
+top_100_words <- common_words %>% 
+  slice_head(n = 100) %>% 
+  pull(word_root)
+
+# Extracting the top 200 words to use for clustering features
+top_200_words <- common_words %>% 
+  slice_head(n = 200) %>% 
+  pull(word_root)
+```
+
+### Type-word matrix
+```{r}
+# Creating the matrix by pivoting original profiles wide after filtering to only the selected 50/100/200 words (we want each row to be a unique type so that we can cluster across types during HCA with the words as features)
+
+# 50 WORDS #################
+type_matrix50 <- type_profiles %>% 
+  filter(word_root %in% top_50_words) %>% 
+  select(type, word_root, tf_idf) %>% 
+  rename(pokemon_type = type) %>% 
+  pivot_wider(names_from = word_root,
+              values_from = tf_idf,
+              values_fill = 0) # filling in cases where a word is not reported in a type to be 0
+
+print(type_matrix50)
+
+# Preparing quick visualization of the number of types that have a word value greater than 0 to get an idea of how exclusive words are to certain types
+word_type_counts50 <- type_matrix50 %>% 
+  summarise(across(-pokemon_type, 
+                   ~ sum(. > 0))) %>% 
+  pivot_longer(
+    cols = everything(),
+    names_to = "word_root_50total",
+    values_to =  "types_with_word"
+  )
+
+print(word_type_counts50)
+
+# 100 WORDS #################
+type_matrix100 <- type_profiles %>% 
+  filter(word_root %in% top_100_words) %>% 
+  select(type, word_root, tf_idf) %>% 
+  rename(pokemon_type = type) %>% 
+  pivot_wider(names_from = word_root,
+              values_from = tf_idf,
+              values_fill = 0) # filling in cases where a word is not reported in a type to be 0
+
+print(type_matrix100)
+
+# Preparing quick visualization of the number of types that have a word value greater than 0 to get an idea of how exclusive words are to certain types
+word_type_counts100 <- type_matrix100 %>% 
+  summarise(across(-pokemon_type, 
+                   ~ sum(. > 0))) %>% 
+  pivot_longer(
+    cols = everything(),
+    names_to = "word_root_100total",
+    values_to =  "types_with_word"
+  )
+
+print(word_type_counts100)
+
+# 200 WORDS #################
+type_matrix200 <- type_profiles %>% 
+  filter(word_root %in% top_200_words) %>% 
+  select(type, word_root, tf_idf) %>% 
+  rename(pokemon_type = type) %>% 
+  pivot_wider(names_from = word_root,
+              values_from = tf_idf,
+              values_fill = 0) # filling in cases where a word is not reported in a type to be 0
+
+print(type_matrix200)
+
+# Preparing quick visualization of the number of types that have a word value greater than 0 to get an idea of how exclusive words are to certain types
+word_type_counts200 <- type_matrix200 %>% 
+  summarise(across(-pokemon_type, 
+                   ~ sum(. > 0))) %>% 
+  pivot_longer(
+    cols = everything(),
+    names_to = "word_root_200total",
+    values_to =  "types_with_word"
+  )
+
+print(word_type_counts200)
+```
+
+### Generation-word matrix
+```{r}
+# Creating the matrix by pivoting original profiles wide after filtering to only the selected 50/100/200 words (we want each row to be a unique generation so that we can cluster across types during HCA with the words as features)
+
+# 50 WORDS #################
+gen_matrix50 <- gen_profiles %>% 
+  filter(word_root %in% top_50_words) %>% 
+  select(generation, word_root, tf_idf) %>% 
+  rename(pokemon_gen = generation) %>% 
+  pivot_wider(names_from = word_root,
+              values_from = tf_idf,
+              values_fill = 0) # filling in cases where a word is not reported in a type to be 0
+
+print(gen_matrix50)
+
+# Preparing quick visualization of the number of generations that have a word value greater than 0 to get an idea of how exclusive words are to certain generations
+word_gen_counts50 <- gen_matrix50 %>% 
+  summarise(across(-pokemon_gen, 
+                   ~ sum(. > 0))) %>% 
+  pivot_longer(
+    cols = everything(),
+    names_to = "word_root_50total",
+    values_to =  "gens_with_word"
+  )
+
+print(word_gen_counts50)
+
+# 100 WORDS #################
+gen_matrix100 <- gen_profiles %>% 
+  filter(word_root %in% top_100_words) %>% 
+  select(generation, word_root, tf_idf) %>% 
+  rename(pokemon_gen = generation) %>% 
+  pivot_wider(names_from = word_root,
+              values_from = tf_idf,
+              values_fill = 0) # filling in cases where a word is not reported in a type to be 0
+
+print(gen_matrix100)
+
+# Preparing quick visualization of the number of generations that have a word value greater than 0 to get an idea of how exclusive words are to certain generations
+word_gen_counts100 <- gen_matrix100 %>% 
+  summarise(across(-pokemon_gen, 
+                   ~ sum(. > 0))) %>% 
+  pivot_longer(
+    cols = everything(),
+    names_to = "word_root_100total",
+    values_to =  "gens_with_word"
+  )
+
+print(word_gen_counts100)
+
+# 200 WORDS #################
+gen_matrix200 <- gen_profiles %>% 
+  filter(word_root %in% top_200_words) %>% 
+  select(generation, word_root, tf_idf) %>% 
+  rename(pokemon_gen = generation) %>% 
+  pivot_wider(names_from = word_root,
+              values_from = tf_idf,
+              values_fill = 0) # filling in cases where a word is not reported in a type to be 0
+
+print(gen_matrix200)
+
+# Preparing quick visualization of the number of generations that have a word value greater than 0 to get an idea of how exclusive words are to certain generations
+word_gen_counts200 <- gen_matrix200 %>% 
+  summarise(across(-pokemon_gen, 
+                   ~ sum(. > 0))) %>% 
+  pivot_longer(
+    cols = everything(),
+    names_to = "word_root_200total",
+    values_to =  "gens_with_word"
+  )
+
+print(word_gen_counts200)
+```
+
+# Saving matrices for analysis
+```{r}
+# Main analysis (150 words)
+write.csv(type_matrix, here("project1/DATA/", "pokemon_type-word_matrix.csv"), row.names = FALSE)
+write.csv(gen_matrix, here("project1/DATA/", "pokemon_gen-word_matrix.csv"), row.names = FALSE)
+
+# Sensitivity check
+# 50 words
+write.csv(type_matrix50, here("project1/DATA/", "pokemon_type-word_matrix50.csv"), row.names = FALSE)
+write.csv(gen_matrix50, here("project1/DATA/", "pokemon_gen-word_matrix50.csv"), row.names = FALSE)
+
+# 100 words
+write.csv(type_matrix100, here("project1/DATA/", "pokemon_type-word_matrix100.csv"), row.names = FALSE)
+write.csv(gen_matrix100, here("project1/DATA/", "pokemon_gen-word_matrix100.csv"), row.names = FALSE)
+
+# 200 words
+write.csv(type_matrix200, here("project1/DATA/", "pokemon_type-word_matrix200.csv"), row.names = FALSE)
+write.csv(gen_matrix200, here("project1/DATA/", "pokemon_gen-word_matrix200.csv"), row.names = FALSE)
+```
