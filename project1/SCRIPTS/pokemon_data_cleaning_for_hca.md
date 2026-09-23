@@ -1,7 +1,7 @@
 DS4002 Pokemon Project Data Cleaning
 ================
 Caroline Clippinger
-2026-09-18
+2026-09-23
 
 # General Information
 
@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(here) # for loading data
 ```
 
-    ## here() starts at C:/Users/Caroline Clippinger/OneDrive/Documents/DS-4002-group-01
+    ## here() starts at C:/Users/cacli/OneDrive/Documents/DS-4002-group-01
 
 ``` r
 library(tidyverse) # for general data wrangling and string manipulation
@@ -126,7 +126,7 @@ print(pokemon_updated[pokemon_updated$type_1 == "" | is.na(pokemon_updated$type_
 ud_model <- udpipe_download_model(language = "english")
 ```
 
-    ## Downloading udpipe model from https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/master/inst/udpipe-ud-2.5-191206/english-ewt-ud-2.5-191206.udpipe to C:/Users/Caroline Clippinger/OneDrive/Documents/DS-4002-group-01/project1/SCRIPTS/english-ewt-ud-2.5-191206.udpipe
+    ## Downloading udpipe model from https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/master/inst/udpipe-ud-2.5-191206/english-ewt-ud-2.5-191206.udpipe to C:/Users/cacli/OneDrive/Documents/DS-4002-group-01/project1/SCRIPTS/english-ewt-ud-2.5-191206.udpipe
 
     ##  - This model has been trained on version 2.5 of data from https://universaldependencies.org
 
@@ -136,7 +136,7 @@ ud_model <- udpipe_download_model(language = "english")
 
     ##  - For a list of all models and their licenses (most models you can download with this package have either a CC-BY-SA or a CC-BY-SA-NC license) read the documentation at ?udpipe_download_model. For building your own models: visit the documentation by typing vignette('udpipe-train', package = 'udpipe')
 
-    ## Downloading finished, model stored at 'C:/Users/Caroline Clippinger/OneDrive/Documents/DS-4002-group-01/project1/SCRIPTS/english-ewt-ud-2.5-191206.udpipe'
+    ## Downloading finished, model stored at 'C:/Users/cacli/OneDrive/Documents/DS-4002-group-01/project1/SCRIPTS/english-ewt-ud-2.5-191206.udpipe'
 
 ``` r
 # Extracting the file model
@@ -764,9 +764,451 @@ cat("\n\n", sum(rowSums(is.na(gen_matrix[, 2:151])) > 0), "rows in the generatio
     ## 
     ##  0 rows in the generation-word matrix contain all 0 values.
 
+## Creating Sensitivy Check Matrices
+
+### Extracting new word counts
+
+``` r
+# Extracting the top 50 words to use for clustering features
+top_50_words <- common_words %>% 
+  slice_head(n = 50) %>% 
+  pull(word_root)
+
+# Extracting the top 100 words to use for clustering features
+top_100_words <- common_words %>% 
+  slice_head(n = 100) %>% 
+  pull(word_root)
+
+# Extracting the top 200 words to use for clustering features
+top_200_words <- common_words %>% 
+  slice_head(n = 200) %>% 
+  pull(word_root)
+```
+
+### Type-word matrix
+
+``` r
+# Creating the matrix by pivoting original profiles wide after filtering to only the selected 50/100/200 words (we want each row to be a unique type so that we can cluster across types during HCA with the words as features)
+
+# 50 WORDS #################
+type_matrix50 <- type_profiles %>% 
+  filter(word_root %in% top_50_words) %>% 
+  select(type, word_root, tf_idf) %>% 
+  rename(pokemon_type = type) %>% 
+  pivot_wider(names_from = word_root,
+              values_from = tf_idf,
+              values_fill = 0) # filling in cases where a word is not reported in a type to be 0
+
+print(type_matrix50)
+```
+
+    ## # A tibble: 18 × 51
+    ##    pokemon_type   silk  honey  cloak electricity   ultra   fear   sand  apple
+    ##    <chr>         <dbl>  <dbl>  <dbl>       <dbl>   <dbl>  <dbl>  <dbl>  <dbl>
+    ##  1 bug          0.0344 0.0209 0.0206     0.00716 0.00610 0      0      0     
+    ##  2 dark         0      0      0          0       0       0.0482 0.0275 0     
+    ##  3 dragon       0      0      0          0.0108  0       0      0      0.0474
+    ##  4 electric     0      0      0          0.140   0       0      0      0     
+    ##  5 fairy        0      0      0          0       0       0      0      0     
+    ##  6 fighting     0      0      0          0       0.00918 0      0      0     
+    ##  7 fire         0      0      0          0       0       0      0      0     
+    ##  8 flying       0      0.0192 0          0.00657 0       0      0      0     
+    ##  9 ghost        0      0      0          0       0       0      0      0     
+    ## 10 grass        0      0      0          0       0       0      0      0.0190
+    ## 11 ground       0      0      0          0       0       0      0.0777 0     
+    ## 12 ice          0      0      0          0       0       0      0      0     
+    ## 13 normal       0      0      0          0       0       0      0      0     
+    ## 14 poison       0      0      0          0       0.00732 0      0      0     
+    ## 15 psychic      0      0      0          0       0       0      0      0     
+    ## 16 rock         0      0      0          0       0.00863 0      0      0     
+    ## 17 steel        0      0      0          0       0.0210  0      0      0     
+    ## 18 water        0      0      0          0       0       0      0      0     
+    ## # ℹ 42 more variables: tusk <dbl>, expedition <dbl>, journal <dbl>,
+    ## #   freeze <dbl>, inhabit <dbl>, spark <dbl>, charge <dbl>, storing <dbl>,
+    ## #   magazine <dbl>, hammer <dbl>, smell <dbl>, guardian <dbl>, hidden <dbl>,
+    ## #   overwhelm <dbl>, source <dbl>, timid <dbl>, muscle <dbl>, dangerous <dbl>,
+    ## #   toxic <dbl>, paranormal <dbl>, fireball <dbl>, set <dbl>, internal <dbl>,
+    ## #   coal <dbl>, twig <dbl>, gas <dbl>, spirit <dbl>, soul <dbl>, hollow <dbl>,
+    ## #   sword <dbl>, snow <dbl>, cold <dbl>, breath <dbl>, frigid <dbl>, …
+
+``` r
+# Preparing quick visualization of the number of types that have a word value greater than 0 to get an idea of how exclusive words are to certain types
+word_type_counts50 <- type_matrix50 %>% 
+  summarise(across(-pokemon_type, 
+                   ~ sum(. > 0))) %>% 
+  pivot_longer(
+    cols = everything(),
+    names_to = "word_root_50total",
+    values_to =  "types_with_word"
+  )
+
+print(word_type_counts50)
+```
+
+    ## # A tibble: 50 × 2
+    ##    word_root_50total types_with_word
+    ##    <chr>                       <int>
+    ##  1 silk                            1
+    ##  2 honey                           2
+    ##  3 cloak                           1
+    ##  4 electricity                     4
+    ##  5 ultra                           5
+    ##  6 fear                            1
+    ##  7 sand                            2
+    ##  8 apple                           2
+    ##  9 tusk                            3
+    ## 10 expedition                      1
+    ## # ℹ 40 more rows
+
+``` r
+# 100 WORDS #################
+type_matrix100 <- type_profiles %>% 
+  filter(word_root %in% top_100_words) %>% 
+  select(type, word_root, tf_idf) %>% 
+  rename(pokemon_type = type) %>% 
+  pivot_wider(names_from = word_root,
+              values_from = tf_idf,
+              values_fill = 0) # filling in cases where a word is not reported in a type to be 0
+
+print(type_matrix100)
+```
+
+    ## # A tibble: 18 × 101
+    ##    pokemon_type   silk  honey  cloak  flower bubble    flap electricity   shock
+    ##    <chr>         <dbl>  <dbl>  <dbl>   <dbl>  <dbl>   <dbl>       <dbl>   <dbl>
+    ##  1 bug          0.0344 0.0209 0.0206 0.0179  0.0157 0.0128      0.00716 0.00716
+    ##  2 dark         0      0      0      0       0      0           0       0      
+    ##  3 dragon       0      0      0      0       0      0           0.0108  0      
+    ##  4 electric     0      0      0      0       0      0           0.140   0.0107 
+    ##  5 fairy        0      0      0      0.0795  0      0           0       0      
+    ##  6 fighting     0      0      0      0       0      0           0       0      
+    ##  7 fire         0      0      0      0       0      0           0       0      
+    ##  8 flying       0      0.0192 0      0.00985 0      0.0274      0.00657 0.00657
+    ##  9 ghost        0      0      0      0       0      0           0       0      
+    ## 10 grass        0      0      0      0.0239  0      0           0       0      
+    ## 11 ground       0      0      0      0       0      0           0       0      
+    ## 12 ice          0      0      0      0       0      0           0       0      
+    ## 13 normal       0      0      0      0       0      0.00988     0       0      
+    ## 14 poison       0      0      0      0       0      0           0       0      
+    ## 15 psychic      0      0      0      0       0      0           0       0.00701
+    ## 16 rock         0      0      0      0       0      0           0       0      
+    ## 17 steel        0      0      0      0       0      0           0       0      
+    ## 18 water        0      0      0      0       0.0174 0           0       0      
+    ## # ℹ 92 more variables: ultra <dbl>, fear <dbl>, sand <dbl>, violent <dbl>,
+    ## #   clad <dbl>, list <dbl>, temperament <dbl>, bone <dbl>, burn <dbl>,
+    ## #   flame <dbl>, apple <dbl>, tusk <dbl>, expedition <dbl>, journal <dbl>,
+    ## #   freeze <dbl>, hundred <dbl>, mention <dbl>, inhabit <dbl>, lightning <dbl>,
+    ## #   spark <dbl>, charge <dbl>, storing <dbl>, `elec­` <dbl>, tricity <dbl>,
+    ## #   touch <dbl>, magazine <dbl>, hammer <dbl>, smell <dbl>, emit <dbl>,
+    ## #   cream <dbl>, guardian <dbl>, hidden <dbl>, lull <dbl>, overwhelm <dbl>, …
+
+``` r
+# Preparing quick visualization of the number of types that have a word value greater than 0 to get an idea of how exclusive words are to certain types
+word_type_counts100 <- type_matrix100 %>% 
+  summarise(across(-pokemon_type, 
+                   ~ sum(. > 0))) %>% 
+  pivot_longer(
+    cols = everything(),
+    names_to = "word_root_100total",
+    values_to =  "types_with_word"
+  )
+
+print(word_type_counts100)
+```
+
+    ## # A tibble: 100 × 2
+    ##    word_root_100total types_with_word
+    ##    <chr>                        <int>
+    ##  1 silk                             1
+    ##  2 honey                            2
+    ##  3 cloak                            1
+    ##  4 flower                           4
+    ##  5 bubble                           2
+    ##  6 flap                             3
+    ##  7 electricity                      4
+    ##  8 shock                            4
+    ##  9 ultra                            5
+    ## 10 fear                             1
+    ## # ℹ 90 more rows
+
+``` r
+# 200 WORDS #################
+type_matrix200 <- type_profiles %>% 
+  filter(word_root %in% top_200_words) %>% 
+  select(type, word_root, tf_idf) %>% 
+  rename(pokemon_type = type) %>% 
+  pivot_wider(names_from = word_root,
+              values_from = tf_idf,
+              values_fill = 0) # filling in cases where a word is not reported in a type to be 0
+
+print(type_matrix200)
+```
+
+    ## # A tibble: 18 × 201
+    ##    pokemon_type   silk  honey  cloak cocoon  swarm  flower bubble    host
+    ##    <chr>         <dbl>  <dbl>  <dbl>  <dbl>  <dbl>   <dbl>  <dbl>   <dbl>
+    ##  1 bug          0.0344 0.0209 0.0206 0.0206 0.0206 0.0179  0.0157 0.0157 
+    ##  2 dark         0      0      0      0      0      0       0      0      
+    ##  3 dragon       0      0      0      0      0      0       0      0      
+    ##  4 electric     0      0      0      0      0      0       0      0      
+    ##  5 fairy        0      0      0      0      0      0.0795  0      0      
+    ##  6 fighting     0      0      0      0      0      0       0      0      
+    ##  7 fire         0      0      0      0      0      0       0      0      
+    ##  8 flying       0      0.0192 0      0      0      0.00985 0      0      
+    ##  9 ghost        0      0      0      0      0      0       0      0      
+    ## 10 grass        0      0      0      0      0      0.0239  0      0.00951
+    ## 11 ground       0      0      0      0      0      0       0      0      
+    ## 12 ice          0      0      0      0      0      0       0      0      
+    ## 13 normal       0      0      0      0      0      0       0      0      
+    ## 14 poison       0      0      0      0      0      0       0      0      
+    ## 15 psychic      0      0      0      0      0      0       0      0      
+    ## 16 rock         0      0      0      0      0      0       0      0      
+    ## 17 steel        0      0      0      0      0      0       0      0      
+    ## 18 water        0      0      0      0      0      0       0.0174 0      
+    ## # ℹ 192 more variables: flap <dbl>, bark <dbl>, poisonous <dbl>,
+    ## #   predator <dbl>, venomous <dbl>, steal <dbl>, antenna <dbl>,
+    ## #   electricity <dbl>, shock <dbl>, ultra <dbl>, fear <dbl>, pack <dbl>,
+    ## #   sand <dbl>, violent <dbl>, clad <dbl>, follow <dbl>, lead <dbl>,
+    ## #   list <dbl>, startle <dbl>, temperament <dbl>, bone <dbl>, feather <dbl>,
+    ## #   burn <dbl>, forest <dbl>, hair <dbl>, moon <dbl>, flame <dbl>, apple <dbl>,
+    ## #   tusk <dbl>, expedition <dbl>, journal <dbl>, freeze <dbl>, trigger <dbl>, …
+
+``` r
+# Preparing quick visualization of the number of types that have a word value greater than 0 to get an idea of how exclusive words are to certain types
+word_type_counts200 <- type_matrix200 %>% 
+  summarise(across(-pokemon_type, 
+                   ~ sum(. > 0))) %>% 
+  pivot_longer(
+    cols = everything(),
+    names_to = "word_root_200total",
+    values_to =  "types_with_word"
+  )
+
+print(word_type_counts200)
+```
+
+    ## # A tibble: 200 × 2
+    ##    word_root_200total types_with_word
+    ##    <chr>                        <int>
+    ##  1 silk                             1
+    ##  2 honey                            2
+    ##  3 cloak                            1
+    ##  4 cocoon                           1
+    ##  5 swarm                            1
+    ##  6 flower                           4
+    ##  7 bubble                           2
+    ##  8 host                             2
+    ##  9 flap                             3
+    ## 10 bark                             2
+    ## # ℹ 190 more rows
+
+### Generation-word matrix
+
+``` r
+# Creating the matrix by pivoting original profiles wide after filtering to only the selected 50/100/200 words (we want each row to be a unique generation so that we can cluster across types during HCA with the words as features)
+
+# 50 WORDS #################
+gen_matrix50 <- gen_profiles %>% 
+  filter(word_root %in% top_50_words) %>% 
+  select(generation, word_root, tf_idf) %>% 
+  rename(pokemon_gen = generation) %>% 
+  pivot_wider(names_from = word_root,
+              values_from = tf_idf,
+              values_fill = 0) # filling in cases where a word is not reported in a type to be 0
+
+print(gen_matrix50)
+```
+
+    ## # A tibble: 9 × 51
+    ##   pokemon_gen    toxic     gas  muscle  timid storing  charge electricity hollow
+    ##   <chr>          <dbl>   <dbl>   <dbl>  <dbl>   <dbl>   <dbl>       <dbl>  <dbl>
+    ## 1 generation-i 0.0104  0.00521 0.00381 0       0      0           0       0     
+    ## 2 generation-… 0       0       0       0.0233  0.0155 0.0106      0.00430 0     
+    ## 3 generation-… 0       0       0       0       0      0           0.00115 0.0124
+    ## 4 generation-… 0       0       0       0       0      0           0.00225 0     
+    ## 5 generation-… 0.00709 0       0.00345 0       0      0           0.00383 0     
+    ## 6 generation-v 0       0.00445 0       0       0      0.00445     0.00300 0     
+    ## 7 generation-… 0       0       0       0       0      0           0       0     
+    ## 8 generation-… 0       0       0       0       0      0           0       0     
+    ## 9 generation-… 0       0       0.00518 0       0      0           0.00478 0     
+    ## # ℹ 42 more variables: silk <dbl>, spark <dbl>, sand <dbl>, spirit <dbl>,
+    ## #   cloak <dbl>, honey <dbl>, cold <dbl>, impressive <dbl>, magnetism <dbl>,
+    ## #   smell <dbl>, freeze <dbl>, magazine <dbl>, paranormal <dbl>,
+    ## #   expedition <dbl>, journal <dbl>, chain <dbl>, hammer <dbl>, salt <dbl>,
+    ## #   fireball <dbl>, apple <dbl>, set <dbl>, soul <dbl>, internal <dbl>,
+    ## #   tusk <dbl>, breath <dbl>, snow <dbl>, fear <dbl>, ears <dbl>, hidden <dbl>,
+    ## #   inhabit <dbl>, twig <dbl>, restore <dbl>, sword <dbl>, ultra <dbl>, …
+
+``` r
+# Preparing quick visualization of the number of generations that have a word value greater than 0 to get an idea of how exclusive words are to certain generations
+word_gen_counts50 <- gen_matrix50 %>% 
+  summarise(across(-pokemon_gen, 
+                   ~ sum(. > 0))) %>% 
+  pivot_longer(
+    cols = everything(),
+    names_to = "word_root_50total",
+    values_to =  "gens_with_word"
+  )
+
+print(word_gen_counts50)
+```
+
+    ## # A tibble: 50 × 2
+    ##    word_root_50total gens_with_word
+    ##    <chr>                      <int>
+    ##  1 toxic                          2
+    ##  2 gas                            2
+    ##  3 muscle                         3
+    ##  4 timid                          1
+    ##  5 storing                        1
+    ##  6 charge                         2
+    ##  7 electricity                    6
+    ##  8 hollow                         1
+    ##  9 silk                           1
+    ## 10 spark                          1
+    ## # ℹ 40 more rows
+
+``` r
+# 100 WORDS #################
+gen_matrix100 <- gen_profiles %>% 
+  filter(word_root %in% top_100_words) %>% 
+  select(generation, word_root, tf_idf) %>% 
+  rename(pokemon_gen = generation) %>% 
+  pivot_wider(names_from = word_root,
+              values_from = tf_idf,
+              values_fill = 0) # filling in cases where a word is not reported in a type to be 0
+
+print(gen_matrix100)
+```
+
+    ## # A tibble: 9 × 101
+    ##   pokemon_gen       code   flap  quick    bone   toxic lightning    lull   stone
+    ##   <chr>            <dbl>  <dbl>  <dbl>   <dbl>   <dbl>     <dbl>   <dbl>   <dbl>
+    ## 1 generation-i    0.0152 0.0152 0.0152 0.0130  0.0104    0.00762 0.00762 0.00762
+    ## 2 generation-ii   0      0      0      0       0         0       0       0      
+    ## 3 generation-iii  0      0      0      0       0         0       0       0      
+    ## 4 generation-iv   0      0      0      0       0         0       0       0      
+    ## 5 generation-ix   0      0      0      0       0.00709   0.00345 0       0      
+    ## 6 generation-v    0      0      0      0.00667 0         0.00488 0       0      
+    ## 7 generation-vi   0      0      0      0       0         0       0       0      
+    ## 8 generation-vii  0      0      0      0       0         0       0       0      
+    ## 9 generation-viii 0      0      0      0       0         0       0       0      
+    ## # ℹ 92 more variables: boulder <dbl>, female <dbl>, gas <dbl>, hot <dbl>,
+    ## #   muscle <dbl>, brain <dbl>, flame <dbl>, punch <dbl>, burn <dbl>,
+    ## #   shock <dbl>, timid <dbl>, touch <dbl>, cool <dbl>, `elec­` <dbl>,
+    ## #   snout <dbl>, storing <dbl>, tricity <dbl>, charge <dbl>, electricity <dbl>,
+    ## #   hollow <dbl>, silk <dbl>, spark <dbl>, spring <dbl>, flower <dbl>,
+    ## #   sand <dbl>, spirit <dbl>, cloak <dbl>, honey <dbl>, bud <dbl>, cold <dbl>,
+    ## #   guard <dbl>, impressive <dbl>, magnetism <dbl>, unit <dbl>, vile <dbl>, …
+
+``` r
+# Preparing quick visualization of the number of generations that have a word value greater than 0 to get an idea of how exclusive words are to certain generations
+word_gen_counts100 <- gen_matrix100 %>% 
+  summarise(across(-pokemon_gen, 
+                   ~ sum(. > 0))) %>% 
+  pivot_longer(
+    cols = everything(),
+    names_to = "word_root_100total",
+    values_to =  "gens_with_word"
+  )
+
+print(word_gen_counts100)
+```
+
+    ## # A tibble: 100 × 2
+    ##    word_root_100total gens_with_word
+    ##    <chr>                       <int>
+    ##  1 code                            1
+    ##  2 flap                            1
+    ##  3 quick                           1
+    ##  4 bone                            2
+    ##  5 toxic                           2
+    ##  6 lightning                       3
+    ##  7 lull                            1
+    ##  8 stone                           1
+    ##  9 boulder                         3
+    ## 10 female                          2
+    ## # ℹ 90 more rows
+
+``` r
+# 200 WORDS #################
+gen_matrix200 <- gen_profiles %>% 
+  filter(word_root %in% top_200_words) %>% 
+  select(generation, word_root, tf_idf) %>% 
+  rename(pokemon_gen = generation) %>% 
+  pivot_wider(names_from = word_root,
+              values_from = tf_idf,
+              values_fill = 0) # filling in cases where a word is not reported in a type to be 0
+
+print(gen_matrix200)
+```
+
+    ## # A tibble: 9 × 201
+    ##   pokemon_gen      code   flap   host   hunt prefer  quick rarely    bone  swimm
+    ##   <chr>           <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>   <dbl>  <dbl>
+    ## 1 generation-i   0.0152 0.0152 0.0152 0.0152 0.0152 0.0152 0.0152 0.0130  0.0114
+    ## 2 generation-ii  0      0      0      0      0      0      0      0       0     
+    ## 3 generation-iii 0      0      0      0      0      0      0      0       0     
+    ## 4 generation-iv  0      0      0      0      0      0      0      0       0     
+    ## 5 generation-ix  0      0      0      0      0      0      0      0       0     
+    ## 6 generation-v   0      0      0      0      0      0      0      0.00667 0     
+    ## 7 generation-vi  0      0      0      0      0      0      0      0       0     
+    ## 8 generation-vii 0      0      0      0      0      0      0      0       0     
+    ## 9 generation-vi… 0      0      0      0      0      0      0      0       0     
+    ## # ℹ 191 more variables: venomous <dbl>, easily <dbl>, toxic <dbl>, plant <dbl>,
+    ## #   bolt <dbl>, filthy <dbl>, fossil <dbl>, immobilize <dbl>,
+    ## #   intelligence <dbl>, larger <dbl>, lightning <dbl>, lull <dbl>,
+    ## #   sludge <dbl>, stone <dbl>, venom <dbl>, warning <dbl>, boulder <dbl>,
+    ## #   weapon <dbl>, female <dbl>, gas <dbl>, hot <dbl>, muscle <dbl>,
+    ## #   throw <dbl>, brain <dbl>, flame <dbl>, punch <dbl>, burn <dbl>,
+    ## #   shock <dbl>, timid <dbl>, touch <dbl>, bark <dbl>, cool <dbl>, …
+
+``` r
+# Preparing quick visualization of the number of generations that have a word value greater than 0 to get an idea of how exclusive words are to certain generations
+word_gen_counts200 <- gen_matrix200 %>% 
+  summarise(across(-pokemon_gen, 
+                   ~ sum(. > 0))) %>% 
+  pivot_longer(
+    cols = everything(),
+    names_to = "word_root_200total",
+    values_to =  "gens_with_word"
+  )
+
+print(word_gen_counts200)
+```
+
+    ## # A tibble: 200 × 2
+    ##    word_root_200total gens_with_word
+    ##    <chr>                       <int>
+    ##  1 code                            1
+    ##  2 flap                            1
+    ##  3 host                            1
+    ##  4 hunt                            1
+    ##  5 prefer                          1
+    ##  6 quick                           1
+    ##  7 rarely                          1
+    ##  8 bone                            2
+    ##  9 swimm                           1
+    ## 10 venomous                        1
+    ## # ℹ 190 more rows
+
 # Saving matrices for analysis
 
 ``` r
+# Main analysis (150 words)
 write.csv(type_matrix, here("project1/DATA/", "pokemon_type-word_matrix.csv"), row.names = FALSE)
 write.csv(gen_matrix, here("project1/DATA/", "pokemon_gen-word_matrix.csv"), row.names = FALSE)
+
+# Sensitivity check
+# 50 words
+write.csv(type_matrix50, here("project1/DATA/", "pokemon_type-word_matrix50.csv"), row.names = FALSE)
+write.csv(gen_matrix50, here("project1/DATA/", "pokemon_gen-word_matrix50.csv"), row.names = FALSE)
+
+# 100 words
+write.csv(type_matrix100, here("project1/DATA/", "pokemon_type-word_matrix100.csv"), row.names = FALSE)
+write.csv(gen_matrix100, here("project1/DATA/", "pokemon_gen-word_matrix100.csv"), row.names = FALSE)
+
+# 200 words
+write.csv(type_matrix200, here("project1/DATA/", "pokemon_type-word_matrix200.csv"), row.names = FALSE)
+write.csv(gen_matrix200, here("project1/DATA/", "pokemon_gen-word_matrix200.csv"), row.names = FALSE)
 ```
