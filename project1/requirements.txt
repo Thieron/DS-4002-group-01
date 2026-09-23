@@ -1,1 +1,6 @@
+requests
 pandas>=3.0.0
+numpy
+matplotlib
+scipy
+scikit-learn
