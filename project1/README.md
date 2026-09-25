@@ -17,8 +17,6 @@ This folder contains the data, code, and outputs for Project 1. We collected Pok
 - **Python 3** (Jupyter Notebook) with `requests`, `pandas`, `numpy`, `matplotlib`, `scipy`, `scikit-learn`
 - **R** (RStudio) with `here`, `tidyverse`, `tidytext`, `udpipe`
 
-**TO ADD: Remove `textdata` from this list (and from Setup step 3) if Caroline removes `library(textdata)` from the R script, since it is not used.**
-
 ## Section 2: Documentation Map
 
 ```
