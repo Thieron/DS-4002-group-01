@@ -11,8 +11,8 @@ clustering analysis. Includes creation of additional datasets for
 sensitivity analysis to ensure results are not determined by a single
 feature count selection. The necessary data file can be found at
 DS-4002-group-01/project1/DATA/pokedex.csv in the github. It also
-requires the following packages: `here`, `tidyverse`, `tidytext`,
-`textdata`, and `udpipe`. To install these packages use the
+requires the following packages: `here`, `tidyverse`, `tidytext`, and
+`udpipe`. To install these packages use the
 `install.packages("package_name")` syntax.
 
 # Loading Packages and Data
@@ -42,7 +42,6 @@ library(tidyverse) # for general data wrangling and string manipulation
 
 ``` r
 library(tidytext) # for working with the text
-library(textdata) # for afinn lexicon to do sentiment analysis
 library(udpipe) # for the smart word cleaning and lemmatization
 
 
