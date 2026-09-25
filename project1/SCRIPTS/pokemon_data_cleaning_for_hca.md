@@ -1,7 +1,7 @@
 DS4002 Pokemon Project Data Cleaning
 ================
 Caroline Clippinger
-2026-09-23
+2026-09-25
 
 # General Information
 
@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(here) # for loading data
 ```
 
-    ## here() starts at C:/Users/cacli/OneDrive/Documents/DS-4002-group-01
+    ## here() starts at C:/Users/Caroline Clippinger/OneDrive/Documents/DS-4002-group-01
 
 ``` r
 library(tidyverse) # for general data wrangling and string manipulation
@@ -126,7 +126,7 @@ print(pokemon_updated[pokemon_updated$type_1 == "" | is.na(pokemon_updated$type_
 ud_model <- udpipe_download_model(language = "english")
 ```
 
-    ## Downloading udpipe model from https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/master/inst/udpipe-ud-2.5-191206/english-ewt-ud-2.5-191206.udpipe to C:/Users/cacli/OneDrive/Documents/DS-4002-group-01/project1/SCRIPTS/english-ewt-ud-2.5-191206.udpipe
+    ## Downloading udpipe model from https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/master/inst/udpipe-ud-2.5-191206/english-ewt-ud-2.5-191206.udpipe to C:/Users/Caroline Clippinger/OneDrive/Documents/DS-4002-group-01/project1/SCRIPTS/english-ewt-ud-2.5-191206.udpipe
 
     ##  - This model has been trained on version 2.5 of data from https://universaldependencies.org
 
@@ -136,7 +136,7 @@ ud_model <- udpipe_download_model(language = "english")
 
     ##  - For a list of all models and their licenses (most models you can download with this package have either a CC-BY-SA or a CC-BY-SA-NC license) read the documentation at ?udpipe_download_model. For building your own models: visit the documentation by typing vignette('udpipe-train', package = 'udpipe')
 
-    ## Downloading finished, model stored at 'C:/Users/cacli/OneDrive/Documents/DS-4002-group-01/project1/SCRIPTS/english-ewt-ud-2.5-191206.udpipe'
+    ## Downloading finished, model stored at 'C:/Users/Caroline Clippinger/OneDrive/Documents/DS-4002-group-01/project1/SCRIPTS/english-ewt-ud-2.5-191206.udpipe'
 
 ``` r
 # Extracting the file model
@@ -569,6 +569,245 @@ top_150_df <- common_words %>%
   slice_head(n = 150)
 
 top_150_words <- top_150_df$word_root
+```
+
+### Determining best feature count
+
+``` r
+n_unique_words = length(unique(common_words$word_root))
+cat("There are", n_unique_words, "unique common words that meet requirements.")
+```
+
+    ## There are 566 unique common words that meet requirements.
+
+``` r
+# Preparing informativeness metrics
+informativeness <- data.frame(
+  word_root = common_words$word_root,
+  avg_tfidf = common_words$avg_tfidf
+) %>% 
+  mutate(
+    rank = row_number(), # arranged by avg_tfidf in descending order so 1 is the most informative word
+    pct_total_vocab = rank/max(rank)*100, # getting percent of total possible vocab
+    signal_strength_pct = (avg_tfidf / first(avg_tfidf))*100, # the word with the highest average TF-IDF is considered the most informative because it tells the most as to which type/generation a pokemon belongs to, so every other word after in the rankings will be a percentage of this
+    cumulative_mass_pct = (cumsum(avg_tfidf)/sum(avg_tfidf))*100, # this gives the percent of total amount of TF-IDF information contributed by all words ranked up to this point
+    slope = (signal_strength_pct - lag(signal_strength_pct)) / (rank - lag(rank)), # getting slope at each point
+    slope_change = slope - lag(slope) # change in slope
+  )
+
+# Metrics at certain ranks
+informativeness %>% 
+  filter(rank %in% seq(0, 300, by = 5)) %>% 
+  print()
+```
+
+    ##      word_root   avg_tfidf rank pct_total_vocab signal_strength_pct
+    ## 1         sand 0.028482614    5       0.8833922            50.89096
+    ## 2         ears 0.027023565   10       1.7667845            48.28402
+    ## 3       hammer 0.025593933   15       2.6501767            45.72964
+    ## 4   expedition 0.024232420   20       3.5335689            43.29698
+    ## 5        spark 0.023757729   25       4.4169611            42.44883
+    ## 6       muscle 0.022793661   30       5.3003534            40.72629
+    ## 7         silk 0.021354215   35       6.1837456            38.15438
+    ## 8       spirit 0.020412263   40       7.0671378            36.47136
+    ## 9    dangerous 0.019617724   45       7.9505300            35.05172
+    ## 10      source 0.018904894   50       8.8339223            33.77808
+    ## 11      flower 0.018449608   55       9.7173145            32.96461
+    ## 12       punch 0.018044027   60      10.6007067            32.23994
+    ## 13       fiery 0.017873783   65      11.4840989            31.93576
+    ## 14         bud 0.017471363   70      12.3674912            31.21674
+    ## 15      future 0.016929682   75      13.2508834            30.24890
+    ## 16     hundred 0.016569000   80      14.1342756            29.60445
+    ## 17    sighting 0.016187671   85      15.0176678            28.92312
+    ## 18       quick 0.015874235   90      15.9010601            28.36309
+    ## 19       shock 0.015581782   95      16.7844523            27.84056
+    ## 20 temperament 0.015497971  100      17.6678445            27.69081
+    ## 21       ember 0.015346360  105      18.5512367            27.41992
+    ## 22        mine 0.014914025  110      19.4346290            26.64745
+    ## 23     feather 0.014664913  115      20.3180212            26.20235
+    ## 24       mound 0.014481070  120      21.2014134            25.87387
+    ## 25        type 0.014315619  125      22.0848057            25.57825
+    ## 26       star­ 0.014074900  130      22.9681979            25.14815
+    ## 27        lead 0.013865839  135      23.8515901            24.77462
+    ## 28        tear 0.013808364  140      24.7349823            24.67192
+    ## 29      report 0.013691940  145      25.6183746            24.46390
+    ## 30        bark 0.013545818  150      26.5017668            24.20282
+    ## 31      memory 0.013356527  155      27.3851590            23.86461
+    ## 32     partner 0.013145365  160      28.2685512            23.48732
+    ## 33       reach 0.012960440  165      29.1519435            23.15690
+    ## 34        pain 0.012823958  170      30.0353357            22.91305
+    ## 35        seas 0.012657697  175      30.9187279            22.61598
+    ## 36       swing 0.012477812  180      31.8021201            22.29458
+    ## 37      pierce 0.012369410  185      32.6855124            22.10089
+    ## 38         oil 0.012166889  190      33.5689046            21.73904
+    ## 39  immobilize 0.012066220  195      34.4522968            21.55917
+    ## 40         mud 0.012064546  200      35.3356890            21.55618
+    ## 41        poké 0.011961785  205      36.2190813            21.37257
+    ## 42    creature 0.011874200  210      37.1024735            21.21608
+    ## 43   stimulate 0.011712961  215      37.9858657            20.92799
+    ## 44   instantly 0.011582237  220      38.8692580            20.69442
+    ## 45       spray 0.011537071  225      39.7526502            20.61372
+    ## 46     possess 0.011462845  230      40.6360424            20.48110
+    ## 47     jungles 0.011370825  235      41.5194346            20.31668
+    ## 48      active 0.011247531  240      42.4028269            20.09639
+    ## 49   technique 0.011111626  245      43.2862191            19.85356
+    ## 50        wait 0.011026733  250      44.1696113            19.70188
+    ## 51        glow 0.010937009  255      45.0530035            19.54156
+    ## 52 underground 0.010801707  260      45.9363958            19.29982
+    ## 53        bump 0.010726012  265      46.8197880            19.16457
+    ## 54        past 0.010545478  270      47.7031802            18.84200
+    ## 55        fast 0.010359970  275      48.5865724            18.51055
+    ## 56   transform 0.010313965  280      49.4699647            18.42835
+    ## 57    nutrient 0.010181797  285      50.3533569            18.19220
+    ## 58       white 0.010109542  290      51.2367491            18.06310
+    ## 59        wake 0.009990172  295      52.1201413            17.84982
+    ## 60     similar 0.009828856  300      53.0035336            17.56159
+    ##    cumulative_mass_pct         slope  slope_change
+    ## 1             2.898965 -0.3490015295  2.4667889518
+    ## 2             5.031461 -0.0055075631  0.0878344919
+    ## 3             7.082904 -1.1108025737 -0.8290921136
+    ## 4             8.999233 -0.0827965513  0.0962743132
+    ## 5            10.872074 -0.1741083595  0.0644632240
+    ## 6            12.678551 -0.0049579581  0.8021873892
+    ## 7            14.397943 -1.0024190156 -0.6095199287
+    ## 8            16.028891 -0.4861155924 -0.1478652083
+    ## 9            17.579341 -0.1835562020 -0.0420190348
+    ## 10           19.068553  0.0000000000  0.0000000000
+    ## 11           20.520762 -0.0432280373  0.1481224038
+    ## 12           21.941727 -0.0764246009 -0.0764246009
+    ## 13           23.341233 -0.0737314034 -0.0737314034
+    ## 14           24.720546 -0.0995392742  0.0522629003
+    ## 15           26.055920 -0.1780513900 -0.1271107908
+    ## 16           27.362998 -0.1851918516 -0.0696090057
+    ## 17           28.642448 -0.1387030540  0.1846070992
+    ## 18           29.889465 -0.0529514635  0.0474731048
+    ## 19           31.113634 -0.0071876825  0.1169875045
+    ## 20           32.326380  0.0000000000  0.0784691526
+    ## 21           33.528286 -0.0120829591  0.0908574554
+    ## 22           34.709261 -0.1757600970  0.2135163184
+    ## 23           35.862745 -0.1254911723 -0.1113745617
+    ## 24           36.996637 -0.0365174002 -0.0363869513
+    ## 25           38.122757 -0.1382267656 -0.0277458166
+    ## 26           39.228712 -0.0998274114 -0.0309896956
+    ## 27           40.314951 -0.0864253350 -0.0803791916
+    ## 28           41.395254 -0.0109826935  0.0524409726
+    ## 29           42.467947 -0.0056516375  0.0720357445
+    ## 30           43.529047 -0.0477613356 -0.0040756775
+    ## 31           44.579417 -0.1401610226 -0.0878436154
+    ## 32           45.612794 -0.0737603134 -0.0737603134
+    ## 33           46.630313 -0.0478536274  0.0394853220
+    ## 34           47.637241 -0.0335567186  0.0856248867
+    ## 35           48.629943 -0.0499945915  0.0003078982
+    ## 36           49.607887 -0.0359100293 -0.0318806561
+    ## 37           50.575322 -0.0073703173  0.0355689550
+    ## 38           51.530078 -0.0679470327  0.0017935187
+    ## 39           52.475505  0.0000000000  0.0435528862
+    ## 40           53.417629 -0.0029903628 -0.0029903628
+    ## 41           54.355559 -0.0982818879 -0.0982818879
+    ## 42           55.284641 -0.0268754476 -0.0134537747
+    ## 43           56.202846  0.0000000000  0.0403709569
+    ## 44           57.110539  0.0000000000  0.0483542034
+    ## 45           58.013643 -0.0428201497 -0.0258914953
+    ## 46           58.910729 -0.0172700321  0.0193192156
+    ## 47           59.802286 -0.0675762991 -0.0218784204
+    ## 48           60.685183 -0.0617952608  0.0040351603
+    ## 49           61.557725 -0.0069657552  0.1195872844
+    ## 50           62.421127 -0.0002532905  0.0783033698
+    ## 51           63.277956 -0.0150663131 -0.0042046193
+    ## 52           64.125730 -0.0059471828  0.1129766450
+    ## 53           64.966814 -0.0558813605 -0.0185950427
+    ## 54           65.795167 -0.0799129996 -0.0730632549
+    ## 55           66.610648 -0.0522675752  0.0692994082
+    ## 56           67.417196 -0.0087402846  0.0229495908
+    ## 57           68.215623 -0.0410476424 -0.0020440305
+    ## 58           69.006576 -0.0005247829  0.0013663251
+    ## 59           69.787254  0.0000000000  0.0044712664
+    ## 60           70.557620 -0.0162016845  0.0272816224
+
+``` r
+# Indicates 140 to be the first main plateau point
+rank_140_metrics <- informativeness %>% filter(rank == 140)
+rank_150_metrics <- informativeness %>% filter(rank == 150)
+
+cat("First plateau in decay observed at Rank 140\n")
+```
+
+    ## First plateau in decay observed at Rank 140
+
+``` r
+cat("Signal Strength at Rank 140:", round(rank_140_metrics$signal_strength_pct, 2), "%\n")
+```
+
+    ## Signal Strength at Rank 140: 24.67 %
+
+``` r
+cat("Vocabulary % at Rank 140:", round(rank_140_metrics$pct_total_vocab, 2), "%\n")
+```
+
+    ## Vocabulary % at Rank 140: 24.73 %
+
+``` r
+cat("Total TF-IDF Mass Captured at Rank 140:", round(rank_140_metrics$cumulative_mass_pct, 2), "%\n\n")
+```
+
+    ## Total TF-IDF Mass Captured at Rank 140: 41.4 %
+
+``` r
+cat("Plan to use Rank 150 as a feature buffer and for pragmatic rounding\n")
+```
+
+    ## Plan to use Rank 150 as a feature buffer and for pragmatic rounding
+
+``` r
+cat("Signal Strength at Rank 150:", round(rank_150_metrics$signal_strength_pct, 2), "%\n")
+```
+
+    ## Signal Strength at Rank 150: 24.2 %
+
+``` r
+cat("Vocabulary % at Rank 150:", round(rank_150_metrics$pct_total_vocab, 2), "%\n")
+```
+
+    ## Vocabulary % at Rank 150: 26.5 %
+
+``` r
+cat("Total TF-IDF Mass Captured at Rank 150:", round(rank_150_metrics$cumulative_mass_pct, 2), "%\n\n")
+```
+
+    ## Total TF-IDF Mass Captured at Rank 150: 43.53 %
+
+``` r
+# Plotting decay curve
+ggplot(informativeness, aes(x=rank, y = signal_strength_pct)) + 
+  geom_line(color = "darkblue", size = .7) +
+  geom_ribbon(data = filter(informativeness, rank <=150),
+              aes(ymin = 0, ymax = signal_strength_pct),
+              fill = "darkgreen", alpha = .15) +
+  geom_vline(xintercept = 140, linetype = "dashed", color = "red", size = .5) +
+  geom_hline(yintercept = rank_140_metrics$signal_strength_pct, linetype = "dashed", color = "red", size = .5) +
+  geom_vline(xintercept = 150, linetype = "dashed", color = "darkgreen", size = .5) +
+  geom_hline(yintercept = rank_150_metrics$signal_strength_pct, linetype = "dashed", color = "darkgreen", size = .5) +
+  annotate("point", x = 140, y = rank_140_metrics$signal_strength_pct, color = "black", size = 3) +
+  scale_x_continuous(breaks = seq(0, max(informativeness$rank), by = 25)) +
+  labs(
+    title = "TF-IDF Informativeness Decay Curve",
+    subtitle = "Top 150 words capture 44% of total information mass\nand uses 27% of all usable words",
+    x = "Word Rank (Sorted by Averaged TF-IDF)",
+    y = "Signal Strength (% of Top Word)"
+  ) +
+  theme_minimal(base_size = 12)
+```
+
+    ## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+    ## ℹ Please use `linewidth` instead.
+    ## This warning is displayed once per session.
+    ## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+    ## generated.
+
+![](pokemon_data_cleaning_for_hca_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+
+``` r
+ggsave(here("project1/OUTPUT/", "tf-idf_informativeness_decay_curve.png"), width = 8, height = 5)
 ```
 
 ## Creating matrices
