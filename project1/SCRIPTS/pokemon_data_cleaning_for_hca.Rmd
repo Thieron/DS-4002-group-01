@@ -6,7 +6,7 @@ output: github_document
 ---
 
 # General Information
-This data cleaning script is purposed with preparing the Pokemon type x word and Pokemon generation x word matrices to use for our hierarchical clustering analysis. The necessary data file can be found at DS-4002-group-01/project1/DATA/pokedex.csv in the github. It also requires the following packages: `here`, `tidyverse`, `tidytext`, `textdata`, and `udpipe`. To install these packages use the `install.packages("package_name")` syntax.
+This data cleaning script is purposed with preparing the Pokemon type x word and Pokemon generation x word matrices to use for our hierarchical clustering analysis. Includes creation of additional datasets for sensitivity analysis to ensure results are not determined by a single feature count selection. The necessary data file can be found at DS-4002-group-01/project1/DATA/pokedex.csv in the github. It also requires the following packages: `here`, `tidyverse`, `tidytext`, `textdata`, and `udpipe`. To install these packages use the `install.packages("package_name")` syntax.
 
 
 # Loading Packages and Data
@@ -260,15 +260,9 @@ common_words <- type_word_scores %>%
 
 print("Top 20 averaged TF-IDF words across type and generation profiles")
 print(head(common_words, 20))
-
-# Extracting the top 150 words to use for clustering features
-top_150_df <- common_words %>% 
-  slice_head(n = 150)
-
-top_150_words <- top_150_df$word_root
 ```
 
-### Determining best feature count
+### Determining best feature count and extracting
 ```{r}
 n_unique_words = length(unique(common_words$word_root))
 cat("There are", n_unique_words, "unique common words that meet requirements.")
@@ -293,15 +287,15 @@ informativeness %>%
   print()
 
 # Indicates 140 to be the first main plateau point
-rank_140_metrics <- informativeness %>% filter(rank == 140)
+rank_100_metrics <- informativeness %>% filter(rank == 100)
 rank_150_metrics <- informativeness %>% filter(rank == 150)
 
-cat("First plateau in decay observed at Rank 140\n")
-cat("Signal Strength at Rank 140:", round(rank_140_metrics$signal_strength_pct, 2), "%\n")
+cat("First plateau in decay observed at Rank 100\n")
+cat("Signal Strength at Rank 100:", round(rank_100_metrics$signal_strength_pct, 2), "%\n")
 
-cat("Vocabulary % at Rank 140:", round(rank_140_metrics$pct_total_vocab, 2), "%\n")
+cat("Vocabulary % at Rank 100:", round(rank_100_metrics$pct_total_vocab, 2), "%\n")
 
-cat("Total TF-IDF Mass Captured at Rank 140:", round(rank_140_metrics$cumulative_mass_pct, 2), "%\n\n")
+cat("Total TF-IDF Mass Captured at Rank 100:", round(rank_100_metrics$cumulative_mass_pct, 2), "%\n\n")
 
 cat("Plan to use Rank 150 as a feature buffer and for pragmatic rounding\n")
 cat("Signal Strength at Rank 150:", round(rank_150_metrics$signal_strength_pct, 2), "%\n")
@@ -312,25 +306,37 @@ cat("Total TF-IDF Mass Captured at Rank 150:", round(rank_150_metrics$cumulative
 
 # Plotting decay curve
 ggplot(informativeness, aes(x=rank, y = signal_strength_pct)) + 
-  geom_line(color = "darkblue", size = .7) +
+  geom_line(color = "darkblue", size = .8) +
   geom_ribbon(data = filter(informativeness, rank <=150),
               aes(ymin = 0, ymax = signal_strength_pct),
               fill = "darkgreen", alpha = .15) +
-  geom_vline(xintercept = 140, linetype = "dashed", color = "red", size = .5) +
-  geom_hline(yintercept = rank_140_metrics$signal_strength_pct, linetype = "dashed", color = "red", size = .5) +
+  geom_ribbon(data = filter(informativeness, rank <=100),
+              aes(ymin = 0, ymax = signal_strength_pct),
+              fill = "red", alpha = .1) +
+  geom_vline(xintercept = 100, linetype = "dashed", color = "red", size = .5) +
+  geom_hline(yintercept = rank_100_metrics$signal_strength_pct, linetype = "dashed", color = "red", size = .5) +
   geom_vline(xintercept = 150, linetype = "dashed", color = "darkgreen", size = .5) +
   geom_hline(yintercept = rank_150_metrics$signal_strength_pct, linetype = "dashed", color = "darkgreen", size = .5) +
-  annotate("point", x = 140, y = rank_140_metrics$signal_strength_pct, color = "black", size = 3) +
+  annotate("point", x = 100, y = rank_100_metrics$signal_strength_pct, color = "red", size = 2) +
+  annotate("point", x = 150, y = rank_150_metrics$signal_strength_pct, color = "darkgreen", size = 2) +
   scale_x_continuous(breaks = seq(0, max(informativeness$rank), by = 25)) +
   labs(
     title = "TF-IDF Informativeness Decay Curve",
-    subtitle = "Top 150 words capture 44% of total information mass\nand uses 27% of all usable words",
+    subtitle = "Using top 150 as a buffer; captures 44% of total information mass\nand uses 27% of all usable words.",
     x = "Word Rank (Sorted by Averaged TF-IDF)",
     y = "Signal Strength (% of Top Word)"
   ) +
   theme_minimal(base_size = 12)
 
 ggsave(here("project1/OUTPUT/", "tf-idf_informativeness_decay_curve.png"), width = 8, height = 5)
+
+# Extracting the top 150 words to use for clustering features as a buffer for 100 which may be ideal
+# will want to include features of 50, 100, and 200 for sensitivity checks and compare model outputs to
+# determine the best features for clustering
+top_150_df <- common_words %>% 
+  slice_head(n = 150)
+
+top_150_words <- top_150_df$word_root
 ```
 
 
