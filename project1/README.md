@@ -15,7 +15,7 @@ This folder contains the data, code, and outputs for Project 1. We collected Pok
 
 - **Platform:** Windows
 - **Python 3** (Jupyter Notebook) with `requests`, `pandas`, `numpy`, `matplotlib`, `scipy`, `scikit-learn`
-- **R** (RStudio) with `here`, `tidyverse`, `tidytext`, `textdata`, `udpipe`
+- **R** (RStudio) with `here`, `tidyverse`, `tidytext`, `udpipe`
 
 **TO ADD: Remove `textdata` from this list (and from Setup step 3) if Caroline removes `library(textdata)` from the R script, since it is not used.**
 
@@ -64,7 +64,7 @@ There are three steps: Python (EDA), then R (cleaning and TF-IDF), then Python a
 
 1. Clone the repository: `git clone https://github.com/Thieron/DS-4002-group-01.git`
 2. Install the Python packages from the `project1` folder: `pip install -r requirements.txt`
-3. In R, install the packages: `install.packages(c("here", "tidyverse", "tidytext", "textdata", "udpipe"))`
+3. In R, install the packages: `install.packages(c("here", "tidyverse", "tidytext", "udpipe"))`
 
 **Step 1: Exploratory analysis (Python)**
 
