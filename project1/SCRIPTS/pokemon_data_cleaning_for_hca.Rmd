@@ -268,6 +268,72 @@ top_150_df <- common_words %>%
 top_150_words <- top_150_df$word_root
 ```
 
+### Determining best feature count
+```{r}
+n_unique_words = length(unique(common_words$word_root))
+cat("There are", n_unique_words, "unique common words that meet requirements.")
+
+# Preparing informativeness metrics
+informativeness <- data.frame(
+  word_root = common_words$word_root,
+  avg_tfidf = common_words$avg_tfidf
+) %>% 
+  mutate(
+    rank = row_number(), # arranged by avg_tfidf in descending order so 1 is the most informative word
+    pct_total_vocab = rank/max(rank)*100, # getting percent of total possible vocab
+    signal_strength_pct = (avg_tfidf / first(avg_tfidf))*100, # the word with the highest average TF-IDF is considered the most informative because it tells the most as to which type/generation a pokemon belongs to, so every other word after in the rankings will be a percentage of this
+    cumulative_mass_pct = (cumsum(avg_tfidf)/sum(avg_tfidf))*100, # this gives the percent of total amount of TF-IDF information contributed by all words ranked up to this point
+    slope = (signal_strength_pct - lag(signal_strength_pct)) / (rank - lag(rank)), # getting slope at each point
+    slope_change = slope - lag(slope) # change in slope
+  )
+
+# Metrics at certain ranks
+informativeness %>% 
+  filter(rank %in% seq(0, 300, by = 5)) %>% 
+  print()
+
+# Indicates 140 to be the first main plateau point
+rank_140_metrics <- informativeness %>% filter(rank == 140)
+rank_150_metrics <- informativeness %>% filter(rank == 150)
+
+cat("First plateau in decay observed at Rank 140\n")
+cat("Signal Strength at Rank 140:", round(rank_140_metrics$signal_strength_pct, 2), "%\n")
+
+cat("Vocabulary % at Rank 140:", round(rank_140_metrics$pct_total_vocab, 2), "%\n")
+
+cat("Total TF-IDF Mass Captured at Rank 140:", round(rank_140_metrics$cumulative_mass_pct, 2), "%\n\n")
+
+cat("Plan to use Rank 150 as a feature buffer and for pragmatic rounding\n")
+cat("Signal Strength at Rank 150:", round(rank_150_metrics$signal_strength_pct, 2), "%\n")
+
+cat("Vocabulary % at Rank 150:", round(rank_150_metrics$pct_total_vocab, 2), "%\n")
+
+cat("Total TF-IDF Mass Captured at Rank 150:", round(rank_150_metrics$cumulative_mass_pct, 2), "%\n\n")
+
+# Plotting decay curve
+ggplot(informativeness, aes(x=rank, y = signal_strength_pct)) + 
+  geom_line(color = "darkblue", size = .7) +
+  geom_ribbon(data = filter(informativeness, rank <=150),
+              aes(ymin = 0, ymax = signal_strength_pct),
+              fill = "darkgreen", alpha = .15) +
+  geom_vline(xintercept = 140, linetype = "dashed", color = "red", size = .5) +
+  geom_hline(yintercept = rank_140_metrics$signal_strength_pct, linetype = "dashed", color = "red", size = .5) +
+  geom_vline(xintercept = 150, linetype = "dashed", color = "darkgreen", size = .5) +
+  geom_hline(yintercept = rank_150_metrics$signal_strength_pct, linetype = "dashed", color = "darkgreen", size = .5) +
+  annotate("point", x = 140, y = rank_140_metrics$signal_strength_pct, color = "black", size = 3) +
+  scale_x_continuous(breaks = seq(0, max(informativeness$rank), by = 25)) +
+  labs(
+    title = "TF-IDF Informativeness Decay Curve",
+    subtitle = "Top 150 words capture 44% of total information mass\nand uses 27% of all usable words",
+    x = "Word Rank (Sorted by Averaged TF-IDF)",
+    y = "Signal Strength (% of Top Word)"
+  ) +
+  theme_minimal(base_size = 12)
+
+ggsave(here("project1/OUTPUT/", "tf-idf_informativeness_decay_curve.png"), width = 8, height = 5)
+```
+
+
 ## Creating matrices
 ### Type-word matrix
 ```{r}
