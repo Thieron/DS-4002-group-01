@@ -48,12 +48,6 @@ project1/
     └── pokemon_ARI.png                         # Cluster agreement (ARI) across vocabulary sizes
 ```
 
-**TO ADD: Rename `LICENSE` to `LICENSE.md` to match the MI3 rubric.**
-
-**TO ADD: Create `DATA/README.md` (port the data establishment section from MI2 and add entries for the matrix CSVs).**
-
-**TO ADD: Decide whether to keep both notebooks. `Analysis_with_AI_Comments.ipynb` only covers the 150-word runs and has no ARI comparison, so it is out of date. Either move its comments into `Analysis.ipynb` and delete it, or update this map to explain the difference.**
-
 ## Section 3: Instructions for Reproducing Results
 
 There are three steps: Python (EDA), then R (cleaning and TF-IDF), then Python again (clustering).
