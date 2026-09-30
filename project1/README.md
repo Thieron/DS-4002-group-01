@@ -15,7 +15,7 @@ This folder contains the data, code, and outputs for Project 1. We collected Pok
 
 - **Platform:** Windows
 - **Python 3** (Jupyter Notebook) with `requests`, `pandas`, `numpy`, `matplotlib`, `scipy`, `scikit-learn`
-- **R** (RStudio) with `here`, `tidyverse`, `tidytext`, `udpipe`
+- **R (v4.5.3)** (RStudio) with `here` (v1.0.2), `tidyverse` (v2.0.0), `tidytext` (v0.4.3), `udpipe` (v0.8.16)
 
 ## Section 2: Documentation Map
 
