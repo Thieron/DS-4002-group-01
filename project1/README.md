@@ -35,7 +35,6 @@ project1/
 │   └── pokemon_gen-word_matrix{50,100,200}.csv   # Sensitivity check: generations at 50, 100, 200 words
 ├── SCRIPTS/
 │   ├── Analysis.ipynb                          # Data collection, EDA plots, HCA, and sensitivity comparison
-│   ├── Analysis_with_AI_Comments.ipynb         # Annotated copy of the 150-word analysis
 │   ├── pokemon_data_cleaning_for_hca.Rmd       # Text cleaning, lemmatization, TF-IDF, matrices
 │   └── pokemon_data_cleaning_for_hca.md        # Knitted output of the .Rmd
 └── OUTPUT/
