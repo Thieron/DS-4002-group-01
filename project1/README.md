@@ -19,7 +19,6 @@ This folder contains the data, code, and outputs for Project 1. We collected Pok
 
 ## Section 2: Documentation Map
 
-```
 project1/
 ├── README.md                                   # This file
 ├── LICENSE.md                                  # MIT license + PokéAPI BSD 3-Clause notice
