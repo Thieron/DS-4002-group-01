@@ -40,11 +40,13 @@ project1/
 └── OUTPUT/
     ├── pokemonTypeCounts.png                   # Pokémon per type, primary vs. secondary slot
     ├── pokemonEntryLength.png                  # Entry length by generation
+    ├── Explanatiom.md                          # Explaining the output graphs
     ├── tf-idf_informativeness_decay_curve.png  # Justification for the 150-word cutoff
     ├── pokémon_type_average.png                # Type dendrograms at each vocabulary size
     ├── pokémon_generation_average.png          # Generation dendrograms at each vocabulary size
     ├── silhouette_analysis.png                 # Per-member silhouette scores at the chosen k
     └── pokemon_ARI.png                         # Cluster agreement (ARI) across vocabulary sizes
+    
 ```
 
 ## Section 3: Instructions for Reproducing Results
