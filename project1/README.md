@@ -47,7 +47,6 @@ project1/
     ├── silhouette_analysis.png                 # Per-member silhouette scores at the chosen k
     └── pokemon_ARI.png                         # Cluster agreement (ARI) across vocabulary sizes
     
-```
 
 ## Section 3: Instructions for Reproducing Results
 
