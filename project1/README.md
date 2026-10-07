@@ -18,7 +18,6 @@ This folder contains the data, code, and outputs for Project 1. We collected Pok
 - **R (v4.5.3)** (RStudio) with `here` (v1.0.2), `tidyverse` (v2.0.0), `tidytext` (v0.4.3), `udpipe` (v0.8.16)
 
 ## Section 2: Documentation Map
-
 ```
 project1/
 ├── README.md                                   # This file
@@ -47,7 +46,7 @@ project1/
     ├── silhouette_analysis.png                 # Per-member silhouette scores at the chosen k
     └── pokemon_ARI.png                         # Cluster agreement (ARI) across vocabulary sizes
     
-
+```
 ## Section 3: Instructions for Reproducing Results
 
 There are three steps: Python (EDA), then R (cleaning and TF-IDF), then Python again (clustering).
