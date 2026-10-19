@@ -469,7 +469,7 @@ results_table <- do.call(rbind, results_list)
 
 results_table <- results_table[order(results_table$MAPE_test), ]
 
-head(results_table, 10)
+head(results_table, 25)
 ```
 
     ##    p d q P D Q      AIC      BIC RMSE_train RMSE_test MAPE_train MAPE_test
@@ -483,6 +483,21 @@ head(results_table, 10)
     ## 56 0 1 1 0 0 1 2090.833 2100.590   28343.83  27931.91   9.598031  6.391117
     ## 74 0 1 1 2 0 1 2084.395 2100.656   26609.73  28796.85   9.056571  6.409727
     ## 59 0 1 2 0 0 1 2092.801 2105.810   28337.17  27993.87   9.587278  6.414977
+    ## 57 1 1 1 0 0 1 2092.796 2105.805   28336.37  28005.00   9.585816  6.419121
+    ## 60 1 1 2 0 0 1 2089.301 2105.562   27747.94  27917.08   9.350466  6.426174
+    ## 95 0 1 0 2 1 1 2057.655 2070.405   33040.02  28474.95   9.800890  6.437301
+    ## 65 0 1 1 1 0 1 2082.407 2095.416   26612.88  28984.28   9.058690  6.441870
+    ## 18 2 1 2 1 0 0 2095.540 2115.053   28262.02  27823.93   9.540406  6.479904
+    ## 15 2 1 1 1 0 0 2093.555 2109.816   28262.51  27799.94   9.541154  6.481340
+    ## 63 1 1 0 1 0 1 2111.055 2124.064   29318.50  27831.27   9.942504  6.496453
+    ## 12 2 1 0 1 0 0 2101.855 2114.864   29098.94  28035.12   9.848868  6.497689
+    ## 67 2 1 1 1 0 1 2085.954 2105.468   26582.33  29396.92   9.045897  6.509106
+    ## 70 2 1 2 1 0 1 2087.941 2110.706   26550.53  29388.02   9.034280  6.510666
+    ## 66 1 1 1 1 0 1 2084.007 2100.269   26643.98  29531.11   9.063748  6.534355
+    ## 45 0 1 0 2 1 0 2096.996 2106.559   40335.41  26852.93  12.405986  6.542861
+    ## 68 0 1 2 1 0 1 2083.992 2100.254   26580.25  29615.82   9.042122  6.547273
+    ## 55 2 1 0 0 0 1 2101.997 2115.006   29100.65  28275.81   9.859247  6.558089
+    ## 26 2 1 2 2 0 0 2094.271 2117.036   27884.53  28334.30   9.431923  6.569797
 
 ``` r
 # Best model based on IC metrics, RMSE, and MAPE (and simplicity)
@@ -535,7 +550,7 @@ fitted_vals <- fitted(manual_model)
 
 # Residuals Independence and Basic Normality (Homoscedasticity check again)
 # Generates the Residual Time Plot (homoscedasticity and structure), ACF (independence), Histogram of residuals (normality), and prints Ljung-Box p-value (independence)
-checkresiduals(manual_model, lag = 24)
+checkresiduals(manual_model, lag = 12)
 ```
 
 ![](sarima_analysis_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
@@ -544,22 +559,22 @@ checkresiduals(manual_model, lag = 24)
     ##  Ljung-Box test
     ## 
     ## data:  Residuals from ARIMA(0,1,1)(1,0,0)[12]
-    ## Q* = 40.201, df = 22, p-value = 0.01024
+    ## Q* = 14.361, df = 10, p-value = 0.1571
     ## 
-    ## Model df: 2.   Total lags used: 24
+    ## Model df: 2.   Total lags used: 12
 
 ``` r
 png(here("project2/OUTPUT/", "residuals_plots.png"), width = 800, height = 500)
-checkresiduals(manual_model, lag = 24) # lag is for Ljung-Box test df calculation (statistical power), this will mean we are checking for missed patterns by looking two years back 
+checkresiduals(manual_model, lag = 12) # lag is for Ljung-Box test df calculation (statistical power), this will mean we are checking for missed patterns by looking two years back 
 ```
 
     ## 
     ##  Ljung-Box test
     ## 
     ## data:  Residuals from ARIMA(0,1,1)(1,0,0)[12]
-    ## Q* = 40.201, df = 22, p-value = 0.01024
+    ## Q* = 14.361, df = 10, p-value = 0.1571
     ## 
-    ## Model df: 2.   Total lags used: 24
+    ## Model df: 2.   Total lags used: 12
 
 ``` r
 dev.off()

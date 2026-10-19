@@ -269,7 +269,7 @@ results_table <- do.call(rbind, results_list)
 
 results_table <- results_table[order(results_table$MAPE_test), ]
 
-head(results_table, 10)
+head(results_table, 25)
 
 # Best model based on IC metrics, RMSE, and MAPE (and simplicity)
 results_table[2, ]
@@ -301,10 +301,10 @@ fitted_vals <- fitted(manual_model)
 
 # Residuals Independence and Basic Normality (Homoscedasticity check again)
 # Generates the Residual Time Plot (homoscedasticity and structure), ACF (independence), Histogram of residuals (normality), and prints Ljung-Box p-value (independence)
-checkresiduals(manual_model, lag = 24)
+checkresiduals(manual_model, lag = 12)
 
 png(here("project2/OUTPUT/", "residuals_plots.png"), width = 800, height = 500)
-checkresiduals(manual_model, lag = 24) # lag is for Ljung-Box test df calculation (statistical power), this will mean we are checking for missed patterns by looking two years back 
+checkresiduals(manual_model, lag = 12) # lag is for Ljung-Box test df calculation (statistical power), this will mean we are checking for missed patterns by looking two years back 
 dev.off()
 
 # Notes
