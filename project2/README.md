@@ -5,7 +5,7 @@
 
 ## Contents of This Repository
 
-This repository holds the data, code, and outputs for Project 2 of DS 4002. We build a monthly series of median home sale prices for Philadelphia's 19147 ZIP code from the City of Philadelphia's public Real Estate Transfers records, then fit a SARIMA model in R to the 1999–2015 data and forecast the 12 months of 2016. Our goal is a 2016 forecast with a MAPE of 10% or less, compared against a seasonal naive baseline.
+This repository holds the data, code, and outputs for Project 2 of DS 4002. We build a monthly series of median home sale prices for Philadelphia's 19147 ZIP code from the City of Philadelphia's public Real Estate Transfers records, then fit a SARIMA model in R to the 2000–2015 data and forecast the 12 months of 2016. Our goal is a 2016 forecast with a MAPE of 10% or less, compared against a seasonal naive baseline.
 
 - `DATA/` holds the instructions for downloading the raw data, the cleaned deed-level data, the final monthly series, and the data's metadata.
 - `SCRIPTS/` holds the Python notebook that cleans the data and the R scripts that make the exploratory plots and fit, check, and evaluate the model.
@@ -62,7 +62,7 @@ project2/
 │   │                                  #   data dictionary, exploratory plots, and how to
 │   │                                  #   download the raw CSV (too large for GitHub)
 │   ├── downlaodData.png               # Screenshot showing where to download the raw CSV
-│   ├── rtt_19147_clean.csv            # Cleaned deed-level records for ZIP 19147, 1999–2016
+│   ├── rtt_19147_clean.csv            # Cleaned deed-level records for ZIP 19147, 1999–2016 (1999 was dropped later for better preforemence)
 │   └── rtt_19147_monthly.csv          # Final analyzed data: monthly median price and sale count
 ├── SCRIPTS/
 │   ├── code.ipynb                     # Step 1: cleans the raw CSV and builds the monthly series
@@ -136,7 +136,7 @@ Run the steps in order. Each step reads files the step before it writes.
 2. Click **Knit** (or run `rmarkdown::render("sarima_analysis.Rmd")` from the `SCRIPTS/` folder).
 3. The R Markdown file:
    - turns `rtt_19147_monthly.csv` into a monthly time series and estimates the Box-Cox lambda to decide on a transformation;
-   - splits the data into a training set (1999–2015) and a test set (2016);
+   - splits the data into a training set (2000–2015) and a test set (2016);
    - uses an STL decomposition and an ADF test (α = 0.05) to set the differencing orders d and D;
    - uses ACF and PACF plots of the differenced training data to choose p, q, P, and Q, and compares them with `auto.arima`;
    - fits the SARIMA model and checks its residuals (histogram, Q-Q plot, residual time plot, residuals vs. fitted, residual ACF, and a Ljung-Box test at α = 0.05);
