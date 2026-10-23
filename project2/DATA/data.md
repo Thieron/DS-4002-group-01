@@ -15,4 +15,4 @@ Follow these steps to obtain the **Real Estate Transfers** dataset required for 
      ```text
      project2/DATA/rtt_summary.csv
      ```
-     *(Full path: `\DS4002\DS-4002-group-01\project2\DATA\rtt_summary.csv`)*
+     *(Full path: `\DS-4002-group-01\project2\DATA\rtt_summary.csv`)*
