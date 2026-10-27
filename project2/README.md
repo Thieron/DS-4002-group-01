@@ -28,7 +28,6 @@ This repository holds the data, code, and outputs for Project 2 of DS 4002. We b
 
 | Package | Version | Used for |
 |---|---|---|
-| `stats` | 4.5.3 (included with R) | `ts`, `stl`, `acf`, `pacf`, `arima`, `Box.test` |
 | `forecast` | 9.0.2 | `auto.arima`, `forecast`, `accuracy`, `snaive`, `checkresiduals`, `BoxCox.lambda` |
 | `tseries` | 0.10.63 | `adf.test` (Augmented Dickey-Fuller test) |
 | `dplyr` | 1.2.1 | Data manipulation |
@@ -137,7 +136,7 @@ Run the steps in order. Each step reads files the step before it writes.
 3. The R Markdown file:
    - turns `rtt_19147_monthly.csv` into a monthly time series and estimates the Box-Cox lambda to decide on a transformation;
    - splits the data into a training set (2000–2015) and a test set (2016);
-   - uses an STL decomposition and an ADF test (α = 0.05) to set the differencing orders d and D;
+   - uses an STL decomposition and an ADF test (α = 0.05) to inform the differencing orders d and D;
    - uses ACF and PACF plots of the differenced training data to choose p, q, P, and Q, and compares them with `auto.arima`;
    - fits the SARIMA model and checks its residuals (histogram, Q-Q plot, residual time plot, residuals vs. fitted, residual ACF, and a Ljung-Box test at α = 0.05);
    - forecasts the 12 months of 2016 and reports RMSE and MAPE for both the SARIMA model and a seasonal naive baseline.
@@ -146,6 +145,13 @@ Run the steps in order. Each step reads files the step before it writes.
 ### Step 5: Check the results
 
 Compare your figures in `OUTPUT/` and the RMSE and MAPE values printed in `sarima_analysis.md` with ours. `OUTPUT/Explanation.md` explains what each figure shows and whether the model met the goal of a 2016 MAPE of 10% or less.
+
+**Our results:**
+| Model | Train RMSE | Test RMSE | Train MAPE | Test MAPE |
+|---|---|---|---|---|
+| Manually Selected SARIMA(0,1,1)(1,0,0)[12] | 28279.53 | 27285.84 | 9.54 | 6.31 |
+| Automatically Selected SARIMA(0,1,1)(2,0,0)[12] | 27436.47 | 30593.66 | 9.40 | 6.78 |
+| Seasonal Naive | 42335.81 | 40275.55 | 13.72 | 9.21 |
 
 ## References
 
