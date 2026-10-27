@@ -7,8 +7,8 @@
 
 This repository holds the data, code, and outputs for Project 2 of DS 4002. We build a monthly series of median home sale prices for Philadelphia's 19147 ZIP code from the City of Philadelphia's public Real Estate Transfers records, then fit a SARIMA model in R to the 2000–2015 data and forecast the 12 months of 2016. Our goal is a 2016 forecast with a MAPE of 10% or less, compared against a seasonal naive baseline.
 
-- `DATA/` holds the instructions for downloading the raw data, the cleaned deed-level data, the final monthly series, and the data's metadata.
-- `SCRIPTS/` holds the Python notebook that cleans the data and the R scripts that make the exploratory plots and fit, check, and evaluate the model.
+- `DATA/` holds the instructions for downloading the raw data, the cleaned deed-level data, the cleaning log, the final monthly series, and the data's metadata.
+- `SCRIPTS/` holds the Python notebook that cleans the data, the R script that makes the exploratory plots, and the R Markdown file that fits, checks, and evaluates the model.
 - `OUTPUT/` holds every figure the scripts produce and a written explanation of the results.
 
 ## Section 1: Software and Platform
@@ -25,6 +25,8 @@ This repository holds the data, code, and outputs for Project 2 of DS 4002. We b
 | `numpy` | 2.3.3 | Log prices and outlier calculations |
 
 **R packages**
+
+`eda_plots.R` uses base R only. The packages below are for `sarima_analysis.Rmd`.
 
 | Package | Version | Used for |
 |---|---|---|
@@ -59,14 +61,27 @@ project2/
 ├── DATA/
 │   ├── data.md                        # Metadata: summary, provenance, license, ethics,
 │   │                                  #   data dictionary, exploratory plots, and how to
-│   │                                  #   download the raw CSV (too large for GitHub)
+│   │                                  #   download the raw CSV
 │   ├── downlaodData.png               # Screenshot showing where to download the raw CSV
-│   ├── rtt_19147_clean.csv            # Cleaned deed-level records for ZIP 19147, 1999–2016 (1999 was dropped later for better preforemence)
-│   └── rtt_19147_monthly.csv          # Final analyzed data: monthly median price and sale count
+│   ├── rtt_summary.csv                # Raw all-years Real Estate Transfers CSV. NOT in the
+│   │                                  #   repo: you download it in Step 1 (~5.2M rows, too
+│   │                                  #   large for GitHub)
+│   ├── rtt_19147_clean.csv            # Written by code.ipynb: cleaned deed-level records for
+│   │                                  #   ZIP 19147, 1999–2016 (1999 is dropped later, in the
+│   │                                  #   model, for better performance)
+│   ├── cleaning_steps_log.csv         # Written by code.ipynb: rows removed by each cleaning rule
+│   └── rtt_19147_monthly.csv          # Written by code.ipynb: monthly median price and sale
+│                                      #   count. This is the series the model uses.
 ├── SCRIPTS/
-│   ├── code.ipynb                     # Step 1: cleans the raw CSV and builds the monthly series
-│   ├── eda_plots.R                    # Step 2: exploratory figures (Figures 1 and 2)
-│   ├── sarima_analysis.Rmd            # Step 3: SARIMA order selection, fitting, diagnostics,
+│   ├── code.ipynb                     # Step 2: cleans the raw CSV and builds the monthly series
+│   ├── eda_plots.R                    # Step 3: exploratory figures (Figures 1 and 2); pulls its
+│   │                                  #   own data from the city's API
+│   ├── raw_19147_deeds.csv            # NOT in the repo: written when you run eda_plots.R
+│   │                                  #   (its API pull of 19147 deeds, 1999–2016)
+│   ├── monthly_19147.csv              # NOT in the repo: written when you run eda_plots.R
+│   │                                  #   (its own monthly series, for Figure 2 only; the
+│   │                                  #   model uses DATA/rtt_19147_monthly.csv)
+│   ├── sarima_analysis.Rmd            # Step 4: SARIMA order selection, fitting, diagnostics,
 │   │                                  #   forecast, and evaluation
 │   ├── sarima_analysis.md             # Knitted (GitHub-rendered) output of sarima_analysis.Rmd
 │   └── sarima_analysis_files/
@@ -97,7 +112,7 @@ project2/
 
 ## Section 3: Instructions for Reproducing Our Results
 
-Run the steps in order. Each step reads files the step before it writes.
+Steps 2 and 4 must run in order, because the model in Step 4 reads the monthly series that Step 2 writes. Step 3 only makes the two exploratory figures. It pulls its own data from the city's API, so it can run any time after Step 1.
 
 ### Step 1: Get the code and the raw data
 
@@ -107,9 +122,10 @@ Run the steps in order. Each step reads files the step before it writes.
    cd DS-4002-group-01/project2
    ```
 2. Install the software and packages listed in Section 1.
-3. Download the raw Real Estate Transfers CSV. The file has about 5.2 million rows and is too large for GitHub.s 
-    - see `DATA/data.md` for instructions
-    
+3. Download the raw Real Estate Transfers CSV. The file has about 5.2 million rows and is too large for GitHub.
+   - See `DATA/data.md` for instructions.
+   - Save it in the `DATA/` folder as `rtt_summary.csv`. The notebook looks for the file there under that name, so do not rename it.
+
 ### Step 2: Clean the data and build the monthly series (Python)
 
 1. Start Jupyter from the `SCRIPTS/` folder and open `code.ipynb`:
@@ -117,24 +133,34 @@ Run the steps in order. Each step reads files the step before it writes.
    cd SCRIPTS
    jupyter notebook code.ipynb
    ```
-2. Run all cells in order. note Reading the full CSV can takes a few minutes and a few GB of memory.
+2. Run all cells in order. Reading the full CSV can take a few minutes and a few GB of memory.
 3. The notebook keeps only deeds dated January 1, 1999 through December 31, 2016 whose ZIP code starts with 19147. It then drops records with no price, records under the $10,000 price floor, same-day groups of records sharing one identical price (bulk sales), and sales more than three standard deviations from their year's mean log price. Finally it takes each month's median price and sale count, filling any empty month by linear interpolation.
-4. Check that these two files now exist in `DATA/`:
+4. Check that these three files now exist in `DATA/`:
    - `rtt_19147_clean.csv`, the cleaned deed-level records
+   - `cleaning_steps_log.csv`, the number of rows each cleaning rule removed
    - `rtt_19147_monthly.csv`, 216 rows (January 1999 to December 2016) with the monthly median price and sale count
 
 ### Step 3: Make the exploratory figures (R)
 
-1. Open the R script from inside the cloned repository. The scripts use the `here` package to find files relative to the project root, so you don't need to set a working directory by hand.
-2. Run `eda_plots.R`
-3. This writes `fig1_raw_price_distribution.png` and `fig2_monthly_median.png` to `OUTPUT/`.
+`eda_plots.R` does not read the files from Step 2, and nothing in Step 4 reads the files it writes.
+
+1. Open `SCRIPTS/eda_plots.R` in RStudio and click **Source**. The script uses base R only, so it needs no extra packages. When sourced from RStudio, it sets the working directory to its own folder, so every file it writes lands in `SCRIPTS/`. (Outside RStudio, run it from `SCRIPTS/` to get the same result.)
+2. On its first run, the script pulls every 19147 deed dated 1999–2016 from the City of Philadelphia's Carto SQL API (the same Real Estate Transfers data), so the first run needs an internet connection. It saves the pull as `raw_19147_deeds.csv`, and later runs reuse that file. Set `REFRESH <- TRUE` at the top of the script to pull fresh data.
+3. The script prints how many deeds each cleaning rule removed, builds its own monthly series, and writes these to `SCRIPTS/`:
+   - `monthly_19147.csv`, its monthly median price and sale count
+   - `fig1_raw_price_distribution.png` and `fig2_monthly_median.png`
+4. Copy the two figures into `OUTPUT/` to match the repository.
+
+`raw_19147_deeds.csv` and `monthly_19147.csv` are created when you run the script and are not included in the repository.
+
+**How this script's cleaning differs from the notebook's:** it keeps only single-property deeds (`property_count == 1`), and it treats a group as a bulk sale only when 5 or more records share the same day and price (the notebook uses 2 or more). Its interpolation (`approx()`) also does not fill empty months at the very start or end of the series. Because of this, `monthly_19147.csv` and Figure 2 can differ slightly from `DATA/rtt_19147_monthly.csv`, which is the series the model uses.
 
 ### Step 4: Fit, check, and evaluate the SARIMA model (R)
 
 1. Open `SCRIPTS/sarima_analysis.Rmd` in RStudio.
 2. Click **Knit** (or run `rmarkdown::render("sarima_analysis.Rmd")` from the `SCRIPTS/` folder).
 3. The R Markdown file:
-   - turns `rtt_19147_monthly.csv` into a monthly time series and estimates the Box-Cox lambda to decide on a transformation;
+   - turns `DATA/rtt_19147_monthly.csv` into a monthly time series and estimates the Box-Cox lambda to decide on a transformation;
    - splits the data into a training set (2000–2015) and a test set (2016);
    - uses an STL decomposition and an ADF test (α = 0.05) to inform the differencing orders d and D;
    - uses ACF and PACF plots of the differenced training data to choose p, q, P, and Q, and compares them with `auto.arima`;
@@ -170,3 +196,5 @@ Compare your figures in `OUTPUT/` and the RMSE and MAPE values printed in `sarim
 [7] T. L. Pedersen, "patchwork: The Composer of Plots," Comprehensive R Archive Network (CRAN). [Online]. Available: https://cran.r-project.org/web/packages/patchwork/index.html [Accessed Oct. 20, 2026].
 
 [8] R. J. Hyndman and G. Athanasopoulos, *Forecasting: Principles and Practice*, 3rd ed. Melbourne, Australia: OTexts, 2021. [Online]. Available: https://otexts.com/fpp3/ [Accessed Oct. 12, 2026].
+
+[9] City of Philadelphia, "Carto SQL API," City of Philadelphia. [Online]. Available: https://phl.carto.com/api/v2/sql [Accessed Oct. 27, 2026].
