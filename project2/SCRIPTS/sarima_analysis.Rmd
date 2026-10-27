@@ -6,7 +6,7 @@ output: github_document
 ---
 
 # General Information
-This data cleaning script is purposed with completing the SARIMA analysis for the 2000-2016 Philadelphia 19147 property sales. Includes assumptions checks, data transformation, a train/test split, STL decomposition, ACF and PACF plots, a model parameter optimization grid, and comparisons in model performance across the selected manual model, automatic model, and seasonal naive model. Ultimately, we determined the best model to be the one selected from the optimization grid: SARIMA(0,1,1)(1,0,0)[12]. The necessary data file can be found at DS-4002-group-01/project2/DATA/rtt_19147_monthly.csv in the GitHub It also requires the following packages: `dplyr`, `forecast`, `ggplot2`, `tseries`, `here`, `stats`, `scales`, and `patchwork`. To install these packages use the `install.packages(c("package_name1", "package_name2", ...))` syntax.
+This data cleaning script is purposed with completing the SARIMA analysis for the 2000-2016 Philadelphia 19147 property sales. Includes assumptions checks, data transformation, a train/test split, STL decomposition, ACF and PACF plots, a model parameter optimization grid, and comparisons in model performance across the selected manual model, automatic model, and seasonal naive model. Ultimately, we determined the best model to be the one selected from the optimization grid: SARIMA(0,1,1)(1,0,0)[12]. The necessary data file can be found at DS-4002-group-01/project2/DATA/rtt_19147_monthly.csv in the GitHub It also requires the following packages: `dplyr`, `forecast`, `ggplot2`, `tseries`, `here`, `scales`, and `patchwork`. To install these packages use the `install.packages(c("package_name1", "package_name2", ...))` syntax.
 
 # Loading Packages and Data
 ```{r setup}
@@ -32,7 +32,7 @@ library(scales)
 library(patchwork) # for arranging graphics to save
 
 # Documenting package versions
-message("\nLoaded package versions:\ndplyr = ", packageVersion("dplyr"), "\nforecasts = ", packageVersion("forecast"), "\nggplot2 = ", packageVersion("ggplot2"), "\ntseries = ", packageVersion("tseries"), "\nhere = ", packageVersion("here"), "\nstats = ", packageVersion("stats"), "\nscales = ", packageVersion("scales"), "\npatchwork = ", packageVersion("patchwork"))
+message("\nLoaded package versions:\ndplyr = ", packageVersion("dplyr"), "\nforecasts = ", packageVersion("forecast"), "\nggplot2 = ", packageVersion("ggplot2"), "\ntseries = ", packageVersion("tseries"), "\nhere = ", packageVersion("here"), "\nscales = ", packageVersion("scales"), "\npatchwork = ", packageVersion("patchwork"))
 
 # Loading the data
 data <- read.csv(here("project2/DATA/", "rtt_19147_monthly.csv"))

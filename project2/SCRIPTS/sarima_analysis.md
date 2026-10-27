@@ -15,9 +15,9 @@ best model to be the one selected from the optimization grid:
 SARIMA(0,1,1)(1,0,0)\[12\]. The necessary data file can be found at
 DS-4002-group-01/project2/DATA/rtt_19147_monthly.csv in the GitHub It
 also requires the following packages: `dplyr`, `forecast`, `ggplot2`,
-`tseries`, `here`, `stats`, `scales`, and `patchwork`. To install these
-packages use the
-`install.packages(c("package_name1", "package_name2", ...))` syntax.
+`tseries`, `here`, `scales`, and `patchwork`. To install these packages
+use the `install.packages(c("package_name1", "package_name2", ...))`
+syntax.
 
 # Loading Packages and Data
 
@@ -74,7 +74,7 @@ library(scales)
 library(patchwork) # for arranging graphics to save
 
 # Documenting package versions
-message("\nLoaded package versions:\ndplyr = ", packageVersion("dplyr"), "\nforecasts = ", packageVersion("forecast"), "\nggplot2 = ", packageVersion("ggplot2"), "\ntseries = ", packageVersion("tseries"), "\nhere = ", packageVersion("here"), "\nstats = ", packageVersion("stats"), "\nscales = ", packageVersion("scales"), "\npatchwork = ", packageVersion("patchwork"))
+message("\nLoaded package versions:\ndplyr = ", packageVersion("dplyr"), "\nforecasts = ", packageVersion("forecast"), "\nggplot2 = ", packageVersion("ggplot2"), "\ntseries = ", packageVersion("tseries"), "\nhere = ", packageVersion("here"), "\nscales = ", packageVersion("scales"), "\npatchwork = ", packageVersion("patchwork"))
 ```
 
     ## 
@@ -84,7 +84,6 @@ message("\nLoaded package versions:\ndplyr = ", packageVersion("dplyr"), "\nfore
     ## ggplot2 = 4.0.3
     ## tseries = 0.10.63
     ## here = 1.0.2
-    ## stats = 4.5.3
     ## scales = 1.4.0
     ## patchwork = 1.3.2
 
