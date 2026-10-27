@@ -1,7 +1,7 @@
 SARIMA Analysis
 ================
 Caroline Clippinger
-2026-10-19
+2026-10-26
 
 # General Information
 
@@ -36,7 +36,6 @@ message("Current R Version: ", R.Version()$version.string)
 #install.packages("ggplot2")
 #install.packages("tseries")
 #install.packages("here")
-#install.packages("stats")
 #install.packages("scales")
 #install.packages("patchwork")
 
@@ -68,10 +67,9 @@ library(tseries) # for stationarity tests
 library(here) # for loading data
 ```
 
-    ## here() starts at C:/Users/Caroline Clippinger/OneDrive/Documents/DS-4002-group-01
+    ## here() starts at C:/Users/Caroline Clippinger/OneDrive/Documents/College Documents/UVA/UVA Fall 2026/DS4002 DS Project/DS-4002-group-01
 
 ``` r
-library(stats)
 library(scales) 
 library(patchwork) # for arranging graphics to save
 
@@ -140,7 +138,7 @@ head(data_clean, 12)
     ## 24    2000-12       115000         51        False
 
 ``` r
-ts_data <- ts(data_clean$median_price, start = c(2000, 1), frequency = 12) # from stats - defining the first observation in the time-series values to be January (1) of 1999 and a seasonal frequency of 12, indicating monthly data
+ts_data <- ts(data_clean$median_price, start = c(2000, 1), frequency = 12) # from stats - defining the first observation in the time-series values to be January (1) of 2000 and a seasonal frequency of 12, indicating monthly data
 # S = frequency (will confirm later with ACF, will be shown as biggest spike)
 ```
 
@@ -292,42 +290,45 @@ adf.test(train) # from tseries
 # This determines value of d (if trend) and S (if seasonality)
 # Number of ordinary differences need
 d <- ndiffs(train)
-cat("\nNumber of ordinary differences (d) =", d)
+cat("\nSuggested number of ordinary differences (d) =", d)
 ```
 
     ## 
-    ## Number of ordinary differences (d) = 1
+    ## Suggested number of ordinary differences (d) = 1
 
 ``` r
 # Number of seasonal differences needed
 D <- nsdiffs(train)
-cat("\nNumber of seasonal differences (D) =", D) # giving 0, but it could be 1 as seen in STL pattern so when optimizing let this be 0-1
+cat("\nSuggested number of seasonal differences (D) =", D) # giving 0, but it could be 1 as seen in STL pattern so when optimizing let this be 0-1
 ```
 
     ## 
-    ## Number of seasonal differences (D) = 0
+    ## Suggested number of seasonal differences (D) = 0
 
 ``` r
-# Apply differencing (d = 1 and D = 1) - differences argument default is 1
+# NOTES:
+# How you apply differencing (if d = 1 and D = 1) - differences argument default is 1
 # Inner diff: Ordinary difference - lag = 1 (always), differences = d
 # Outer diff: Seasonal difference - lag = S, differences = D
 
-# Doignthe simplest differencing first to see if it fixes stationarity
+# Will apply ordinary differencing first, and if ADF test indicates staionarity we will not do seasonal differencing (which nsdiffs indicates should not be necessary), otherwise complete seasonal differencing as well and re-test
+
+# Doign the simplest differencing first to see if it fixes stationarity (AKA ordinary differencing, d = 1)
 diff_data <- diff(train, lag = d)
 
 # Checking post-differencing
-cat("\nNumber of ordinary differences (d) post-differencing =", ndiffs(diff_data))
+cat("\nNumber of ordinary differences (d) post-ordinary-differencing =", ndiffs(diff_data))
 ```
 
     ## 
-    ## Number of ordinary differences (d) post-differencing = 0
+    ## Number of ordinary differences (d) post-ordinary-differencing = 0
 
 ``` r
-cat("\nNumber of seasonal differences (D) post-differencing =", nsdiffs(diff_data))
+cat("\nNumber of seasonal differences (D) post-ordinary-differencing =", nsdiffs(diff_data))
 ```
 
     ## 
-    ## Number of seasonal differences (D) post-differencing = 0
+    ## Number of seasonal differences (D) post-ordinary-differencing = 0
 
 ``` r
 # Checking if stationarity fixed (want < .05)
@@ -342,6 +343,10 @@ adf.test(diff_data)
     ## data:  diff_data
     ## Dickey-Fuller = -8.0771, Lag order = 5, p-value = 0.01
     ## alternative hypothesis: stationary
+
+``` r
+# No stationarity concerns so no need for seasonal differencing (D=0)
+```
 
 # Determine Model Parameters
 
@@ -378,32 +383,34 @@ ggsave(
 # PACF Tells us:
 # p (last lag where value out of significance band) - 0 (when comparing to ACF since it tails off, but could be 2)
 
-# Suggested parameters are SARIMA(0,1,1)(1,1,0)[12]
+# Suggested parameters based on visuals are SARIMA(0,1,1)(1,1,0)[12]
 ```
 
 ## Automatically
 
 ``` r
 # Auto determines the best parameters based on the data
-auto_model <- auto.arima(train_raw, seasonal = TRUE, lambda = "auto") # from forecast
+auto_model <- auto.arima(train_raw, seasonal = TRUE, lambda = .5) # from forecast
 summary(auto_model)
 ```
 
     ## Series: train_raw 
-    ## ARIMA(0,1,1)(2,0,0)[12] with drift 
-    ## Box Cox transformation: lambda= 0.3999846 
+    ## ARIMA(0,1,1)(0,0,2)[12] with drift 
+    ## Box Cox transformation: lambda= 0.5 
     ## 
     ## Coefficients:
-    ##           ma1    sar1    sar2   drift
-    ##       -0.7739  0.1352  0.1356  0.9705
-    ## s.e.   0.0462  0.0762  0.0800  0.3533
+    ##           ma1    sma1    sma2   drift
+    ##       -0.7779  0.1649  0.2050  3.2415
+    ## s.e.   0.0466  0.0780  0.0917  1.1959
     ## 
-    ## sigma^2 = 261.6:  log likelihood = -801.44
-    ## AIC=1612.87   AICc=1613.19   BIC=1629.13
+    ## sigma^2 = 3062:  log likelihood = -1036.64
+    ## AIC=2083.28   AICc=2083.61   BIC=2099.54
     ## 
     ## Training set error measures:
-    ##                     ME    RMSE      MAE     MPE     MAPE      MASE        ACF1
-    ## Training set -93.93091 27587.3 21651.66 -0.8559 9.503038 0.6547302 0.008969746
+    ##                    ME     RMSE      MAE        MPE     MAPE      MASE
+    ## Training set 13.68817 27436.47 21401.74 -0.8379688 9.402478 0.6471727
+    ##                    ACF1
+    ## Training set 0.01562825
 
 ``` r
 # Suggested parameters: SARIMA(0,1,1)(2,0,0)[12]
@@ -506,6 +513,10 @@ results_table[2, ]
 
     ##    p d q P D Q      AIC      BIC RMSE_train RMSE_test MAPE_train MAPE_test
     ## 13 0 1 1 1 0 0 2089.868 2099.625   28279.53  27285.84   9.544768  6.308283
+
+``` r
+# DISCLAIMER: The model output on row 2 will not always necessarily be the 'best' model, but on our run we determined it was. Various criteria weight into this decision. First, is the value of train/test error. We prioritized low testing error since our model is about predictive accuracy, but if there is a large discrepancy in the train/test error we will refrain from selecting that model due to concerns of over-fitting the training data. Second, is the information criteria (IC), for these lower is better. Finally, is the simplicity where having more parameters at 0 would be a simpler model than more parameters at 1 or 2. 
+```
 
 # Fitting Selected Manual Model
 
@@ -761,12 +772,12 @@ cat("\n\nAutomatic SARIMA Model - SARIMA(0,1,1)(2,0,0)[12]")
 forecast::accuracy(forecast_values_auto, test_raw) 
 ```
 
-    ##                        ME     RMSE      MAE       MPE     MAPE      MASE
-    ## Training set    -93.93091 27587.30 21651.66 -0.855900 9.503038 0.6547302
-    ## Test set     -12863.61482 29570.29 22121.32 -4.152516 6.498235 0.6689322
-    ##                      ACF1 Theil's U
-    ## Training set  0.008969746        NA
-    ## Test set     -0.184668628 0.6841422
+    ##                        ME     RMSE      MAE        MPE     MAPE      MASE
+    ## Training set     13.68817 27436.47 21401.74 -0.8379688 9.402478 0.6471727
+    ## Test set     -12811.95864 30593.66 23119.08 -4.1515039 6.782092 0.6991039
+    ##                     ACF1 Theil's U
+    ## Training set  0.01562825        NA
+    ## Test set     -0.14450078 0.7109614
 
 ``` r
 # Seasonal Naive
@@ -800,7 +811,7 @@ autoplot(train) +
   labs(
     title = "Seasonal Naive vs. SARIMA Forecasts",
     x = "Time (2016)",
-    y = "Median Sale Price ($)" # would this be prices?
+    y = "Median Sale Price ($)" 
   ) + scale_color_manual(values = c(
     "Seasonal Naive Forecast" = "orange",
     "SARIMA Manual Forecast" = "blue",
