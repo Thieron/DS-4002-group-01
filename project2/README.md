@@ -26,7 +26,7 @@ This repository holds the data, code, and outputs for Project 2 of DS 4002. We b
 
 **R packages**
 
-`eda_plots.R` uses base R only. The packages below are for `sarima_analysis.Rmd`.
+`eda_plots.R` needs only `here`. All of the packages below are used by `sarima_analysis.Rmd`.
 
 | Package | Version | Used for |
 |---|---|---|
@@ -36,7 +36,7 @@ This repository holds the data, code, and outputs for Project 2 of DS 4002. We b
 | `ggplot2` | 4.0.3 | Plotting |
 | `scales` | 1.4.0 | Formatting axis labels (dollar amounts, dates) |
 | `patchwork` | 1.3.2 | Combining several plots into one figure |
-| `here` | 1.0.2 | Building file paths from the project root |
+| `here` | 1.0.2 | Building file paths from the repository root (used by both R scripts) |
 
 `rmarkdown` and `knitr` are also needed to knit `sarima_analysis.Rmd`; RStudio installs them automatically.
 
@@ -59,13 +59,16 @@ project2/
 ├── README.md                          # This file: orientation and reproduction steps
 ├── LICENSE.md                         # MIT License
 ├── DATA/
-│   ├── data.md                        # Metadata: summary, provenance, license, ethics,
-│   │                                  #   data dictionary, exploratory plots, and how to
-│   │                                  #   download the raw CSV
+│   ├── README.md                      # Metadata: summary, provenance, license, ethics,
+│   │                                  #   data dictionary, and exploratory plots
+│   ├── data.md                        # How to download the raw CSV
 │   ├── downlaodData.png               # Screenshot showing where to download the raw CSV
 │   ├── rtt_summary.csv                # Raw all-years Real Estate Transfers CSV. NOT in the
 │   │                                  #   repo: you download it in Step 1 (~5.2M rows, too
 │   │                                  #   large for GitHub)
+│   ├── raw_19147_deeds.csv            # NOT in the repo: written when you run eda_plots.R
+│   │                                  #   (its API pull of the raw 19147 deeds, 1999–2016,
+│   │                                  #   used only for Figure 1)
 │   ├── rtt_19147_clean.csv            # Written by code.ipynb: cleaned deed-level records for
 │   │                                  #   ZIP 19147, 1999–2016 (1999 is dropped later, in the
 │   │                                  #   model, for better performance)
@@ -74,13 +77,8 @@ project2/
 │                                      #   count. This is the series the model uses.
 ├── SCRIPTS/
 │   ├── code.ipynb                     # Step 2: cleans the raw CSV and builds the monthly series
-│   ├── eda_plots.R                    # Step 3: exploratory figures (Figures 1 and 2); pulls its
-│   │                                  #   own data from the city's API
-│   ├── raw_19147_deeds.csv            # NOT in the repo: written when you run eda_plots.R
-│   │                                  #   (its API pull of 19147 deeds, 1999–2016)
-│   ├── monthly_19147.csv              # NOT in the repo: written when you run eda_plots.R
-│   │                                  #   (its own monthly series, for Figure 2 only; the
-│   │                                  #   model uses DATA/rtt_19147_monthly.csv)
+│   ├── eda_plots.R                    # Step 3: exploratory figures (Figures 1 and 2), saved
+│   │                                  #   to OUTPUT/
 │   ├── sarima_analysis.Rmd            # Step 4: SARIMA order selection, fitting, diagnostics,
 │   │                                  #   forecast, and evaluation
 │   ├── sarima_analysis.md             # Knitted (GitHub-rendered) output of sarima_analysis.Rmd
@@ -112,7 +110,7 @@ project2/
 
 ## Section 3: Instructions for Reproducing Our Results
 
-Steps 2 and 4 must run in order, because the model in Step 4 reads the monthly series that Step 2 writes. Step 3 only makes the two exploratory figures. It pulls its own data from the city's API, so it can run any time after Step 1.
+Run the steps in order. Steps 3 and 4 both read `DATA/rtt_19147_monthly.csv`, the monthly series that Step 2 writes. (That file is also committed to the repository, so Steps 3 and 4 can be run on their own to check our results.)
 
 ### Step 1: Get the code and the raw data
 
@@ -142,18 +140,14 @@ Steps 2 and 4 must run in order, because the model in Step 4 reads the monthly s
 
 ### Step 3: Make the exploratory figures (R)
 
-`eda_plots.R` does not read the files from Step 2, and nothing in Step 4 reads the files it writes.
+1. Open `SCRIPTS/eda_plots.R` in RStudio and click **Source** (or run `Rscript project2/SCRIPTS/eda_plots.R` from the repository root). Like the R Markdown file, it uses `here` to build file paths from the repository root, so run it from anywhere inside the cloned repository.
+2. **Figure 1** shows prices *before* cleaning, so it needs the raw deeds. Rather than load the full 5.2-million-row CSV into R, the script pulls only the 19147 deeds dated 1999–2016 from the City of Philadelphia's Carto SQL API [9]. This is the same Real Estate Transfers table, with the same DEED, ZIP code, and date filters the notebook applies first. No cleaning is applied. The first run needs an internet connection and saves the pull as `DATA/raw_19147_deeds.csv`; later runs reuse that file. Set `REFRESH <- TRUE` at the top of the script to pull fresh data.
+3. **Figure 2** reads `DATA/rtt_19147_monthly.csv`, the series written in Step 2. The script does no cleaning or interpolation of its own, so Figure 2 shows exactly the series the model uses.
+4. The script saves both figures straight to `OUTPUT/`:
+   - `fig1_raw_price_distribution.png`
+   - `fig2_monthly_median.png`
 
-1. Open `SCRIPTS/eda_plots.R` in RStudio and click **Source**. The script uses base R only, so it needs no extra packages. When sourced from RStudio, it sets the working directory to its own folder, so every file it writes lands in `SCRIPTS/`. (Outside RStudio, run it from `SCRIPTS/` to get the same result.)
-2. On its first run, the script pulls every 19147 deed dated 1999–2016 from the City of Philadelphia's Carto SQL API (the same Real Estate Transfers data), so the first run needs an internet connection. It saves the pull as `raw_19147_deeds.csv`, and later runs reuse that file. Set `REFRESH <- TRUE` at the top of the script to pull fresh data.
-3. The script prints how many deeds each cleaning rule removed, builds its own monthly series, and writes these to `SCRIPTS/`:
-   - `monthly_19147.csv`, its monthly median price and sale count
-   - `fig1_raw_price_distribution.png` and `fig2_monthly_median.png`
-4. Copy the two figures into `OUTPUT/` to match the repository.
-
-`raw_19147_deeds.csv` and `monthly_19147.csv` are created when you run the script and are not included in the repository.
-
-**How this script's cleaning differs from the notebook's:** it keeps only single-property deeds (`property_count == 1`), and it treats a group as a bulk sale only when 5 or more records share the same day and price (the notebook uses 2 or more). Its interpolation (`approx()`) also does not fill empty months at the very start or end of the series. Because of this, `monthly_19147.csv` and Figure 2 can differ slightly from `DATA/rtt_19147_monthly.csv`, which is the series the model uses.
+`raw_19147_deeds.csv` is created when you run the script and is not included in the repository.
 
 ### Step 4: Fit, check, and evaluate the SARIMA model (R)
 

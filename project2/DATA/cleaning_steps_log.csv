@@ -1,0 +1,10 @@
+step,records_before,records_removed,records_remaining
+Start: all records,5171819,0,5171819
+Keep document_type == DEED,5171819,4066107,1105712
+Remove impossible / unparseable dates,1105712,35323,1070389
+Keep dates 1999-01-01 to 2016-12-31,1070389,378518,691871
+Keep zip_code starting with 19147,691871,666172,25699
+Remove records with no price,25699,690,25009
+"Remove prices below floor ($10,000)",25009,6981,18028
+Remove same-day identical-price groups,18028,3957,14071
+Remove sales > 3 SD from year mean log price,14071,171,13900
