@@ -412,7 +412,7 @@ summary(auto_model)
     ## Training set 0.01562825
 
 ``` r
-# Suggested parameters: SARIMA(0,1,1)(2,0,0)[12]
+# Suggested parameters: SARIMA(0,1,1)(0,0,2)[12] with drift
 # My parameters from the visualizations was going to be (0,1,1)(1,1,0)[12]
 # Since they do not align I am going to do an optimization grid and choose the best parameters from that
 ```
@@ -521,9 +521,9 @@ results_table[2, ]
 
 ``` r
 # The other models for comparison
-# Automatic = SARIMA(0,1,1)(2,0,0)[12]
+# Automatic = SARIMA(0,1,1)(0,0,2)[12] with drift
 # Visualization-based = SARIMA(0,1,1)(1,1,0)[12]
-# Optimization grid = SARIMA(0,1,1)(1,0,0)[12] - the seasonal term takes both from the automatic and visual versions
+# Optimization grid = SARIMA(0,1,1)(1,0,0)[12] - takes P = 1 from the visual version and D = 0 from the automatic version
 
 #SARIMA(p,d,q)(P,D,Q)[S]
 manual_model <- forecast::Arima(train_raw,
@@ -737,9 +737,9 @@ snaive_model <- snaive(train_raw, h = 12) # forecasting 12 months
 
 ``` r
 # Metric calculations (lower is better)
-# Automatic = SARIMA(0,1,1)(2,0,0)[12]
+# Automatic = SARIMA(0,1,1)(0,0,2)[12] with drift
 # Visualization-based = SARIMA(0,1,1)(1,1,0)[12]
-# Optimization grid = SARIMA(0,1,1)(1,0,0)[12] - the seasonal term takes both from the automatic and visual versions
+# Optimization grid = SARIMA(0,1,1)(1,0,0)[12] - takes P = 1 from the visual version and D = 0 from the automatic version
 
 # SARIMA
 cat("Manual SARIMA Model - SARIMA(0,1,1)(1,0,0)[12]")
@@ -760,12 +760,12 @@ forecast::accuracy(forecast_values_manual, test_raw)
 
 ``` r
 # SARIMA auto 
-cat("\n\nAutomatic SARIMA Model - SARIMA(0,1,1)(2,0,0)[12]")
+cat("\n\nAutomatic SARIMA Model - SARIMA(0,1,1)(0,0,2)[12] with drift")
 ```
 
     ## 
     ## 
-    ## Automatic SARIMA Model - SARIMA(0,1,1)(2,0,0)[12]
+    ## Automatic SARIMA Model - SARIMA(0,1,1)(0,0,2)[12] with drift
 
 ``` r
 forecast::accuracy(forecast_values_auto, test_raw) 

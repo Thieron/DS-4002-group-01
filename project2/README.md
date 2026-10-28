@@ -170,8 +170,10 @@ Compare your figures in `OUTPUT/` and the RMSE and MAPE values printed in `sarim
 | Model | Train RMSE | Test RMSE | Train MAPE | Test MAPE |
 |---|---|---|---|---|
 | Manually Selected SARIMA(0,1,1)(1,0,0)[12] | 28279.53 | 27285.84 | 9.54 | 6.31 |
-| Automatically Selected SARIMA(0,1,1)(2,0,0)[12] | 27436.47 | 30593.66 | 9.40 | 6.78 |
+| Automatically Selected SARIMA(0,1,1)(0,0,2)[12] with drift | 27436.47 | 30593.66 | 9.40 | 6.78 |
 | Seasonal Naive | 42335.81 | 40275.55 | 13.72 | 9.21 |
+
+**Limitation:** The final SARIMA model was chosen from the optimization grid partly by its 2016 forecast error, so the 2016 data was used in model selection as well as in evaluation. Its test RMSE and MAPE are therefore likely optimistic, and a fully independent evaluation would choose the model on training data alone (for example, by information criteria or a validation year within 2000–2015) before scoring it on 2016.
 
 ## References
 

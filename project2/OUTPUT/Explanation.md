@@ -26,7 +26,7 @@ The price series after a square root transformation. A Box-Cox test gave λ = 0.
 An STL decomposition splits the series into a trend, a seasonal pattern, and the remainder (leftover noise). It was done on the square-root-transformed data.
 - **Data (row 1):** The level shifts over time, so the series is likely not stationary.
 - **Trend (row 2):** A long-term upward trend suggests d = 1.
-- **Seasonal (row 3):** A repeating yearly pattern suggests D = 1. Because the pattern is small, our final model uses D = 0 and models the seasonality with a seasonal AR term instead.
+- **Seasonal (row 3):** A repeating yearly pattern suggests D = 1. The final model, chosen by the optimization grid described below, ends up using D = 0 and models the seasonality with a seasonal AR term instead.
 - **Remainder (row 4):** The noise looks random, so outliers are not a concern.
 
 ## ACF and PACF Plots
@@ -36,9 +36,10 @@ Both plots use the differenced training data. Spikes that cross the dashed bands
 
 **ACF Plot (left):** The ACF shows how strongly the series correlates with its own past values at each lag. The last significant early lag is lag 1, suggesting q = 1. The small positive spike at lag 12 suggests P = 1 and Q = 0. Because the spike is small, these could be flipped, but P and Q are each between 0 and 1.
 
-**PACF Plot (right):** The PACF shows the direct correlation with each lag after removing the effect of shorter lags. The last significant lag is lag 2, suggesting p = 2. However, the PACF tails off while the ACF cuts off after lag 1, which suggests p = 0. We chose p = 0 for the manual model because the simpler model is less likely to overfit.
+**PACF Plot (right):** The PACF shows the direct correlation with each lag after removing the effect of shorter lags. The last significant lag is lag 2, suggesting p = 2. However, the PACF tails off while the ACF cuts off after lag 1, which suggests p = 0. We chose p = 0 because the simpler model is less likely to overfit.
 
-This gave the manual model **SARIMA(0,1,1)(1,0,0)[12]**. `auto.arima` chose **SARIMA(0,1,1)(2,0,0)[12]**, which agrees on every setting except P, supporting our choices.
+## Choosing the Final Model
+Together with the STL decomposition (d = 1, D = 1), the ACF and PACF plots suggested **SARIMA(0,1,1)(1,1,0)[12]**. `auto.arima` instead chose **SARIMA(0,1,1)(0,0,2)[12] with drift**, which matches on p, d, and q but models the seasonality differently: no seasonal differencing, two seasonal MA terms instead of one seasonal AR term, and a drift term. Because the two approaches disagreed on the seasonal part, we fit an optimization grid of 108 candidate models (p and q from 0 to 2, d = 1, P from 0 to 2, D from 0 to 1, Q from 0 to 1) and compared them on 2016 forecast error, the gap between training and test error, information criteria (AIC and BIC), and simplicity. The grid's choice, and our final manual model, is **SARIMA(0,1,1)(1,0,0)[12]**. It keeps P = 1 from the visual approach and D = 0 from `auto.arima`. Because 2016 forecast error was one of the selection criteria, the 2016 data was used to choose the model as well as to evaluate it, so the reported test error is likely optimistic.
 
 # Model Diagnostic Plots
 ## Residual Time Plot (top), ACF of Residuals (left), Histogram of Residuals (right)
@@ -69,4 +70,4 @@ The SARIMA(0,1,1)(1,0,0)[12] model's 12-month forecast for 2016 compared with th
 ## All Model Comparisons
 ![Model Comparisons](model_comparisons.png)
 
-This plot shows how the manually selected SARIMA(0,1,1)(1,0,0)[12] model's 12-month horizon forecast compares with the automatically selected SARIMA(0,1,1)(2,0,0)[12] model and the seasonal naive model, which forecasts to be equal to the actual observed value from the last corresponding season (from 2015). These are all compared to the observed values for that 12-month horizon (2016). Overall, the automatic model tends to overestimate actual prices, and the seasonal naive is unstable, frequently underestimating.
+This plot shows how the manually selected SARIMA(0,1,1)(1,0,0)[12] model's 12-month horizon forecast compares with the automatically selected SARIMA(0,1,1)(0,0,2)[12] with drift model and the seasonal naive model, which forecasts to be equal to the actual observed value from the last corresponding season (from 2015). These are all compared to the observed values for that 12-month horizon (2016). Overall, the automatic model tends to overestimate actual prices, and the seasonal naive is unstable, frequently underestimating.
