@@ -46,7 +46,7 @@ project3/
 ├── README.md                                  # This file: orientation and reproduction steps
 ├── LICENSE.md                                 # MIT License, plus PokéAPI's BSD 3-Clause notice
 ├── DATA/
-│   ├── datareadme.md                          # Metadata: summary, provenance, license, ethics,
+│   ├── README.md                          # Metadata: summary, provenance, license, ethics,
 │   │                                          #   data dictionary, and exploratory plots
 │   ├── pokemon_forms_normal.csv               # 1,513 forms with types, flags, normal render URL,
 │   │                                          #   and dominant colors
@@ -62,8 +62,10 @@ project3/
     ├── plot1_type_distribution.png            # Forms per primary type, with the majority-class line
     ├── pokemonTypeCounts.png                  # Forms per type, split by primary and secondary slot
     ├── plot2_color_type_alignment_heatmap.png # Percent of each type's forms in each color family
-    └── model_comparison_benchmark.png         # Accuracy of every model and test set against the
-                                               #   30% target
+    ├── model_comparison_benchmark.png         # Accuracy of every model and test set against the
+    │                                          #   30% target
+    └── Explanation.md                         # Document explaining the visualization outputs and their
+                                               #   interpretations
 ```
 
 ## Section 3: Instructions for Reproducing Our Results
