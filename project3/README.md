@@ -36,7 +36,7 @@ This repository holds the data, code, and outputs for Project 3 of DS 4002. We c
 Install them with:
 
 ```bash
-pip install requests pandas numpy pillow scikit-learn torch torchvision matplotlib seaborn scipy jupyter
+pip install -r requirements.txt
 ```
 
 ## Section 2: Map of Documentation

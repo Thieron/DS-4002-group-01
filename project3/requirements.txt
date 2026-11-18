@@ -1,0 +1,10 @@
+botasaurus_requests==4.0.38
+matplotlib==3.11.2
+matplotlib-inline==0.2.1
+numpy==2.5.4
+pandas==3.1.0
+pillow==13.0.0
+requests 
+requests-toolbelt==1.0.0
+scipy==1.18.1
+seaborn==0.13.2
